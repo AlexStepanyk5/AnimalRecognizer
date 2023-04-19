@@ -1,0 +1,28 @@
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+
+.header-container{
+    max-width: 1440px;
+    padding: 30px  140px;
+    font-family: $main-font;
+    font-size: rem(16px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+
+    .heading{
+        font-family: $secondary-font;
+        font-size: rem(45px);
+    }
+    .navbar-container{
+        display: flex;
+        gap:rem(35px)
+    }
+
+    .navbar-container li{
+        padding:10px 10px
+    }
+
+}
