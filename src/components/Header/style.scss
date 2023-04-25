@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    
 
     .heading{
         font-family: $secondary-font;
@@ -18,9 +19,14 @@
     }
     .navbar-container{
         display: flex;
-        gap:rem(35px)
+        gap:rem(35px);
+        color:#5E6085;  
+        
     }
-
+    .navbar-container :hover{
+        color: #000958;
+        cursor: pointer;
+    }
     .navbar-container li{
         padding:10px 10px
     }
