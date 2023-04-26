@@ -1,0 +1,11 @@
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+
+.home-container {
+    max-width: 1440px;
+    padding: 100px 140px 30px;
+    font-family: $main-font;
+    font-size: rem(14px);
+    margin: auto;
+    background-color: #FFF4EA;
+}
