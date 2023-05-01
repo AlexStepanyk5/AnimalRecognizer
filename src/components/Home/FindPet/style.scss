@@ -1,0 +1,100 @@
+@use "../../styles/variables" as *;
+@use "../../styles/functions" as *;
+
+.find-pet-container {
+    max-width: 1440px;
+    padding: 200px 140px 30px;
+    font-family: $main-font;
+    font-size: rem(14px);
+    margin: auto;
+    background-color: #FFFAF5;
+    .find-pet-content{
+      .find-pet-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: rem(600px);
+        .find-pet-images{
+            .dog-main{
+                position: relative;
+                bottom: 350px;
+                right: -150px;
+                object-fit: cover;
+            }
+            .cat-main{
+                position: relative;
+                top: -160px;
+                left: -140px;
+                object-fit: cover;
+            }
+            .star{
+                position:relative;
+                top: -100px;
+                left: 500px;
+                object-fit: cover;
+            }
+            .paw{
+                position:relative;
+                top: 400px;
+                left: -190px;
+                object-fit: cover;
+            }
+            .circles{
+                position:relative;
+                top: 350px;
+                left: 1100px;
+                object-fit: cover;
+            }
+        }
+        .find-pet-text{
+
+            width: rem(1200px);
+            .find-pet-title{
+                font-family: $secondary-font;
+                font-size: rem(40px);
+                font-weight: bold;
+                color: #00063a;
+                margin-bottom: rem(100px);
+            }
+            .find-pet-description{
+                font-family: $main-font;
+                font-size: rem(20px);
+                color: #000000;
+                margin-bottom: rem(50px);
+            }
+            .find-text-button{
+                font-family: $main-font;
+                font-size: rem(16px);
+                font-weight: 600;
+                color: #FFFFFF;
+                background-color: #ff6600;
+                border: none;
+                padding: rem(22px) rem(31px);
+                border-radius: 5px;
+                cursor: pointer;      
+                display: flex;
+                box-shadow: 0px 5px 8px #ff6600;
+                transition: all 0.3s ease 0s;
+                align-items: center;       
+                margin: auto; 
+            }
+
+        }
+      }
+    }
+}
+
+.slackey {
+    font-family: $secondary-font;
+    font-size: rem(16px);
+}
+
+.slackey :img{
+   width: rem(40px);
+   height: rem(40px);
+}
+
+.main-text {
+    font-family: $main-font;
+    font-size: rem(14px);
+}

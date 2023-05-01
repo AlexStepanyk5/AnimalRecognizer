@@ -2,20 +2,26 @@
 @use "../../styles/functions" as *;
 
 .header-container{
-    max-width: 1440px;
+    width: 1440px;
     padding: 30px  140px;
     font-family: $main-font;
-    font-size: rem(16px);
+    font-size: rem(20px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 100;
+    left: 50%; 
+    
+    margin-left: -720px;
+    background-color: #FFFAF5;
     
 
     .heading{
         font-family: $secondary-font;
-        font-size: rem(45px);
+        font-size: rem(50px);
     }
 
     .heading:hover{
@@ -31,6 +37,7 @@
     .navbar-container :hover{
         color: #000958;
         cursor: pointer;
+        padding-left: rem(800px);
     }
     .navbar-container li{
         padding:10px 10px
