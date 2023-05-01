@@ -17,6 +17,11 @@
         font-family: $secondary-font;
         font-size: rem(45px);
     }
+
+    .heading:hover{
+        cursor: pointer;
+    }
+    
     .navbar-container{
         display: flex;
         gap:rem(35px);

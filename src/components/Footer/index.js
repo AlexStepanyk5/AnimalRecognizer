@@ -35,8 +35,8 @@ const Footer = () => {
                     <h3 className="slackey">Explore</h3>
                     <ul className="main-font">
                         <li>About us</li>
-                        <li>Our Team</li>
-                        <li>Adopt Pet</li>
+                        <li>Our Pets</li>
+                        <li>Blog</li>
                     </ul>
                 </div>
                 <div>
