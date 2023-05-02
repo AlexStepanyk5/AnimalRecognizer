@@ -1,0 +1,87 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/functions" as *;
+
+.usage-container {
+    max-width: 1440px;
+    padding: 40px 140px 30px;
+    font-family: $main-font;
+    font-size: rem(14px);
+    margin: auto;
+    background-color: #FFFAF5;
+    .usage-content{
+        .image-upload-container{
+            display: flex;
+            flex-direction: row;
+            gap: rem(300px);
+            .image-upload-button{
+                display: flex;
+                gap: rem(11px);
+                flex-direction: column;
+                align-items: center;
+                width: rem(180px);
+                height: rem(180px);
+                background-color: #FF5B2E;
+                border-radius: 40px;
+                box-shadow: 5px 6px 13px -1px rgba(0, 0, 0, 0.25);
+                padding: rem(40px) rem(34px);
+
+            }
+            .image-upload-button h4{
+                font-family: $secondary-font;
+                font-size: 20px;
+                text-align: center;
+                line-height: 30px;
+                color: #FFFAF5;
+            }
+            .image-upload-button:hover{
+                cursor: pointer;
+            }
+           .image-upload-text{
+                display: flex;
+                flex-direction: column;
+                gap: rem(20px);
+                align-items: center;
+                color: #656689;
+           }
+            .image-upload-text h3{
+                font-family: $secondary-font;
+                font-size: 27px;
+            }
+            .image-upload-text p{
+                text-align: center;
+            }
+            
+        }
+        .contact-cotainer{
+            .contact-content{
+                .contact-text{
+                    .check-text{
+                        font-family: $main-font;
+                        font-size: rem(23px);
+                    }
+                }
+                .contact-photo{
+                    
+                }
+            }
+        }
+        .paw{
+            position:relative;
+            top: 400px;
+            left: -190px;
+            object-fit: cover;
+        }
+        
+      
+    }
+}
+
+.slackey {
+    font-family: $secondary-font;
+    font-size: rem(45px);
+}
+
+.main-text {
+    font-family: $main-font;
+    font-size: rem(16px);
+}

@@ -14,7 +14,6 @@
     position: fixed;
     z-index: 100;
     left: 50%; 
-    
     margin-left: -720px;
     background-color: #FFFAF5;
     
@@ -31,13 +30,12 @@
     .navbar-container{
         display: flex;
         gap:rem(35px);
-        color:#5E6085;  
-        
+        color:#5E6085; 
     }
     .navbar-container :hover{
         color: #000958;
         cursor: pointer;
-        padding-left: rem(800px);
+
     }
     .navbar-container li{
         padding:10px 10px

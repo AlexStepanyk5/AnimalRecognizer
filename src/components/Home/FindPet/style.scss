@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-@use "../../styles/functions" as *;
+@use "../../../styles/variables" as *;
+@use "../../../styles/functions" as *;
 
 .find-pet-container {
     max-width: 1440px;
@@ -78,6 +78,10 @@
                 align-items: center;       
                 margin: auto; 
             }
+            .find-text-button:hover{
+                box-shadow: 0px 5px 8px #ff6600;
+                transform: translateY(-5px);
+            }
 
         }
       }
@@ -87,11 +91,6 @@
 .slackey {
     font-family: $secondary-font;
     font-size: rem(16px);
-}
-
-.slackey :img{
-   width: rem(40px);
-   height: rem(40px);
 }
 
 .main-text {
