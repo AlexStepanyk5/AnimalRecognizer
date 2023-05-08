@@ -1,15 +1,22 @@
 import react from 'react';
+
 import './style.scss';
 
+
 const HowToUse = () => {
+    
+
+
+
     return (
         <div className='usage-container'>
             <div className='usage-content'>
                 <div className='image-upload-container'>
                     <div className='image-upload-button'>
-                        <img src="./images/Home/upload.png"></img>
-                        <h4>Download image</h4>
+                    <input type="file" accept="image/png, image/jpeg"/>
+                  
                     </div>
+                   
                     <div className='image-upload-text'>
                         <h3>How To use?</h3>
                         <p>Just download an image of a desirable<br/>pet and our AI will try to look for a <br/>similar one for you</p>
@@ -27,7 +34,9 @@ const HowToUse = () => {
                             <p className='main-text'>If you want to get more information about our service, 
                             book a call to discuss cooperation or you have any emergency situation -
                              please, be free to reach us with no hesitation - we are always glad to help you!</p>
-                             <button className='find-text-button'>Book a call</button>
+                            <button className='contact-button'>Book a call</button>
+                            <img src='./images/Home/phone.png'/>
+                            <p className='emergency-call'>Emergency Call</p>
                         </div>
                         <div className='contact-photo'>
                             <img src='./images/Home/vet_group.png'/>

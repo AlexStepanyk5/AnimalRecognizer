@@ -13,6 +13,7 @@
             display: flex;
             flex-direction: row;
             gap: rem(300px);
+            padding-bottom: rem(100px);
             .image-upload-button{
                 display: flex;
                 gap: rem(11px);
@@ -24,7 +25,7 @@
                 border-radius: 40px;
                 box-shadow: 5px 6px 13px -1px rgba(0, 0, 0, 0.25);
                 padding: rem(40px) rem(34px);
-
+                margin-left: rem(140px);
             }
             .image-upload-button h4{
                 font-family: $secondary-font;
@@ -42,6 +43,7 @@
                 gap: rem(20px);
                 align-items: center;
                 color: #656689;
+                padding-top: rem(30px);
            }
             .image-upload-text h3{
                 font-family: $secondary-font;
@@ -49,21 +51,13 @@
             }
             .image-upload-text p{
                 text-align: center;
+                font-size: rem(24px);
+                line-height: 30px;
+                font-weight: 500;
+                
+                
             }
             
-        }
-        .contact-cotainer{
-            .contact-content{
-                .contact-text{
-                    .check-text{
-                        font-family: $main-font;
-                        font-size: rem(23px);
-                    }
-                }
-                .contact-photo{
-                    
-                }
-            }
         }
         .paw{
             position:relative;
@@ -71,8 +65,49 @@
             left: -190px;
             object-fit: cover;
         }
+
+        .contact-container{
+            display: flex;
+            flex-direction: row;
+            padding-bottom: rem(100px);
+            gap: rem(25px);
+            .contact-text{
+                width: rem(600px);
+                float: left;
+                .check-text{    
+                    font-family: $main-font;
+                    font-size: rem(23px);
+                }    
+                .contact-button{
+                    font-family: $main-font;
+                    font-size: rem(16px);
+                    font-weight: 600;
+                    color: #FFFFFF;
+                    background-color: #ff6600;
+                    border: none;
+                    padding: rem(22px) rem(31px);
+                    border-radius: 5px;
+                    cursor: pointer;      
+                    display: flex;
+                    box-shadow: 0px 5px 8px #ff6600;
+                    transition: all 0.3s ease 0s;
+                    align-items: center;       
+                    margin: auto; 
+                }    
+                .emergency-call{
+                    font-family: $main-font;
+                    font-size: rem(16px);
+                    text-decoration: underline;
+                    font-weight: bold;
+                }        
+            }
+            .contact-photo{
+                width: rem(535px);
+                float: right;
+            }
+        }    
         
-      
+
     }
 }
 
