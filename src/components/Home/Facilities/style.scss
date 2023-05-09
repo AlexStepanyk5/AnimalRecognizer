@@ -1,0 +1,73 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/functions" as *;
+
+.facilities-container {
+    max-width: 1440px;
+    padding: 50px 140px 30px;
+    font-family: $main-font;
+    font-size: rem(14px);
+    margin: auto;
+    background-color: #FFFAF5;
+    margin-bottom: rem(100px);
+    .facilities-content { 
+        display: flex;
+        flex-direction: column;
+        gap: rem(25px);
+        .facilities{
+            display: flex;
+            gap: rem(25px);
+            padding-bottom: rem(100px);
+            padding-left: rem(90px);
+            padding-right: rem(90px);
+            text-align: center;
+        }
+        .facilities-main{
+            font-family: $secondary-font;
+            font-size: rem(40px);
+            color: #00063a;
+            padding-top: rem(15px);
+        }
+        .facilities-text{
+            font-family: $main-font;
+            font-size: rem(16px);
+            color: #656689;
+            font-weight: 400;
+            line-height: 30px;
+        }
+        .wrapper{
+            height: rem(656px);
+            display: grid;
+            grid-template-columns: rem(580px) rem(580px);
+            gap: rem(250px);
+            background-image: url(../../../../public/images/Home/dog_lines.png);
+        }
+        .column {
+            width: rem(340px);
+            text-align: center;
+        }
+        .column h3{
+            padding-top: rem(15px);
+            padding-bottom: rem(150px);
+            font-family: $main-font;
+            font-size: rem(16px);
+            color: #656689;
+        }
+        .column li{
+            font-family: $secondary-font;
+            font-size: rem(24px);
+            color: #00063a;
+        }
+    }
+}
+
+.slackey {
+    font-family: $secondary-font;
+    font-size: rem(16px);
+    color: #00063a;
+}
+
+.main-text {
+    font-family: $main-font;
+    font-size: rem(14px);
+    color: #656689;
+}

@@ -42,20 +42,19 @@
                 flex-direction: column;
                 gap: rem(20px);
                 align-items: center;
-                color: #656689;
+                color: #00063a;
                 padding-top: rem(30px);
            }
             .image-upload-text h3{
                 font-family: $secondary-font;
-                font-size: 27px;
+                font-size: rem(31px);
             }
             .image-upload-text p{
                 text-align: center;
                 font-size: rem(24px);
                 line-height: 30px;
                 font-weight: 500;
-                
-                
+                color: #656689;
             }
             
         }
@@ -69,49 +68,79 @@
         .contact-container{
             display: flex;
             flex-direction: row;
-            padding-bottom: rem(100px);
             gap: rem(25px);
             .contact-text{
                 width: rem(600px);
                 float: left;
+                font-size: rem(45px);
+                color: #00063a;
                 .check-text{    
                     font-family: $main-font;
-                    font-size: rem(23px);
+                    font-weight: rem(500px);
+                    font-size: rem(15px);
+                    line-height: rem(18px);
+                    color: #48496A;
                 }    
-                .contact-button{
-                    font-family: $main-font;
-                    font-size: rem(16px);
-                    font-weight: 600;
-                    color: #FFFFFF;
-                    background-color: #ff6600;
-                    border: none;
-                    padding: rem(22px) rem(31px);
-                    border-radius: 5px;
-                    cursor: pointer;      
+                .check-block{
                     display: flex;
-                    box-shadow: 0px 5px 8px #ff6600;
-                    transition: all 0.3s ease 0s;
-                    align-items: center;       
-                    margin: auto; 
-                }    
-                .emergency-call{
-                    font-family: $main-font;
-                    font-size: rem(16px);
-                    text-decoration: underline;
-                    font-weight: bold;
-                }        
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: rem(42px);
+                    margin-bottom: rem(42px);
+                }
+                .check-block img{
+                    margin-right: rem(20px);
+                    width: rem(24px);
+                    height: rem(24px);
+                }
+                .check-block p{
+                    margin-right: rem(15px);
+                }
+
+                .contact-buttons{
+                    display: flex;
+                    float: left;
+                    gap: rem(25px);
+                    .contact-button{
+                        font-family: $main-font;
+                        font-size: rem(16px);
+                        font-weight: rem(600px);
+                        color: #FFFFFF;
+                        background-color: #ff6600;
+                        border: none;
+                        padding: rem(22px) rem(31px);
+                        border-radius: 5px;
+                        cursor: pointer;      
+                        display: flex;
+                        box-shadow: 0px 5px 8px #ff6600;
+                        transition: all 0.3s ease 0s;
+                        align-items: center;       
+                        margin: auto; 
+                    }    
+                    .emergency-button{
+                        display: flex;
+                        align-items: center;
+                        background-color: white;
+                        font-weight: 500;
+                        font-size: rem(18px);
+                        line-height: rem(18px);
+                        cursor: pointer;
+                        color: #48496A;
+                        text-decoration: underline;
+                    }
+                }  
             }
             .contact-photo{
                 width: rem(535px);
                 float: right;
             }
-        }    
+        }   
         
-
+        
     }
 }
 
-.slackey {
+#slackey {
     font-family: $secondary-font;
     font-size: rem(45px);
 }
@@ -119,4 +148,8 @@
 .main-text {
     font-family: $main-font;
     font-size: rem(16px);
+    font-weight: 400;
+    color: #656689;
+    line-height: 30px;
+    margin-bottom: rem(40px);
 }

@@ -1,0 +1,67 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/functions" as *;
+
+.blog-container {
+    max-width: 1440px;
+    padding: 40px 140px 30px;
+    margin: auto;
+    background-color: #FFFAF5;
+    margin-bottom: rem(80px);
+    .blog-content{
+        display: flex;
+        flex-direction: row;
+        gap: rem(25px);
+        .blog-text-box{
+            width: rem(600px);
+            .blog-button{
+                font-family: $main-font;
+                font-size: rem(16px);
+                font-weight: rem(600px);
+                color: #FFFFFF;
+                background-color: #ff6600;
+                border: none;
+                padding: rem(22px) rem(31px);
+                border-radius: 5px;
+                cursor: pointer;      
+                display: flex;
+                box-shadow: 0px 5px 8px #ff6600;
+                transition: all 0.3s ease 0s;
+                align-items: center;       
+                width: fit-content;
+            }
+        } 
+        .blog-right-box{
+            background-color: #FFFFFF;
+            width: rem(650px);
+            height: rem(400px);
+            border-radius: rem(16px);
+            padding: rem(35px);
+            display: flex;
+            flex-direction: row;
+            gap: rem(25px);
+            
+            #right-box-title{
+                font-family: $main-font;
+                font-weight: 600;
+                font-size: rem(20px);
+                line-height: 182.02%;
+                text-align: center;
+                padding-bottom: rem(25px);
+            }
+        }   
+    }  
+}
+
+.slackey {
+    font-family: $secondary-font;
+    font-size: rem(45px);
+    color: #00063a;
+    margin-bottom: rem(25px);
+}
+
+.main-text {
+    font-family: $main-font;
+    color: #656689;
+    font-size: rem(16px);
+    margin-bottom: rem(50px);
+}

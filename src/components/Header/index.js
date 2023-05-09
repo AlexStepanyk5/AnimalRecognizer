@@ -2,14 +2,15 @@ import react from 'react';
 import './style.scss';
 
 
+
 const Header = () => {
     return (
         <div className='header-container'>
-            <h1 className="heading">Ancare</h1>
+            <h1 ><a className="heading" href='/'>Ancare</a></h1>
             <ul className='navbar-container'>
-                <li>Our pets</li>
-                <li>Blog</li>
-                <li>About us</li>
+                <li><a href='/our-pets'>Our pets</a></li>
+                <li><a href='/blog'>Blog</a></li>
+                <li><a href='/about'>About us</a></li>
             </ul>     
         </div>
     );
