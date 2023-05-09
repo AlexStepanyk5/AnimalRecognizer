@@ -4,8 +4,8 @@ import Footer from '../components/Footer';
 import Home from '../Pages/Home';
 import About from '../Pages/About';
 import BlogPage from '../Pages/Blog';
-import OurPets from '../components/Home/OurPets';
 import OurPetsPage from '../Pages/OurPets';
+import Authorization from '../Pages/Authorization';
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,6 +19,7 @@ function App() {
                 <Route path="/our-pets" element={<OurPetsPage/>}/>
                 <Route path="/blog" element={<BlogPage/>}/>
                 <Route path="/about" element={<About/>}/>
+                <Route path="/authorization" element={<Authorization/>}/>
               </Routes>
             </Router>
         

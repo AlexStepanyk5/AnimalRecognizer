@@ -39,7 +39,8 @@ const HowToUse = () => {
                                 </p>
                             
                             <div className='contact-buttons'>
-                                <button className='contact-button'>Book a call</button>  
+                                <button className='contact-button'>Book a call</button>
+                                {/* <a href="mailto:dazerotes@gmail.com?subject=Let`s schedule a call about cooperation">Book a call</a>      */}
                                 <div className='emergency-button'><img src='./images/Home/phone.png'/>Emergency call</div>
                             </div>
                         </div>
