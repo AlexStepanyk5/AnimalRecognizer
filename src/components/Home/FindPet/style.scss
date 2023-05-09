@@ -73,13 +73,13 @@
                 border-radius: 5px;
                 cursor: pointer;      
                 display: flex;
-                box-shadow: 0px 5px 8px #ff6600;
+                box-shadow: 0px 2px 2px #ff6600;
                 transition: all 0.3s ease 0s;
                 align-items: center;       
-                margin: auto; 
+                margin: auto;    
             }
             .find-text-button:hover{
-                box-shadow: 0px 5px 8px #ff6600;
+                box-shadow: 0px 8px 8px #723d00;
                 transform: translateY(-5px);
             }
 

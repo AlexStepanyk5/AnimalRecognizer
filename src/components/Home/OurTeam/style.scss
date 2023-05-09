@@ -13,23 +13,28 @@
     .view-team-button{
         margin: auto;
         width: fit-content;
-        background-color: #FF5B2E;
-        padding: rem(22px) rem(28px);
-        border-radius: rem(10px);
-        font-weight: 600;
+        font-family: $main-font;
         font-size: rem(16px);
+        font-weight: 600;
         line-height: rem(16px);
         color: #FFFFFF;
-        transition: 0.7s;
-        margin-bottom: rem(60px);
+        background-color: #ff6600;
+        border: none;
+        padding: rem(22px) rem(31px);
+        border-radius: 5px;
+        cursor: pointer;      
+        display: flex;
+        box-shadow: 0px 2px 2px #ff6600;
+        transition: all 0.3s ease 0s;
+        align-items: center;       
+        margin: auto;    
+
     }
     .view-team-button:hover{
-        background-color: #FF5B2E;
-        box-shadow: 0px 0px 10px rgba(255, 91, 46, 0.5);
-        transition: 0.7s;
-        background-color: #ff3700;
+        box-shadow: 0px 8px 8px #723d00;
+        background-color: #ff6600;
         cursor: pointer;
-        
+        transform: translateY(-5px);
     }
     .our-team-title{
         font-family: $secondary-font;
