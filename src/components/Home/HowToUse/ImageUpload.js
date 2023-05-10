@@ -8,6 +8,7 @@ const ImageUpload = () => {
   const [dominantColor, setDominantColor] = useState(null);
   const [colorName, setColorName] = useState(null);
   const [basicColorName, setBasicColorName] = useState(null);
+  const [imageData, setImageData] = useState(null); // Add imageData state
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -19,9 +20,10 @@ const ImageUpload = () => {
 
       reader.onloadend = async () => {
         const imageData = reader.result;
+        setImageData(imageData); // Store the image data
 
         const response = await axios.post(
-          `https://vision.googleapis.com/v1/images:annotate?key=`,
+          `https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDEVL_Yj-SsWIC93wpK85tZuXLlt72_l5I`,
           {
             requests: [
               {
@@ -84,19 +86,17 @@ const ImageUpload = () => {
   };
 
   const convertColorToBasic = (hexCode) => {
-
     const colorMapping = {
-      gray: ['#808080', '#A8A8A8'],
-      black: ['#000000', '#1F1D1D'],
-      brown: ['#8B4513', '#A52A2A', '#D2691E', '#CD853F'],
-      red: ['#FF0000', '#A52A2A', '#D2691E'],
-      white: ['#FFFFFF', '#DBDBDB'],
-
+      gray: ['#525252', '#747474', '#4e4545', '#807373', '#686161'],
+      black: ['#000000', '#303030', '#161414', '#302525', '#140f0f'],
+      brown: ['#2e1707', '#492106', '#42290f', '#5f3516'],
+      red: ['#fc7a00', '#a04300', '#fd9042', '#ad6507','#cf8e16'],
+      white: ['#FFFFFF', '#A8A8A8', '#f7d5d5',  '#faead5', '#dbd2c5'],
     };
-  
+
     let closestBasicColor = null;
     let minDistance = Infinity;
-  
+
     for (const basicColor in colorMapping) {
       const colorRange = colorMapping[basicColor];
       for (const color of colorRange) {
@@ -107,7 +107,7 @@ const ImageUpload = () => {
         }
       }
     }
-  
+
     return closestBasicColor;
   };
 
@@ -125,35 +125,50 @@ const ImageUpload = () => {
       </button>
       {labels.length > 0 && (
         <div>
-          <h3>Labels:</h3>
+          <h3>Animal:</h3>
           <ul>
-            {labels.map((label, index) => (
-              <li key={index}>{label}</li>
-            ))}
+            {labels.map((label, index) => {
+              if (label === 'Dog' || label === 'Cat') {
+                return <li key={index}>{label}</li>;
+              } else {
+                return (
+                  <li key={index}>
+                    Please upload a photo with a cat or a dog.
+                  </li>
+                );
+              }
+            })}
           </ul>
+          {labels.includes('Dog') || labels.includes('Cat') ? (
+            <>
+              {imageData && (
+                <img src={imageData} style={{ width: '200px', height: '200px' }} alt="Uploaded" />
+              )}
+              {dominantColor && (
+                <div>
+                  <h3>Dominant Color:</h3>
+                  <div
+                    style={{
+                      backgroundColor: dominantColor,
+                      width: '100px',
+                      height: '100px',
+                    }}
+                  ></div>
+                </div>
+              )}
+              {colorName && (
+                <p>
+                  The color name for {dominantColor} is {colorName}.
+                </p>
+              )}
+              {basicColorName && (
+                <p>
+                  The closest basic color for {dominantColor} is {basicColorName}.
+                </p>
+              )}
+            </>
+          ) : null}
         </div>
-      )}
-      {dominantColor && (
-        <div>
-          <h3>Dominant Color:</h3>
-          <div
-            style={{
-              backgroundColor: dominantColor,
-              width: '100px',
-              height: '100px',
-            }}
-          ></div>
-        </div>
-      )}
-      {colorName && (
-        <p>
-          The color name for {dominantColor} is {colorName}.
-        </p>
-      )}
-      {basicColorName && (
-        <p>
-          The closest basic color for {dominantColor} is {basicColorName}.
-        </p>
       )}
     </div>
   );
