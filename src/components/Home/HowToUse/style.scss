@@ -26,6 +26,7 @@
                 box-shadow: 5px 6px 13px -1px rgba(0, 0, 0, 0.25);
                 padding: rem(40px) rem(34px);
                 margin-left: rem(140px);
+                
             }
             .image-upload-button h4{
                 font-family: $secondary-font;
@@ -36,6 +37,8 @@
             }
             .image-upload-button:hover{
                 cursor: pointer;
+                box-shadow: 0px 8px 8px #723d00;
+                transform: translateY(-5px);
             }
            .image-upload-text{
                 display: flex;
@@ -57,12 +60,6 @@
                 color: #656689;
             }
             
-        }
-        .paw{
-            position:relative;
-            top: 400px;
-            left: -190px;
-            object-fit: cover;
         }
 
         .contact-container{
@@ -158,4 +155,55 @@
     margin-bottom: rem(40px);
 }
 
+.approval{
+    background-color: #FF5B2E;
+    width: rem(200px);
+    margin-left: rem(18px);
+    height: rem(50px);
+    font-size: rem(18px);
+    font-weight: 900;
+}
+.approval:hover{
+    cursor: pointer;
+    box-shadow: 0px 8px 8px #723d00 !important;
+    transform: translateY(-5px) !important;
+    background-color: #FF5B2E !important;
+}
+
+.select {
+    width: rem(200px);
+}
+
+.modal-title{
+    font-family: $secondary-font !important;
+    font-size: rem(28px) !important;
+    display: flex !important;
+    text-align: center !important;
+    padding-top: rem(12px) !important;
+}
+
+.modal-text{
+    font-size: rem(16px);
+    color: #00063a;
+    font-weight: 600;
+    padding-bottom: rem(5px);
+    padding-top: rem(10px);
+}
+.ant-checkbox .ant-checkbox-inner {
+        border-color: #FF5B2E !important;
+    }
+    
+    .ant-checkbox-checked .ant-checkbox-inner {
+    border-color: #FF5B2E !important;
+    background-color: #FF5B2E !important; 
+    }
+
+.modal span{
+    font-size: rem(15px);
+    font-family: $main-font;
+    font-weight: 500 !important;
+}
+
 //tel:380676535231
+
+

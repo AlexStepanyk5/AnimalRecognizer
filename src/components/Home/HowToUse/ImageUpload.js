@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import convert from 'color-convert';
 import { Modal, Button, Input, Checkbox, Select } from 'antd';
+import './style.scss';
+
 
 const ImageUpload = () => {
   const [labels, setLabels] = useState([]);
@@ -172,42 +174,37 @@ const ImageUpload = () => {
   ];
   
   return (
-    <div>
+    <div >
       <input type="file" onChange={handleFileChange} style={{ display: 'none' }} />
       <Button
+        className='image-upload-button'
         type="primary"
-        style={{ 
-          backgroundColor: 'rgb(255, 136, 0)',
-          width: '200px',
-          marginLeft: '18px',
-          fontSize: '35px',
-          height: '200px',
-          fontFamily: 'Rockwell'
-        }}
         onClick={() => {
           document.querySelector('input[type="file"]').click();
         }}
         disabled={modalVisible}
       >
-        Upload
+        <img src='./images/Home/upload.png' alt="Upload button"/>
+        <h4>Upload <br/> image</h4>
       </Button>
-
       <Modal
-        title={<span style={{ fontFamily: 'Arial', fontSize: '20px'}}>Let's find a new owner for our little friend!</span>}
+        title={<span className='modal-title'>Let's find a new owner for our little friend!</span>}
         visible={modalVisible}
         onCancel={closeModal}
+        className='modal'
         footer={null}
+        bodyStyle={{ height: "400px"}}
       >
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
             {labels.includes('Dog') || labels.includes('Cat') ? (
               <>
-                <h3>Animal:</h3>
+                <h3 className='modal-text'>Animal:</h3>
                 {editedLabels.map((label, index) => (
                   <Select
                     value={label}
                     onChange={(value) => handleLabelChange(index, value)}
-                    style={{ width: '200px' }}
+                    className='select'
                     key={index}
                   >
                     <Select.Option value="Dog">Dog</Select.Option>
@@ -217,18 +214,18 @@ const ImageUpload = () => {
 
                 {imageData && (
                   <div>
-                    <h3>Uploaded Image:</h3>
+                    <h3 className='modal-text'>Uploaded Image:</h3>
                     <img src={imageData} style={{ width: '200px', height: '200px' }} alt="Uploaded" />
                   </div>
                 )}
 
                 <div>
-                  <h3>Name:</h3>
+                  <h3 className='modal-text'>Name:</h3>
                   <Input value={name} onChange={handleNameChange} style={{ width: '200px' }}/>
                 </div>
               </>
             ) : (
-              <p>Please upload a photo with a cat or a dog.</p>
+              <p className='modal-text'>Please upload a photo with a cat or a dog.</p>
             )}
           </div>
           <div style={{ flex: 1 }}>
@@ -236,7 +233,7 @@ const ImageUpload = () => {
               <>
                 {dominantColor && (
                   <div>
-                    <h3>Dominant Color:</h3>
+                    <h3 className='modal-text'>Dominant Color:</h3>
                     <div
                       style={{
                         backgroundColor: dominantColor,
@@ -248,8 +245,8 @@ const ImageUpload = () => {
                 )}
                 {basicColorName && (
                   <div>
-                    <h3>Basic Color:</h3>
-                    <Select value={editedBasicColorName} onChange={handleBasicColorChange} style={{ width: '200px' }}>
+                    <h3 className='modal-text'>Basic Color:</h3>
+                    <Select value={editedBasicColorName} onChange={handleBasicColorChange} className='select'>
                     <Option value="Black">Black</Option>
                     <Option value="Gray">Gray</Option>
                     <Option value="White">White</Option>
@@ -260,8 +257,8 @@ const ImageUpload = () => {
                   </div>
                 )}
                 <div>
-                  <h3>Shelter:</h3>
-                  <Select value={shelter} onChange={handleShelterChange} style={{ width: '200px' }}>
+                  <h3 className='modal-text'>Shelter:</h3>
+                  <Select value={shelter} onChange={handleShelterChange} className='select'>
                     {shelterOptions.map((option) => (
                       <Option value={option} key={option}>
                         {option}
@@ -271,8 +268,8 @@ const ImageUpload = () => {
                 </div>
 
                 <div>
-                  <h3>Additional Options:</h3>
-                  <Checkbox checked={sterilized} onChange={handleSterilizedChange}>
+                  <h3 className='modal-text'>Additional Options:</h3>
+                  <Checkbox checked={sterilized} onChange={handleSterilizedChange} colorPrimaryBorder='#FF5B2E'>
                     Sterilized
                   </Checkbox>
                   <Checkbox checked={hasPassport} onChange={handlePassportChange}>
@@ -282,17 +279,10 @@ const ImageUpload = () => {
                 <div>
                   <br/><br/>
 
-                  <Button
+                  <Button className='approval'
                     key="save"
                     type="primary"
                     onClick={handleSaveChanges}
-                    style={{ 
-                      backgroundColor: 'rgb(255, 136, 0)',
-                      width: '200px',
-                      marginLeft: '18px',
-                      height: '50px',
-                      fontSize: '18px'
-                    }}
                   >
                     Upload for approval
                   </Button>
@@ -302,7 +292,7 @@ const ImageUpload = () => {
           </div>
         </div>
       </Modal>
-    </div>
+      </div>
   );
 };
 

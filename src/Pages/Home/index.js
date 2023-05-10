@@ -1,4 +1,3 @@
-import react from 'react';
 import './style.scss';
 import FindPet from '../../components/Home/FindPet';
 import HowToUse from '../../components/Home/HowToUse';
@@ -9,7 +8,7 @@ import Blog from '../../components/Home/Blog';
 
 const Home = () => {
     return (
-        <div>
+        <div className='home-page'>
             <FindPet/>  
             <HowToUse/>
             <OurPets/>
