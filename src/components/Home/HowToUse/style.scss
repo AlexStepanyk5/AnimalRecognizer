@@ -2,208 +2,204 @@
 @use "../../../styles/functions" as *;
 
 .usage-container {
-    max-width: 1440px;
-    padding: 40px 140px 30px;
-    font-family: $main-font;
-    font-size: rem(14px);
-    margin: auto;
-    background-color: #FFFAF5;
-    .usage-content{
-        .image-upload-container{
-            display: flex;
-            flex-direction: row;
-            gap: rem(300px);
-            padding-bottom: rem(100px);
-            .image-upload-button{
-                display: flex;
-                gap: rem(11px);
-                flex-direction: column;
-                align-items: center;
-                width: rem(180px);
-                height: rem(180px);
-                background-color: #FF5B2E;
-                border-radius: 40px;
-                box-shadow: 5px 6px 13px -1px rgba(0, 0, 0, 0.25);
-                padding: rem(40px) rem(34px);
-                margin-left: rem(140px);
-                
-            }
-            .image-upload-button h4{
-                font-family: $secondary-font;
-                font-size: 20px;
-                text-align: center;
-                line-height: 30px;
-                color: #FFFAF5;
-            }
-            .image-upload-button:hover{
-                cursor: pointer;
-                box-shadow: 0px 8px 8px #723d00;
-                transform: translateY(-5px);
-            }
-           .image-upload-text{
-                display: flex;
-                flex-direction: column;
-                gap: rem(20px);
-                align-items: center;
-                color: #00063a;
-                padding-top: rem(15px);
-           }
-            .image-upload-text h3{
-                font-family: $secondary-font;
-                font-size: rem(31px);
-            }
-            .image-upload-text p{
-                text-align: center;
-                font-size: rem(24px);
-                line-height: 30px;
-                font-weight: 500;
-                color: #656689;
-            }
-            
+  max-width: 1440px;
+  padding: 40px 140px 30px;
+  font-family: $main-font;
+  font-size: rem(14px);
+  margin: auto;
+  background-color: #fffaf5;
+  .usage-content {
+    .image-upload-container {
+      display: flex;
+      flex-direction: row;
+      gap: rem(300px);
+      padding-bottom: rem(100px);
+      .image-upload-button {
+        display: flex;
+        gap: rem(11px);
+        flex-direction: column;
+        align-items: center;
+        width: rem(180px);
+        height: rem(180px);
+        background-color: #ff5b2e;
+        border-radius: 40px;
+        box-shadow: 5px 6px 13px -1px rgba(0, 0, 0, 0.25);
+        padding: rem(40px) rem(34px);
+        margin-left: rem(140px);
+      }
+      .image-upload-button h4 {
+        font-family: $secondary-font;
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+        color: #fffaf5;
+      }
+      .image-upload-button:hover {
+        cursor: pointer;
+        box-shadow: 0px 8px 8px #723d00;
+        transform: translateY(-5px);
+      }
+      .image-upload-text {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20px);
+        align-items: center;
+        color: #00063a;
+        padding-top: rem(15px);
+      }
+      .image-upload-text h3 {
+        font-family: $secondary-font;
+        font-size: rem(31px);
+      }
+      .image-upload-text p {
+        text-align: center;
+        font-size: rem(24px);
+        line-height: 30px;
+        font-weight: 500;
+        color: #656689;
+      }
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: row;
+      gap: rem(25px);
+      .contact-text {
+        width: rem(600px);
+        float: left;
+        font-size: rem(45px);
+        color: #00063a;
+        .check-text {
+          font-family: $main-font;
+          font-weight: rem(500px);
+          font-size: rem(15px);
+          line-height: rem(18px);
+          color: #48496a;
+        }
+        .check-block {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: rem(42px);
+          margin-bottom: rem(42px);
+        }
+        .check-block img {
+          margin-right: rem(20px);
+          width: rem(24px);
+          height: rem(24px);
+        }
+        .check-block p {
+          margin-right: rem(15px);
         }
 
-        .contact-container{
+        .contact-buttons {
+          display: flex;
+          float: left;
+          gap: rem(25px);
+          .contact-button {
+            font-family: $main-font;
+            font-size: rem(16px);
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #ff6600;
+            border: none;
+            padding: rem(22px) rem(31px);
+            border-radius: 5px;
+            cursor: pointer;
             display: flex;
-            flex-direction: row;
-            gap: rem(25px);
-            .contact-text{
-                width: rem(600px);
-                float: left;
-                font-size: rem(45px);
-                color: #00063a;
-                .check-text{    
-                    font-family: $main-font;
-                    font-weight: rem(500px);
-                    font-size: rem(15px);
-                    line-height: rem(18px);
-                    color: #48496A;
-                }    
-                .check-block{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    margin-top: rem(42px);
-                    margin-bottom: rem(42px);
-                }
-                .check-block img{
-                    margin-right: rem(20px);
-                    width: rem(24px);
-                    height: rem(24px);
-                }
-                .check-block p{
-                    margin-right: rem(15px);
-                }
-
-                .contact-buttons{
-                    display: flex;
-                    float: left;
-                    gap: rem(25px);
-                    .contact-button{
-                        font-family: $main-font;
-                        font-size: rem(16px);
-                        font-weight: 600;
-                        color: #FFFFFF;
-                        background-color: #ff6600;
-                        border: none;
-                        padding: rem(22px) rem(31px);
-                        border-radius: 5px;
-                        cursor: pointer;      
-                        display: flex;
-                        box-shadow: 0px 2px 2px #ff6600;
-                        transition: all 0.3s ease 0s;
-                        align-items: center;       
-                        margin: auto;      
-                    }    
-                    .contact-button:hover{
-                        box-shadow: 0px 8px 8px #723d00;
-                        transform: translateY(-5px);
-                    }
-                    .emergency-button{
-                        display: flex;
-                        align-items: center;
-                        font-size: rem(18px);
-                        line-height: rem(18px);
-                        cursor: pointer;
-                        color: #48496A;
-                        text-decoration: underline;
-                        padding: rem(20px);
-                        border-radius: 5px;
-                    }
-                }  
-            }
-            .contact-photo{
-                width: rem(535px);
-                float: right;
-            }
-        }   
-        
-        
+            box-shadow: 0px 2px 2px #ff6600;
+            transition: all 0.3s ease 0s;
+            align-items: center;
+            margin: auto;
+          }
+          .contact-button:hover {
+            box-shadow: 0px 8px 8px #723d00;
+            transform: translateY(-5px);
+          }
+          .emergency-button {
+            display: flex;
+            align-items: center;
+            font-size: rem(18px);
+            line-height: rem(18px);
+            cursor: pointer;
+            color: #48496a;
+            text-decoration: underline;
+            padding: rem(20px);
+            border-radius: 5px;
+          }
+        }
+      }
+      .contact-photo {
+        width: rem(535px);
+        float: right;
+      }
     }
+  }
 }
 
 #slackey {
-    font-family: $secondary-font;
-    font-size: rem(45px);
+  font-family: $secondary-font;
+  font-size: rem(45px);
 }
 
 .main-text {
-    font-family: $main-font;
-    font-size: rem(16px);
-    font-weight: 400;
-    color: #656689;
-    line-height: 30px;
-    margin-bottom: rem(40px);
+  font-family: $main-font;
+  font-size: rem(16px);
+  font-weight: 400;
+  color: #656689;
+  line-height: 30px;
+  margin-bottom: rem(40px);
 }
 
-.approval{
-    background-color: #FF5B2E;
-    width: rem(200px);
-    margin-left: rem(18px);
-    height: rem(50px);
-    font-size: rem(18px);
-    font-weight: 900;
+.approval {
+  background-color: #ff5b2e;
+  width: rem(200px);
+  margin-left: rem(18px);
+  height: rem(50px);
+  font-size: rem(18px);
+  font-weight: 900;
 }
-.approval:hover{
-    cursor: pointer;
-    box-shadow: 0px 8px 8px #723d00 !important;
-    transform: translateY(-5px) !important;
-    background-color: #FF5B2E !important;
+.approval:hover {
+  cursor: pointer;
+  box-shadow: 0px 8px 8px #723d00 !important;
+  transform: translateY(-5px) !important;
+  background-color: #ff5b2e !important;
 }
 
 .select {
-    width: rem(200px);
+  width: rem(200px);
 }
 
-.modal-title{
-    font-family: $secondary-font !important;
-    font-size: rem(28px) !important;
-    display: flex !important;
-    text-align: center !important;
-    padding-top: rem(12px) !important;
+.modal-title {
+  font-family: $secondary-font !important;
+  font-size: rem(28px) !important;
+  display: flex !important;
+  text-align: center !important;
+  padding-top: rem(12px) !important;
 }
 
-.modal-text{
-    font-size: rem(16px);
-    color: #00063a;
-    font-weight: 600;
-    padding-bottom: rem(5px);
-    padding-top: rem(10px);
+.modal-text {
+  font-size: rem(16px);
+  color: #00063a;
+  font-weight: 600;
+  padding-bottom: rem(5px);
+  padding-top: rem(10px);
 }
 .ant-checkbox .ant-checkbox-inner {
-        border-color: #FF5B2E !important;
-    }
-    
-    .ant-checkbox-checked .ant-checkbox-inner {
-    border-color: #FF5B2E !important;
-    background-color: #FF5B2E !important; 
-    }
-
-.modal span{
-    font-size: rem(15px);
-    font-family: $main-font;
-    font-weight: 500 !important;
+  border-color: #ff5b2e !important;
 }
 
+.ant-checkbox-checked .ant-checkbox-inner {
+  border-color: #ff5b2e !important;
+  background-color: #ff5b2e !important;
+}
+
+.modal span {
+  font-size: rem(15px);
+  font-family: $main-font;
+  font-weight: 500 !important;
+}
+
+
+
 //tel:380676535231
-
-
