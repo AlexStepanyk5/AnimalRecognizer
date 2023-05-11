@@ -8,6 +8,7 @@ import OurPetsPage from '../Pages/OurPets';
 import Authorization from '../Pages/Authorization';
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignUp from '../Pages/SignUp';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/blog" element={<BlogPage/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/authorization" element={<Authorization/>}/>
+                <Route path="/signup" element={<SignUp/>}/>
               </Routes>
             </Router>
         

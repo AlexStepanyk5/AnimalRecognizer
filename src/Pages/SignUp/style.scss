@@ -1,15 +1,3 @@
-// @use "../../styles/variables" as *;
-// @use "../../styles/functions" as *;
-
-// .signup-container {
-//     max-width: 1440px;
-//     padding: 30px 140px 30px;
-//     font-family: $main-font;
-//     font-size: rem(14px);
-//     margin: auto;
-//     background-color: #FFF4EA;
-//     padding-top: rem(500px);
-// }
 @use "../../styles/variables" as *;
 @use "../../styles/functions" as *;
 
@@ -68,3 +56,5 @@
   .authorization-container button:hover {
     background-color: #3e8e41;
   }
+}
+

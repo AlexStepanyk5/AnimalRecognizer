@@ -1,13 +1,3 @@
-
-// const SignUp = () => {
-//     return (
-//         <>
-//             <div className='signup-container'></div>
-//         </>
-//     );
-//     }
-
-// export default SignUp;
 import React, { useState } from 'react';
 import axios from 'axios';
 import './style.scss';
