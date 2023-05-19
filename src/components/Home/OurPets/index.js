@@ -60,15 +60,15 @@ const OurPets = () => {
                             modules={[Grid, Pagination]}
                             className="mySwiper"
                             >
-                            <SwiperSlide>                            
                             {
                                 cats !== undefined ? 
-                                ( cats.map((cat) => (       
-                                <Pet key={cat.id} pet={cat}/>
+                                ( cats.map((cat) => (   
+                                    <SwiperSlide>      
+                                        <Pet key={cat.id} pet={cat}/>
+                                    </SwiperSlide>
                                 )))
                                 : 'No cats'                         
-                                }
-                            </SwiperSlide>
+                            }
                         </Swiper>
                     </div>
                 </div>
@@ -91,15 +91,16 @@ const OurPets = () => {
                         modules={[Grid, Pagination]}
                         className="mySwiper"
                         >
-                        <SwiperSlide>                            
                             {
                             dogs !== undefined ? 
-                                ( dogs.map((dog) => (       
-                                <Pet key={dog.id} pet={dog}/>
+                                ( dogs.map((dog) => (     
+                                <SwiperSlide>    
+                                    <Pet key={dog.id} pet={dog}/>
+                                </SwiperSlide>
                                 )))
+                                
                             : 'No dogs'
                             } 
-                        </SwiperSlide>
                     </Swiper>
                     </div>
                 </div>
