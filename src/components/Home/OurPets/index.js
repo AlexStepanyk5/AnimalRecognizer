@@ -53,7 +53,6 @@ const OurPets = () => {
                             grid={{
                             rows: 2,
                             }}
-                            spaceBetween={50}
                             pagination={{
                             clickable: true,
                             }}
@@ -63,15 +62,15 @@ const OurPets = () => {
                             {
                                 cats !== undefined ? 
                                 ( cats.map((cat) => (   
-                                    <SwiperSlide>      
-                                        <Pet key={cat.id} pet={cat}/>
+                                    <SwiperSlide key={cat.id}>      
+                                        <Pet pet={cat}/>
                                     </SwiperSlide>
                                 )))
                                 : 'No cats'                         
                             }
                         </Swiper>
-                    </div>
-                </div>
+                    </div> 
+                 </div>
 
                 <div className='dogs-block'>
                     <div className="pets-block-title">
@@ -84,7 +83,6 @@ const OurPets = () => {
                         grid={{
                         rows: 2,
                         }}
-                        spaceBetween={50}
                         pagination={{
                         clickable: true,
                         }}
@@ -94,8 +92,8 @@ const OurPets = () => {
                             {
                             dogs !== undefined ? 
                                 ( dogs.map((dog) => (     
-                                <SwiperSlide>    
-                                    <Pet key={dog.id} pet={dog}/>
+                                <SwiperSlide key={dog.id}>    
+                                    <Pet pet={dog}/>
                                 </SwiperSlide>
                                 )))
                                 
