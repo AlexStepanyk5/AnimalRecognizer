@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const OurTeam = () => {
+const OurTeam = ({ currentPage }) => {
     return (
         <div className="our-team-container">
             <h2 className="our-team-title">Our Team</h2>
@@ -44,7 +44,7 @@ const OurTeam = () => {
                 </div>
                 
             </div>
-            <div className='view-team-button'>View team</div>
+            {currentPage === '' && <a href='/about'className='view-team-button'>View team</a>}
         </div>    
     );
     }

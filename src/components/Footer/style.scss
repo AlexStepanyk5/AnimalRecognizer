@@ -64,7 +64,11 @@
                 color: #5E6085;
             }
 
-            li:hover {
+            a:hover {
+                color: #000958;
+                cursor: pointer;
+            }
+            li:hover{
                 color: #000958;
                 cursor: pointer;
             }
@@ -92,5 +96,8 @@
         color: #5E6085;
         margin-top: rem(20px);
     }
-
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
 }
