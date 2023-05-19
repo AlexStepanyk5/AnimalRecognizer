@@ -7,5 +7,61 @@
     font-family: $main-font;
     font-size: rem(14px);
     margin: auto;
-    background-color: #FFF4EA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+;
+    .about-header-container{
+        width: rem(750px);
+        margin: auto;
+        font-family: $main-font;
+        color: #656689;
+        font-size: rem(24px);
+        text-align: center;
+        margin-bottom: rem(44px);
+        .about-header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $secondary-font;
+            font-size: rem(45px);
+            color: #000958;
+        }
+    }
+
+    .about-blocks-container{
+        display: flex;
+        flex-direction: column;
+        gap: rem(44px);
+        margin-bottom: rem(50px);
+        .block-container{
+            width: rem(1154px);
+            height: rem(328px);
+            background-color: #FDC688;
+            border-radius: rem(50px);
+            padding: rem(32px);
+            display: flex;
+            gap: rem(32px);
+            align-items: center;
+            .block-text{
+                color: #656689;
+                font-family: $main-font;
+                font-size: rem(22px);
+                h2{
+                    font-family: $secondary-font;
+                    font-size: rem(32px);
+                    color: #000958;
+                    margin-bottom: rem(10px);
+                }
+            }
+           
+        }
+      
+    }
+    
+    #reverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
