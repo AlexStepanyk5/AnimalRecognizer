@@ -6,17 +6,18 @@ import Facilities from '../../components/Home/Facilities';
 import OurTeam from '../../components/Home/OurTeam';
 import Blog from '../../components/Home/Blog';
 
+
 const Home = () => {
     return (
         <div className='home-page'>
-            <FindPet/>  
-            <HowToUse/>
-            <OurPets/>
-            <Facilities/>
-            <OurTeam currentPage=''/>
-            <Blog/>
+            <FindPet />
+            <HowToUse />
+            <OurPets />
+            <Facilities />
+            <OurTeam currentPage='' />
+            <Blog />
         </div>
     )
-    }
+}
 
-    export default Home;
+export default Home;

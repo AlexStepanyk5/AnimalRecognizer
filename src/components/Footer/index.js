@@ -50,12 +50,12 @@ const Footer = () => {
                         <a target='blank' href='https://twitter.com/ZUNUniversity'><img alt="twitter-img" src="./images/twitter.svg"></img></a>
                         <a target='blank' href='https://www.linkedin.com/company/wunu/'><img alt="linkedin-img" src="./images/linkedin.svg"></img></a>
                         <a target='blank' href='https://www.instagram.com/fcit.zunu/'><img alt="instagram-img" src="./images/instagram.svg"></img></a>
-
                     </div>
 
                 </div>
                 <div className="other">
                     <div >
+
                         <h3 className="slackey">Useful links</h3>
                         <ul className="main-font">
                             <li>
@@ -68,29 +68,29 @@ const Footer = () => {
                                 >
                                     <Box sx={style}>
                                         <Typography id="modal-modal-title" variant="h6" component="h2">
-                                        Frequently Asked Questions
+                                            Frequently Asked Questions
                                         </Typography>
                                         <Typography id="modal-modal-description" sx={{ mt: 2, }}>
                                             <ul>
-                                                <li>Q: How does the pet adoption process work on this website?<br/>
-A: To adopt a pet, browse the available listings and find a pet that suits your preferences. Contact the pet owner or shelter through the provided contact information to inquire about the pet, ask questions, and arrange a meeting. If both parties are satisfied, you can proceed with the adoption process.
-<br/><br/>
-Q: Can I post my pet for adoption on this website?<br/>
-A: Absolutely! We encourage users to post their pets for adoption. Simply create an account, provide necessary details about your pet, including their description, photos, and any other relevant information. Interested individuals can then contact you directly through the website.
-<br/><br/>
-Q: How do I contact the pet owner or shelter to inquire about a pet?<br/>
-A: Each pet listing includes contact information, such as email or phone number. Simply reach out to the pet owner or shelter using the provided contact details to ask questions, discuss the pet's requirements, and express your interest in adoption.
-<br/><br/>
-Q: Are the pets on this website from shelters or individual owners?<br/>
-A: We collaborate with both individual pet owners and shelters. Some pets are posted by individuals who can no longer care for their pets, while others are from reputable animal shelters. Each listing will clearly indicate whether it's from a shelter or an individual.
-<br/><br/>
-Q: What if I encounter any issues during the adoption process?<br/>
-A: If you face any issues or concerns during the adoption process, please contact our customer support team. We are here to assist you and ensure a smooth adoption experience.
-<br/><br/>
-Q: How can I support shelters through this website?<br/>
-A: Our website provides opportunities for users to donate directly to partnering shelters. Additionally, you can choose to adopt pets from these shelters, which helps create space for more animals in need. By spreading the word about our website and promoting responsible pet ownership, you can also contribute to the welfare of animals in shelters.
-<br/><br/>
-If you have any further questions or need assistance, please feel free to contact our customer support team.</li><br />
+                                                <li>Q: How does the pet adoption process work on this website?<br />
+                                                    A: To adopt a pet, browse the available listings and find a pet that suits your preferences. Contact the pet owner or shelter through the provided contact information to inquire about the pet, ask questions, and arrange a meeting. If both parties are satisfied, you can proceed with the adoption process.
+                                                    <br /><br />
+                                                    Q: Can I post my pet for adoption on this website?<br />
+                                                    A: Absolutely! We encourage users to post their pets for adoption. Simply create an account, provide necessary details about your pet, including their description, photos, and any other relevant information. Interested individuals can then contact you directly through the website.
+                                                    <br /><br />
+                                                    Q: How do I contact the pet owner or shelter to inquire about a pet?<br />
+                                                    A: Each pet listing includes contact information, such as email or phone number. Simply reach out to the pet owner or shelter using the provided contact details to ask questions, discuss the pet's requirements, and express your interest in adoption.
+                                                    <br /><br />
+                                                    Q: Are the pets on this website from shelters or individual owners?<br />
+                                                    A: We collaborate with both individual pet owners and shelters. Some pets are posted by individuals who can no longer care for their pets, while others are from reputable animal shelters. Each listing will clearly indicate whether it's from a shelter or an individual.
+                                                    <br /><br />
+                                                    Q: What if I encounter any issues during the adoption process?<br />
+                                                    A: If you face any issues or concerns during the adoption process, please contact our customer support team. We are here to assist you and ensure a smooth adoption experience.
+                                                    <br /><br />
+                                                    Q: How can I support shelters through this website?<br />
+                                                    A: Our website provides opportunities for users to donate directly to partnering shelters. Additionally, you can choose to adopt pets from these shelters, which helps create space for more animals in need. By spreading the word about our website and promoting responsible pet ownership, you can also contribute to the welfare of animals in shelters.
+                                                    <br /><br />
+                                                    If you have any further questions or need assistance, please feel free to contact our customer support team.</li><br />
                                             </ul>
                                         </Typography>
                                         <Button sx={{
@@ -229,7 +229,6 @@ If you have any further questions or need assistance, please feel free to contac
                     </div>
                 </div>
             </div>
-            <hr></hr>
             <h2 className="copyright">Copyright 2023</h2>
         </div>
     );

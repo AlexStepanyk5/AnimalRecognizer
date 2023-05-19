@@ -13,7 +13,7 @@ import SignUp from '../Pages/SignUp';
 function App() {
   return (
     <div className="content">
-        <Header />
+        <Header/>
            <Router>
               <Routes>
                 <Route path="/" element={<Home/>}/>
@@ -24,8 +24,7 @@ function App() {
                 <Route path="/signup" element={<SignUp/>}/>
               </Routes>
             </Router>
-        
-        <Footer />
+        <Footer/>
     </div>
   );
 }

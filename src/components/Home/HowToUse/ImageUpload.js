@@ -86,14 +86,14 @@ const ImageUpload = () => {
     editedLabelsCopy[index] = value;
     setEditedLabels(editedLabelsCopy);
   };
-  
+
 
   const handleBasicColorChange = (value) => {
     const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1);
     setEditedBasicColorName(capitalizedValue);
   };
-  
-  
+
+
   const handleShelterChange = (value) => {
     setShelter(value);
   };
@@ -132,10 +132,10 @@ const ImageUpload = () => {
       red: ['#fc7a00', '#a04300', '#fd9042', '#ad6507', '#cf8e16'],
       white: ['#FFFFFF', '#A8A8A8', '#f7d5d5', '#faead5', '#dbd2c5'],
     };
-  
+
     let closestBasicColor = null;
     let minDistance = Infinity;
-  
+
     for (const basicColor in colorMapping) {
       const colorRange = colorMapping[basicColor];
       for (const color of colorRange) {
@@ -146,12 +146,12 @@ const ImageUpload = () => {
         }
       }
     }
-  
+
     closestBasicColor = closestBasicColor.charAt(0).toUpperCase() + closestBasicColor.slice(1);
-  
+
     return closestBasicColor;
   };
-  
+
 
   const colorDistance = (color1, color2) => {
     const [r1, g1, b1] = convert.hex.rgb(color1);
@@ -172,7 +172,7 @@ const ImageUpload = () => {
     'Paw Prints Animal Haven',
     'Safe Haven Animal Sanctuary',
   ];
-  
+
   return (
     <div >
       <input type="file" onChange={handleFileChange} style={{ display: 'none' }} />
@@ -184,8 +184,8 @@ const ImageUpload = () => {
         }}
         disabled={modalVisible}
       >
-        <img src='./images/Home/upload.png' alt="Upload button"/>
-        <h4>Upload <br/> image</h4>
+        <img src='./images/Home/upload.png' alt="Upload button" />
+        <h4>Upload <br /> image</h4>
       </Button>
       <Modal
         title={<span className='modal-title'>Let's find a new owner for our little friend!</span>}
@@ -193,7 +193,7 @@ const ImageUpload = () => {
         onCancel={closeModal}
         className='modal'
         footer={null}
-        bodyStyle={{ height: "400px"}}
+        bodyStyle={{ height: "400px" }}
       >
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
@@ -221,7 +221,7 @@ const ImageUpload = () => {
 
                 <div>
                   <h3 className='modal-text'>Name:</h3>
-                  <Input value={name} onChange={handleNameChange} style={{ width: '200px' }}/>
+                  <Input value={name} onChange={handleNameChange} style={{ width: '200px' }} />
                 </div>
               </>
             ) : (
@@ -247,12 +247,12 @@ const ImageUpload = () => {
                   <div>
                     <h3 className='modal-text'>Basic Color:</h3>
                     <Select value={editedBasicColorName} onChange={handleBasicColorChange} className='select'>
-                    <Option value="Black">Black</Option>
-                    <Option value="Gray">Gray</Option>
-                    <Option value="White">White</Option>
-                    <Option value="Brown">Brown</Option>
-                    <Option value="Red">Red</Option>
-                  </Select>
+                      <Option value="Black">Black</Option>
+                      <Option value="Gray">Gray</Option>
+                      <Option value="White">White</Option>
+                      <Option value="Brown">Brown</Option>
+                      <Option value="Red">Red</Option>
+                    </Select>
 
                   </div>
                 )}
@@ -277,7 +277,7 @@ const ImageUpload = () => {
                   </Checkbox>
                 </div>
                 <div>
-                  <br/><br/>
+                  <br /><br />
 
                   <Button className='approval'
                     key="save"
@@ -292,7 +292,7 @@ const ImageUpload = () => {
           </div>
         </div>
       </Modal>
-      </div>
+    </div>
   );
 };
 

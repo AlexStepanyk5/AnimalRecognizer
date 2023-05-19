@@ -11,22 +11,22 @@ function Authorization() {
   const handleAuthorization = (event) => {
     event.preventDefault();
     axios.post('https://localhost:44383/api/Account/login', {
-      email: email, 
+      email: email,
       password: password
     })
-    .then(response => {
-      console.log(response.data); // log response from server
+      .then(response => {
+        console.log(response.data); // log response from server
 
-      // Add code to handle successful registration
-      setIsConnected(true);
-      setConnectionStatus('You are logged in');
-    })
-    .catch(error => {
-      console.error(error); // log error from server
-      // Add code to handle registration error
-      setIsConnected(false);
-      setConnectionStatus(' Incorrect data');
-    });
+        // Add code to handle successful registration
+        setIsConnected(true);
+        setConnectionStatus('You are logged in');
+      })
+      .catch(error => {
+        console.error(error); // log error from server
+        // Add code to handle registration error
+        setIsConnected(false);
+        setConnectionStatus(' Incorrect data');
+      });
     setEmail(''); setPassword('');
   };
   return (

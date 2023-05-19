@@ -8,85 +8,96 @@
     font-size: rem(14px);
     margin: auto;
     background-color: #FFFAF5;
-    .find-pet-content{
-      .find-pet-block{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: rem(600px);
-        .find-pet-images{
-            .dog-main{
-                position: relative;
-                bottom: 350px;
-                right: -150px;
-                object-fit: cover;
-            }
-            .cat-main{
-                position: relative;
-                top: -160px;
-                left: -140px;
-                object-fit: cover;
-            }
-            .star{
-                position:relative;
-                top: -100px;
-                left: 500px;
-                object-fit: cover;
-            }
-            .paw{
-                position:relative;
-                top: 400px;
-                left: -190px;
-                object-fit: cover;
-            }
-            .circles{
-                position:relative;
-                top: 350px;
-                left: 1100px;
-                object-fit: cover;
-            }
-        }
-        .find-pet-text{
 
-            width: rem(1200px);
-            .find-pet-title{
-                font-family: $secondary-font;
-                font-size: rem(40px);
-                font-weight: bold;
-                color: #00063a;
-                margin-bottom: rem(100px);
-            }
-            .find-pet-description{
-                font-family: $main-font;
-                font-size: rem(20px);
-                color: #656689;
-                margin-bottom: rem(50px);
-            }
-            .find-text-button{
-                font-family: $main-font;
-                font-size: rem(16px);
-                font-weight: 600;
-                width: fit-content;
-                color: #FFFFFF;
-                background-color: #ff6600;
-                border: none;
-                padding: rem(22px) rem(31px);
-                border-radius: 5px;
-                cursor: pointer;      
-                display: flex;
-                box-shadow: 0px 2px 2px #ff6600;
-                transition: all 0.3s ease 0s;
-                align-items: center;       
-                margin: auto;    
-                text-decoration: none;
-            }
-            .find-text-button:hover{
-                box-shadow: 0px 8px 8px #723d00;
-                transform: translateY(-5px);
+    .find-pet-content {
+        .find-pet-block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: rem(600px);
+
+            .find-pet-images {
+                .dog-main {
+                    position: relative;
+                    bottom: 350px;
+                    right: -150px;
+                    object-fit: cover;
+                }
+
+                .cat-main {
+                    position: relative;
+                    top: -160px;
+                    left: -140px;
+                    object-fit: cover;
+                }
+
+                .star {
+                    position: relative;
+                    top: -100px;
+                    left: 500px;
+                    object-fit: cover;
+                }
+
+                .paw {
+                    position: relative;
+                    top: 400px;
+                    left: -190px;
+                    object-fit: cover;
+                }
+
+                .circles {
+                    position: relative;
+                    top: 350px;
+                    left: 1100px;
+                    object-fit: cover;
+                }
             }
 
+            .find-pet-text {
+
+                width: rem(1200px);
+
+                .find-pet-title {
+                    font-family: $secondary-font;
+                    font-size: rem(40px);
+                    font-weight: bold;
+                    color: #00063a;
+                    margin-bottom: rem(100px);
+                }
+
+                .find-pet-description {
+                    font-family: $main-font;
+                    font-size: rem(20px);
+                    color: #656689;
+                    margin-bottom: rem(50px);
+                }
+
+                .find-text-button {
+                    font-family: $main-font;
+                    font-size: rem(16px);
+                    font-weight: 600;
+                    width: fit-content;
+                    color: #FFFFFF;
+                    background-color: #ff6600;
+                    border: none;
+                    padding: rem(22px) rem(31px);
+                    border-radius: 5px;
+                    cursor: pointer;
+                    display: flex;
+                    box-shadow: 0px 2px 2px #ff6600;
+                    transition: all 0.3s ease 0s;
+                    align-items: center;
+                    margin: auto;
+                    text-decoration: none;
+                }
+
+                .find-text-button:hover {
+                    box-shadow: 0px 8px 8px #723d00;
+                    transform: translateY(-5px);
+                }
+
+            }
         }
-      }
     }
 }
 

@@ -7,13 +7,16 @@
     margin: auto;
     background-color: #FFFAF5;
     margin-bottom: rem(80px);
-    .blog-content{
+
+    .blog-content {
         display: flex;
         flex-direction: row;
         gap: rem(25px);
-        .blog-text-box{
+
+        .blog-text-box {
             width: rem(600px);
-            .blog-button{
+
+            .blog-button {
                 font-family: $main-font;
                 font-size: rem(16px);
                 font-weight: 600;
@@ -22,23 +25,25 @@
                 border: none;
                 padding: rem(22px) rem(31px);
                 border-radius: 5px;
-                cursor: pointer;      
+                cursor: pointer;
                 display: flex;
                 box-shadow: 0px 2px 2px #ff6600;
                 transition: all 0.3s ease 0s;
-                align-items: center;       
-                margin: auto;    
+                align-items: center;
+                margin: auto;
                 width: fit-content;
                 text-decoration: none;
             }
-            .blog-button:hover{
+
+            .blog-button:hover {
                 box-shadow: 0px 8px 8px #723d00;
                 background-color: #ff6600;
                 cursor: pointer;
                 transform: translateY(-5px);
             }
-        } 
-        .blog-right-box{
+        }
+
+        .blog-right-box {
             background-color: #FFFFFF;
             width: rem(650px);
             height: rem(400px);
@@ -47,8 +52,8 @@
             display: flex;
             flex-direction: row;
             gap: rem(25px);
-            
-            #right-box-title{
+
+            #right-box-title {
                 font-family: $main-font;
                 font-weight: 600;
                 font-size: rem(20px);
@@ -56,8 +61,8 @@
                 text-align: center;
                 padding-bottom: rem(25px);
             }
-        }   
-    }  
+        }
+    }
 }
 
 .slackey {

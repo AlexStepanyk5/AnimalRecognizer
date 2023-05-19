@@ -22,22 +22,22 @@ function SignUp() {
       email: email,
       password: password
     })
-    .then(response => {
-      console.log(response.data); // log response from server
+      .then(response => {
+        console.log(response.data); // log response from server
 
-      // Add code to handle successful registration
-      setIsConnected(true);
-      setConnectionStatus('You are registered and logged in');
-    })
-    .catch(error => {
-      console.error(error); // log error from server
-      // Add code to handle registration error
-      setIsConnected(false);
-      setConnectionStatus('Error occurred during registration');
-    });
+        // Add code to handle successful registration
+        setIsConnected(true);
+        setConnectionStatus('You are registered and logged in');
+      })
+      .catch(error => {
+        console.error(error); // log error from server
+        // Add code to handle registration error
+        setIsConnected(false);
+        setConnectionStatus('Error occurred during registration');
+      });
     setUsername(''); setEmail(''); setPassword(''); setConfirmPassword('');
   };
-  
+
   return (
     <form className='signup-container' onSubmit={handleRegistration}>
       <div className='status_signup'>{connectionStatus}</div>

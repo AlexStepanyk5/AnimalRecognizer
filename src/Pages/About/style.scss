@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
-    .about-header-container{
+
+    .about-header-container {
         width: rem(750px);
         margin: auto;
         font-family: $main-font;
@@ -19,7 +19,8 @@
         font-size: rem(24px);
         text-align: center;
         margin-bottom: rem(70px);
-        .about-header{
+
+        .about-header {
             padding-top: rem(75px);
             display: flex;
             align-items: center;
@@ -30,12 +31,13 @@
         }
     }
 
-    .about-blocks-container{
+    .about-blocks-container {
         display: flex;
         flex-direction: column;
         gap: rem(44px);
         margin-bottom: rem(50px);
-        .block-container{
+
+        .block-container {
             width: rem(1154px);
             height: rem(328px);
             background-color: #FDC688;
@@ -44,23 +46,25 @@
             display: flex;
             gap: rem(32px);
             align-items: center;
-            .block-text{
+
+            .block-text {
                 color: #656689;
                 font-family: $main-font;
                 font-size: rem(22px);
-                h2{
+
+                h2 {
                     font-family: $secondary-font;
                     font-size: rem(32px);
                     color: #000958;
                     margin-bottom: rem(10px);
                 }
             }
-           
+
         }
-      
+
     }
-    
-    #reverse{
+
+    #reverse {
         display: flex;
         flex-direction: row-reverse;
     }
