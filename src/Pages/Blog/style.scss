@@ -1,3 +1,15 @@
 @use "../../styles/variables" as *;
 @use "../../styles/functions" as *;
 
+.blog-page {
+    max-width: 1440px;
+    padding: 100px 140px 30px;
+    font-family: $main-font;
+    font-size: rem(14px);
+    margin: auto;
+    background-color: #fffbf7;
+    padding-top: rem(150px);
+    display: flex;
+    flex-direction: row;
+}
+  
