@@ -22,7 +22,7 @@ const FindPet = () => {
                             <img src="./images/Home/emoji.png"></img>
                         </h1>
                         <p className='main-text find-pet-description'>Best pets are waiting for adoption. Find out the the perfect one you will like it.</p>
-                        <button className='find-text-button'>Find a pet</button>
+                        <a href='/our-pets' className='find-text-button'>Find a pet</a>
                         
                     </div>
                     

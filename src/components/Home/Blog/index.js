@@ -11,7 +11,7 @@ const Blog = () => {
                 <div className='blog-text-box'>
                     <h1 className='slackey'>Our Blog</h1>
                     <p className='main-text'>We know that sometimes it`s hard to know each little detail about pet-care,so we have created whole knowledge base to help you with those small things. It also has a lot of different guides and tips for pet owners, interesting facts and will also  include different events and charity fundraising.</p>
-                    <div className='blog-button'>Learn More</div>
+                    <a href="/blog" className='blog-button'>Learn More</a>
                 </div>
                 <div className='blog-right-box'>
                     <img src='./images/Home/blog-dog.png'/>

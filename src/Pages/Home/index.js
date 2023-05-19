@@ -13,7 +13,7 @@ const Home = () => {
             <HowToUse/>
             <OurPets/>
             <Facilities/>
-            <OurTeam/>
+            <OurTeam currentPage=''/>
             <Blog/>
         </div>
     )
