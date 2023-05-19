@@ -3,21 +3,16 @@
 
 .authorization-container {
     max-width: 1440px;
-    padding: 30px 140px 30px;
+    padding: 250px 140px 30px;
+    margin-bottom: 100px;
+    background-color: #fff8f1;  
+    max-height: 850px;
     font-family: $main-font;
-    font-size: rem(14px);
-    margin: auto;
-    background-color: #FFF4EA;
-    padding-top: rem(500px);
-}
-.authorization-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
+}
   
   .authorization-container form {
     display: flex;
@@ -29,8 +24,9 @@
   }
   
   .authorization-container label {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: rem(20px);
+    margin-bottom: 20px;
+    font-weight: 600;
   }
   
   .authorization-container input {
@@ -44,15 +40,28 @@
   }
   
   .authorization-container button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    padding: rem(15px) rem(25px);
+    margin-top: rem(60px);
+    background-color: #ff6600;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
+    align-items: center;        
+    text-decoration: none;
   }
   
   .authorization-container button:hover {
-    background-color: #3e8e41;
+    background-color: #ff6600; 
+    box-shadow: 0px 8px 8px #723d00;
+    transform: translateY(-5px);
   }
+
+.status{
+  font-family: $secondary-font;
+  font-size: rem(50px);
+  color: #00063a;
+  padding-bottom: rem(100px);
+}

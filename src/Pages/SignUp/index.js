@@ -39,8 +39,8 @@ function SignUp() {
   };
   
   return (
-    <form className='authorization-container' onSubmit={handleRegistration}>
-      <div>{connectionStatus}</div>
+    <form className='signup-container' onSubmit={handleRegistration}>
+      <div className='status_signup'>{connectionStatus}</div>
       <label>Username:</label>
       <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
       <label>Email:</label>

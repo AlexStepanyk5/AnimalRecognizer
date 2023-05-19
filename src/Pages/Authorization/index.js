@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import './style.scss';
@@ -32,7 +31,7 @@ function Authorization() {
   };
   return (
     <form className='authorization-container' onSubmit={handleAuthorization}>
-      <div>{connectionStatus}</div>
+      <div className='status'>{connectionStatus}</div>
       <label>Email:</label>
       <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
       <label>Password:</label>
