@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import convert from 'color-convert';
-import { Modal, Button, Input, Checkbox, Select } from 'antd';
+import { Modal, Button, Checkbox, Select } from 'antd';
 import './style.scss';
 
 
@@ -13,8 +13,6 @@ const ImageUpload = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [editedLabels, setEditedLabels] = useState([]);
   const [editedBasicColorName, setEditedBasicColorName] = useState('');
-  const [shelter, setShelter] = useState('');
-  const [name, setName] = useState('');
   const [sterilized, setSterilized] = useState(false);
   const [hasPassport, setHasPassport] = useState(false);
 
@@ -81,25 +79,9 @@ const ImageUpload = () => {
     setModalVisible(false);
   };
 
-  const handleLabelChange = (index, value) => {
-    const editedLabelsCopy = [...editedLabels];
-    editedLabelsCopy[index] = value;
-    setEditedLabels(editedLabelsCopy);
-  };
-
-
   const handleBasicColorChange = (value) => {
     const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1);
     setEditedBasicColorName(capitalizedValue);
-  };
-
-
-  const handleShelterChange = (value) => {
-    setShelter(value);
-  };
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
   };
 
   const handleSterilizedChange = (event) => {
@@ -158,21 +140,7 @@ const ImageUpload = () => {
     const [r2, g2, b2] = convert.hex.rgb(color2);
     return Math.sqrt((r2 - r1) ** 2 + (g2 - g1) ** 2 + (b2 - b1) ** 2);
   };
-
   const { Option } = Select;
-  // const shelterOptions = [
-  //   'Pawsitively Purrfect Animal Shelter',
-  //   'Furry Friends Haven',
-  //   'Happy Tails Rescue Center',
-  //   'Critter Cottage',
-  //   'FurEver Home Animal Sanctuary',
-  //   'Second Chance Animal Shelter',
-  //   'Loving Paws Animal Rescue',
-  //   'Wags and Whiskers Refuge',
-  //   'Paw Prints Animal Haven',
-  //   'Safe Haven Animal Sanctuary',
-  // ];
-
   return (
     <div >
       <input type="file" onChange={handleFileChange} style={{ display: 'none' }} />
@@ -193,25 +161,12 @@ const ImageUpload = () => {
         onCancel={closeModal}
         className='modal'
         footer={null}
-        bodyStyle={{ height: "350px", paddingLeft: "25px"}}
+        bodyStyle={{ height: "350px", paddingLeft: "25px" }}
       >
-      {labels.includes('Dog') || labels.includes('Cat') ? (
-      <>
-        <div style={{ display: 'flex' }}>
-          <div style={{ flex: 1 }}>
-
-                {/* <h3 className='modal-text'>Animal:</h3>
-                {editedLabels.map((label, index) => (
-                  <Select
-                    value={label}
-                    onChange={(value) => handleLabelChange(index, value)}
-                    className='select'
-                    key={index}
-                  >
-                    <Select.Option value="Dog">Dog</Select.Option>
-                    <Select.Option value="Cat">Cat</Select.Option>
-                  </Select>
-                ))} */}
+        {labels.includes('Dog') || labels.includes('Cat') ? (
+          <>
+            <div style={{ display: 'flex' }}>
+              <div style={{ flex: 1 }}>
 
                 {imageData && (
                   <div>
@@ -220,13 +175,9 @@ const ImageUpload = () => {
                   </div>
                 )}
 
-                {/* <div>
-                  <h3 className='modal-text'>Name:</h3>
-                  <Input value={name} onChange={handleNameChange} style={{ width: '200px' }} />
-                </div> */}
+              </div>
 
-          </div>
-          <div style={{ flex: 1 }}>
+              <div style={{ flex: 1 }}>
                 {dominantColor && (
                   <div>
                     <h3 className='modal-text'>Dominant Color:</h3>
@@ -239,6 +190,7 @@ const ImageUpload = () => {
                     ></div>
                   </div>
                 )}
+
                 {basicColorName && (
                   <div>
                     <h3 className='modal-text'>Basic Color:</h3>
@@ -252,46 +204,36 @@ const ImageUpload = () => {
 
                   </div>
                 )}
-                {/* <div>
-                  <h3 className='modal-text'>Shelter:</h3>
-                  <Select value={shelter} onChange={handleShelterChange} className='select'>
-                    {shelterOptions.map((option) => (
-                      <Option value={option} key={option}>
-                        {option}
-                      </Option>
-                    ))}
-                  </Select>
-                </div> */}
 
                 <div>
                   <h3 className='modal-text'>Additional Options:</h3>
                   <Checkbox checked={sterilized} onChange={handleSterilizedChange} colorPrimaryBorder='#FF5B2E'>
                     Sterilized
                   </Checkbox>
-                  <br/>
+                  <br />
                   <Checkbox checked={hasPassport} onChange={handlePassportChange}>
                     Passport
                   </Checkbox>
                 </div>
-          </div>
-        </div>
-        <div className='approval-button'>
-          <br/>
-            <Button className='approval'
-              key="save"
-              type="primary"
-              onClick={handleSaveChanges}
-            >
-              Find similar pets
-            </Button>
-          </div>
-          </>
-          ) : (
-            <div>
-              <img className="image" src="./images/modalCat.png" alt='booo'/>
-              <p className='modal-wrong-text'>Please upload a photo with a cat or a dog.</p>
+              </div>
             </div>
-          )}
+            <div className='approval-button'>
+              <br />
+              <Button className='approval'
+                key="save"
+                type="primary"
+                onClick={handleSaveChanges}
+              >
+                Find similar pets
+              </Button>
+            </div>
+          </>
+        ) : (
+          <div>
+            <img className="image" src="./images/modalCat.png" alt='booo' />
+            <p className='modal-wrong-text'>Please upload a photo with a cat or a dog.</p>
+          </div>
+        )}
       </Modal>
 
     </div>

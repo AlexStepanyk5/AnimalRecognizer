@@ -1,5 +1,3 @@
-import react from 'react';
-
 import './style.scss';
 
 
@@ -14,7 +12,7 @@ const Blog = () => {
                     <a href="/blog" className='blog-button'>Learn More</a>
                 </div>
                 <div className='blog-right-box'>
-                    <img src='./images/Home/blog-dog.png' />
+                    <img src='./images/Home/blog-dog.png' alt='dogee'/>
                     <div>
                         <h3 id='right-box-title'>3 interesting facts about dogs:</h3>
                         <p className='main-text'>1. Dogs` sense of smell is at least 40x better than ours<br />2. Dogs have 18 muscles controlling their ears<br />3. Your dog could be left or right-pawed</p>
