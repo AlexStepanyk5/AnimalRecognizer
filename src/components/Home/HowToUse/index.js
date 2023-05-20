@@ -15,7 +15,7 @@ const HowToUse = () => {
 
                     <div className='image-upload-text'>
                         <h3>How To use?</h3>
-                        <p>Just upload the image of your animal<br />and our AI will help you with detecting its <br />features to find her a new owner or to find more similar animals for you</p>
+                        <p>Just upload the image of your animal<br />and our AI will help you with detecting its <br />features to find similar animals for you</p>
                     </div>
                 </div>
 

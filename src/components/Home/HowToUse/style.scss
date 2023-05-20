@@ -171,10 +171,10 @@
 .approval {
   background-color: #ff5b2e;
   width: rem(200px);
-  margin-left: rem(18px);
   height: rem(50px);
   font-size: rem(18px);
-  font-weight: 900;
+  font-weight: 1000;
+  margin-right: rem(30px);
 }
 
 .approval:hover {
@@ -190,16 +190,17 @@
 
 .modal-title {
   font-family: $secondary-font !important;
-  font-size: rem(28px) !important;
+  font-size: rem(25px) !important;
   display: flex !important;
   text-align: center !important;
-  padding-top: rem(12px) !important;
+  padding-top: rem(10px) !important;
+  max-width: rem(450px);
 }
 
 .modal-text {
   font-size: rem(16px);
   color: #00063a;
-  font-weight: 600;
+  font-weight: 650;
   padding-bottom: rem(5px);
   padding-top: rem(10px);
 }
@@ -217,4 +218,27 @@
   font-size: rem(15px);
   font-family: $main-font;
   font-weight: 500 !important;
+}
+.approval-button{
+  display: flex;
+  justify-content: center;
+  padding-top: rem(30px);
+}
+
+.modal-wrong-text{
+  display: flex;
+  justify-content: center;
+  font-size: rem(19px);
+  font-family: $main-font;
+  font-weight: 600 !important;
+  padding-top: rem(20px);
+}
+
+.image{
+  max-width: 300px;
+  max-height: 300px;
+  display: flex;
+  justify-content: center;
+  margin-left: rem(60px);
+  margin-top: rem(25px);
 }

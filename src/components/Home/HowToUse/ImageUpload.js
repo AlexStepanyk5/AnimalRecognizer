@@ -160,18 +160,18 @@ const ImageUpload = () => {
   };
 
   const { Option } = Select;
-  const shelterOptions = [
-    'Pawsitively Purrfect Animal Shelter',
-    'Furry Friends Haven',
-    'Happy Tails Rescue Center',
-    'Critter Cottage',
-    'FurEver Home Animal Sanctuary',
-    'Second Chance Animal Shelter',
-    'Loving Paws Animal Rescue',
-    'Wags and Whiskers Refuge',
-    'Paw Prints Animal Haven',
-    'Safe Haven Animal Sanctuary',
-  ];
+  // const shelterOptions = [
+  //   'Pawsitively Purrfect Animal Shelter',
+  //   'Furry Friends Haven',
+  //   'Happy Tails Rescue Center',
+  //   'Critter Cottage',
+  //   'FurEver Home Animal Sanctuary',
+  //   'Second Chance Animal Shelter',
+  //   'Loving Paws Animal Rescue',
+  //   'Wags and Whiskers Refuge',
+  //   'Paw Prints Animal Haven',
+  //   'Safe Haven Animal Sanctuary',
+  // ];
 
   return (
     <div >
@@ -189,17 +189,18 @@ const ImageUpload = () => {
       </Button>
       <Modal
         title={<span className='modal-title'>Let's find a new owner for our little friend!</span>}
-        visible={modalVisible}
+        open={modalVisible}
         onCancel={closeModal}
         className='modal'
         footer={null}
-        bodyStyle={{ height: "400px" }}
+        bodyStyle={{ height: "350px", paddingLeft: "25px"}}
       >
+      {labels.includes('Dog') || labels.includes('Cat') ? (
+      <>
         <div style={{ display: 'flex' }}>
           <div style={{ flex: 1 }}>
-            {labels.includes('Dog') || labels.includes('Cat') ? (
-              <>
-                <h3 className='modal-text'>Animal:</h3>
+
+                {/* <h3 className='modal-text'>Animal:</h3>
                 {editedLabels.map((label, index) => (
                   <Select
                     value={label}
@@ -210,7 +211,7 @@ const ImageUpload = () => {
                     <Select.Option value="Dog">Dog</Select.Option>
                     <Select.Option value="Cat">Cat</Select.Option>
                   </Select>
-                ))}
+                ))} */}
 
                 {imageData && (
                   <div>
@@ -219,25 +220,20 @@ const ImageUpload = () => {
                   </div>
                 )}
 
-                <div>
+                {/* <div>
                   <h3 className='modal-text'>Name:</h3>
                   <Input value={name} onChange={handleNameChange} style={{ width: '200px' }} />
-                </div>
-              </>
-            ) : (
-              <p className='modal-text'>Please upload a photo with a cat or a dog.</p>
-            )}
+                </div> */}
+
           </div>
           <div style={{ flex: 1 }}>
-            {labels.includes('Dog') || labels.includes('Cat') ? (
-              <>
                 {dominantColor && (
                   <div>
                     <h3 className='modal-text'>Dominant Color:</h3>
                     <div
                       style={{
                         backgroundColor: dominantColor,
-                        width: '236px',
+                        width: '200px',
                         height: '32px',
                       }}
                     ></div>
@@ -256,7 +252,7 @@ const ImageUpload = () => {
 
                   </div>
                 )}
-                <div>
+                {/* <div>
                   <h3 className='modal-text'>Shelter:</h3>
                   <Select value={shelter} onChange={handleShelterChange} className='select'>
                     {shelterOptions.map((option) => (
@@ -265,33 +261,39 @@ const ImageUpload = () => {
                       </Option>
                     ))}
                   </Select>
-                </div>
+                </div> */}
 
                 <div>
                   <h3 className='modal-text'>Additional Options:</h3>
                   <Checkbox checked={sterilized} onChange={handleSterilizedChange} colorPrimaryBorder='#FF5B2E'>
                     Sterilized
                   </Checkbox>
+                  <br/>
                   <Checkbox checked={hasPassport} onChange={handlePassportChange}>
                     Passport
                   </Checkbox>
                 </div>
-                <div>
-                  <br /><br />
-
-                  <Button className='approval'
-                    key="save"
-                    type="primary"
-                    onClick={handleSaveChanges}
-                  >
-                    Upload for approval
-                  </Button>
-                </div>
-              </>
-            ) : null}
           </div>
         </div>
+        <div className='approval-button'>
+          <br/>
+            <Button className='approval'
+              key="save"
+              type="primary"
+              onClick={handleSaveChanges}
+            >
+              Find similar pets
+            </Button>
+          </div>
+          </>
+          ) : (
+            <div>
+              <img className="image" src="./images/modalCat.png" alt='booo'/>
+              <p className='modal-wrong-text'>Please upload a photo with a cat or a dog.</p>
+            </div>
+          )}
       </Modal>
+
     </div>
   );
 };
