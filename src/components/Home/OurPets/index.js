@@ -8,7 +8,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import { Grid, Pagination } from "swiper";
 
-const OurPets = () => {
+const OurPets = (type, color, sterilized, passport) => {
 
     const [dogs, setDogs] = useState([]);
     const [cats, setCats] = useState();
@@ -109,64 +109,3 @@ const OurPets = () => {
 }
 
 export default OurPets;
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <div className='card'>
-                            <img src="./images/cats/cat_1.jpg"/>
-                            <h4 className='pet-name'>Lary</h4>
-                            <p className='shelter-name'>Shelter “Happy Paw”,</p>
-                            <p className='location'>Ternopil</p>
-                        </div>
-                        <div className='card'>
-                            <img src="./images/cats/cat_2.jpg"/>
-                            <h4 className='pet-name'>Angel</h4>
-                            <p className='shelter-name'>Shelter “Animal World”,</p>
-                            <p className='location'>Ternopil</p>
-                        </div>
-                        <div className='card'>
-                            <img src="./images/cats/cat_3.jpg"/>
-                            <h4 className='pet-name'>Puck</h4>
-                            <p className='shelter-name'>Shelter “Kitty Cat”,</p>
-                            <p className='location'>Ternopil</p>
-                        </div>
-                        <div className='card'>
-                            <img src="./images/cats/cat_4.jpg"/>
-                            <h4 className='pet-name'>Gogo</h4>
-                            <p className='shelter-name'>Shelter “Whiskas”,</p>
-                            <p className='location'>Ternopil</p>
-                        </div>
-                         */}
-
-
-
-
-{/* <div className='card'>
-                            <img src="./images/dogs/dog_2.jpg"/>
-                            <h4 className='pet-name'>Rex</h4>
-                            <p className='shelter-name'>Shelter “Hot-Dog”,</p>
-                            <p className='location'>Ternopil</p>
-                        </div>
-                        <div className='card'>
-                            <img src="./images/dogs/dog_3.jpg"/>
-                            <h4 className='pet-name'>Pes</h4>
-                            <p className='shelter-name'>Shelter “Happy Paw”,</p>
-                            <p className='location'>Ternopil</p>
-                        </div>
-                        <div className='card'>
-                            <img src="./images/dogs/dog_4.jpg"/>
-                            <h4 className='pet-name'>Ben</h4>
-                            <p className='shelter-name'>Shelter “Hot-Dog”,</p>
-                            <p className='location'>Ternopil</p>
-                        </div> */}
-

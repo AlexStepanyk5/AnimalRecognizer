@@ -1,11 +1,18 @@
 import react from 'react';
 import './style.scss';
-import OurPets from "../../components/Home/OurPets";
+import Filters from "../../components/Home/OurPets/Filters.js";
 
 const OurPetsPage = () => {
+    const filters = {
+        color: '',
+        type: '',
+        sterilized: false,
+        passport: false,
+    };
+
 return(
     <>
-        <OurPets />
+        <Filters filters={filters}/>
     </>
 )
 }

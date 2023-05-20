@@ -7,7 +7,7 @@
     font-family: $main-font;
     font-size: rem(14px);
     margin: auto;
-    background-color: #FFF4EA;
+    background-color: #fffaf5;
     color: #00063a;
 
     .our-pets-header {
@@ -20,7 +20,6 @@
         font-size: rem(16px);
         font-weight: 400;
         line-height: 30px;
-        margin-top: rem(125px);
 
         .pets-header-title {
             display: flex;
@@ -88,5 +87,75 @@
             }
 
         }
+    }
+}
+
+.filters-container{
+    max-width: 1440px;
+    padding: 180px 140px 30px;
+    font-family: $main-font;
+    font-size: rem(14px);
+    margin: auto;
+    background-color: #fffaf5;
+    color: #00063a;
+
+    .filters{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: rem(70px);
+        padding-bottom: rem(150px);
+
+        .select-title {
+            font-size: rem(28px);
+            color: #00063a;
+            font-weight: 500;
+            padding-bottom: rem(15px);
+            padding-top: rem(10px);
+            text-align: center;
+            font-family: slackey;
+        }
+        
+        .ant-checkbox .ant-checkbox-inner {
+            border-color: #ff5b2e !important;
+        }
+        
+        .ant-checkbox-checked .ant-checkbox-inner {
+            border-color: #ff5b2e !important;
+            background-color: #ff5b2e !important;
+        }
+        #slackey {
+            font-family: $secondary-font;
+            font-size: rem(45px);
+        }
+        
+        
+        .select-text{
+            width: 150px;
+            font-family: $main-font;
+            font-size: rem(18px);
+            font-weight: 400;
+            color: #323341;
+            line-height: rem(22px);
+            justify-content: center;
+        }
+        
+
+        
+        // .approval {
+        //     background-color: #ff5b2e;
+        //     width: rem(200px);
+        //     height: rem(50px);
+        //     font-size: rem(18px);
+        //     font-weight: 1000;
+        //     margin-right: rem(30px);
+        // }
+        
+        // .approval:hover {
+        //     cursor: pointer;
+        //     box-shadow: 0px 8px 8px #723d00 !important;
+        //     transform: translateY(-5px) !important;
+        //     background-color: #ff5b2e !important;
+        // }
     }
 }
