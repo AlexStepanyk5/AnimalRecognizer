@@ -39,8 +39,14 @@ const Filters = ({ onApplyFilters }) => {
 
     return (
         <div className="filters-container">
+            <div className="our-pets-header">
+                <div className="pets-header-title">
+                    <img src="./images/Home/paw.png" />
+                    <h1>Our Pets</h1>
+                </div>
+                <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>
+            </div>
             <div className="filters">
-
                 <div>
                     <h3 className="select-title">Animal</h3>
                     <Select value={type} onChange={handleTypeChange} className="select-text">
@@ -75,7 +81,7 @@ const Filters = ({ onApplyFilters }) => {
                     </Button>
                 </div> */}
             </div>
-            <div>
+            <div className='bottom-container'>
                 <OurPets type={type} color={color} sterilized={sterilized} passport={passport} />
             </div>
         </div>

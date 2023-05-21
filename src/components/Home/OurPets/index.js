@@ -32,14 +32,6 @@ const OurPets = (type, color, sterilized, passport) => {
 
     return (
         <div className="pets-container">
-            <div className="our-pets-header">
-                <div className="pets-header-title">
-                    <img src="./images/Home/paw.png" />
-                    <h1>Our Pets</h1>
-                </div>
-                <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>
-            </div>
-
             <div className="pets-block">
 
                 <div className='cats-block'>

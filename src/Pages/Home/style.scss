@@ -1,2 +1,22 @@
 @use "../../styles/variables" as *;
 @use "../../styles/functions" as *;
+
+.our-pets-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: $main-font;
+    font-size: rem(16px);
+    font-weight: 400;
+    background-color: #fff3e6 !important;
+
+    .pets-header-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $secondary-font;
+        font-size: rem(45px);
+    }
+}

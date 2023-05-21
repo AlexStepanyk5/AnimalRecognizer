@@ -7,27 +7,8 @@
     font-family: $main-font;
     font-size: rem(14px);
     margin: auto;
-    background-color: #fffaf5;
+    background-color: #fff3e6;
     color: #00063a;
-
-    .our-pets-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-family: $main-font;
-        font-size: rem(16px);
-        font-weight: 400;
-        line-height: 30px;
-
-        .pets-header-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: $secondary-font;
-            font-size: rem(45px);
-        }
     }
 
     .pets-block {
@@ -86,25 +67,46 @@
                 max-height: 1000px;
             }
 
-        }
+        
     }
 }
 
 .filters-container{
     max-width: 1440px;
-    padding: 180px 140px 30px;
+    padding: 150px 140px 30px;
     font-family: $main-font;
     font-size: rem(14px);
     margin: auto;
-    background-color: #fffaf5;
+    background-color: #fff6ed;
     color: #00063a;
-
+    .our-pets-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: $main-font;
+        font-size: rem(16px);
+        font-weight: 400;
+        line-height: 30px;
+    
+        .pets-header-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $secondary-font;
+            font-size: rem(45px);
+        }
+    }
     .filters{
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: rem(70px);
-        padding-bottom: rem(150px);
+        padding-bottom: rem(25px);
+        margin-top: rem(60px);
+        padding-top: rem(15px);
+        background-color: #ffdfb0;
 
         .select-title {
             font-size: rem(28px);
@@ -139,7 +141,8 @@
             line-height: rem(22px);
             justify-content: center;
         }
-        
+
+
 
         
         // .approval {
@@ -158,4 +161,7 @@
         //     background-color: #ff5b2e !important;
         // }
     }
+}
+.bottom-container{
+    padding-bottom: rem(150px);
 }
