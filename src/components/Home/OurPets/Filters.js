@@ -1,41 +1,32 @@
-import React, { useState } from 'react';
-import { Button, Checkbox, Select } from 'antd';
+import React, { useState} from 'react';
+import {Checkbox, Select } from 'antd';
 import './style.scss';
 import OurPets from './index.js';
 
 const { Option } = Select;
 
-const Filters = ({ onApplyFilters }) => {
+const Filters = ({inputType}) => {
     const [color, setColor] = useState('');
-    const [type, setType] = useState('');
+    const [type, setType] = useState(inputType);
     const [sterilized, setSterilized] = useState(false);
     const [passport, setPassport] = useState(false);
-
+    
     const handleColorChange = (color) => {
         setColor(color);
     };
-
     const handleTypeChange = (type) => {
         setType(type);
     };
 
-    const handleSterilizedChange = (e) => {
-        setSterilized(e.target.checked);
-    };
+    // const handleSterilizedChange = (e) => {
+    //     setSterilized(e.target.checked);
+    // };
 
-    const handlePassportChange = (e) => {
-        setPassport(e.target.checked);
-    };
+    // const handlePassportChange = (e) => {
+    //     setPassport(e.target.checked);
+    // };
 
-    //   const handleApplyFilters = () => {
-    //     const filters = {
-    //       color,
-    //       type,
-    //       sterilized,
-    //       passport,
-    //     };
-    //     onApplyFilters(filters);
-    //   };
+   
 
     return (
         <div className="filters-container">
@@ -50,7 +41,7 @@ const Filters = ({ onApplyFilters }) => {
                 <div>
                     <h3 className="select-title">Animal</h3>
                     <Select value={type} onChange={handleTypeChange} className="select-text">
-                        <Option value="">Any</Option>
+                        <Option value="Any">Any</Option>
                         <Option value="Dog">Dog</Option>
                         <Option value="Cat">Cat</Option>
                     </Select>
@@ -68,21 +59,16 @@ const Filters = ({ onApplyFilters }) => {
                 </div>
                 <div>
                     <h3 className="select-title">Additional Options</h3>
-                    <Checkbox checked={sterilized} onChange={handleSterilizedChange} colorPrimaryBorder="#FF5B2E" className="select-text">
+                    <Checkbox checked = {sterilized} onChange={() => setSterilized(!sterilized)} colorPrimaryBorder="#FF5B2E" className="select-text">
                         Sterilized
                     </Checkbox>
-                    <Checkbox checked={passport} onChange={handlePassportChange} className="select-text">
+                    <Checkbox checked = {passport} onChange={() => setPassport(!passport)} className="select-text">
                         Passport
                     </Checkbox>
                 </div>
-                {/* <div>
-                    <Button type="primary" onClick={handleApplyFilters} className='approval'>
-                        Apply
-                    </Button>
-                </div> */}
             </div>
             <div className='bottom-container'>
-                <OurPets type={type} color={color} sterilized={sterilized} passport={passport} />
+                <OurPets inputType={type} color={color} sterilized={sterilized} passport={passport} />
             </div>
         </div>
     );

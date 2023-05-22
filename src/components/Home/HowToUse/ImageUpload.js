@@ -6,15 +6,18 @@ import './style.scss';
 
 
 const ImageUpload = () => {
-  const [labels, setLabels] = useState([]);
+  const [type, setType] = useState([]);
   const [dominantColor, setDominantColor] = useState(null);
   const [basicColorName, setBasicColorName] = useState(null);
   const [imageData, setImageData] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
-  const [editedLabels, setEditedLabels] = useState([]);
-  const [editedBasicColorName, setEditedBasicColorName] = useState('');
-  const [sterilized, setSterilized] = useState(false);
+  // const [editedBasicColorName, setEditedBasicColorName] = useState('');
+  const [isSterilized, setIsSterilized] = useState(false);
   const [hasPassport, setHasPassport] = useState(false);
+  // const [color, setColor] = useState(editedBasicColorName);
+  // const [type, setType] = useState(editedtype);
+  // const [sterilized, setSterilized] = useState(isSterilized);
+  // const [passport, setPassport] = useState(hasPassport);
 
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];
@@ -50,10 +53,9 @@ const ImageUpload = () => {
           }
         );
 
-        const labelsData = response.data.responses[0].labelAnnotations || [];
-        const labels = labelsData.map((label) => label.description);
-        setLabels(labels);
-        setEditedLabels(labels);
+        const typeData = response.data.responses[0].labelAnnotations || [];
+        const type = typeData.map((label) => label.description);
+        setType(type);
 
         const properties = response.data.responses[0].imagePropertiesAnnotation;
         const dominantColorRgb = properties.dominantColors.colors[0].color;
@@ -66,7 +68,7 @@ const ImageUpload = () => {
 
         const basicColor = convertColorToBasic(dominantColor);
         setBasicColorName(basicColor);
-        setEditedBasicColorName(basicColor);
+        // setEditedBasicColorName(basicColor);
       };
 
       reader.readAsDataURL(selectedFile);
@@ -79,22 +81,9 @@ const ImageUpload = () => {
     setModalVisible(false);
   };
 
-  const handleBasicColorChange = (value) => {
-    const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1);
-    setEditedBasicColorName(capitalizedValue);
-  };
+  const handleSaveChanges = (e) => {
+    e.preventDefault()
 
-  const handleSterilizedChange = (event) => {
-    setSterilized(event.target.checked);
-  };
-
-  const handlePassportChange = (event) => {
-    setHasPassport(event.target.checked);
-  };
-
-  const handleSaveChanges = () => {
-    setLabels(editedLabels);
-    setBasicColorName(editedBasicColorName);
     closeModal();
   };
 
@@ -163,7 +152,7 @@ const ImageUpload = () => {
         footer={null}
         bodyStyle={{ height: "350px", paddingLeft: "25px" }}
       >
-        {labels.includes('Dog') || labels.includes('Cat') ? (
+        {type.includes('Dog') || type.includes('Cat') ? (
           <>
             <div style={{ display: 'flex' }}>
               <div style={{ flex: 1 }}>
@@ -194,7 +183,7 @@ const ImageUpload = () => {
                 {basicColorName && (
                   <div>
                     <h3 className='modal-text'>Basic Color:</h3>
-                    <Select value={editedBasicColorName} onChange={handleBasicColorChange} className='select'>
+                    <Select value={basicColorName} className='select'>
                       <Option value="Black">Black</Option>
                       <Option value="Gray">Gray</Option>
                       <Option value="White">White</Option>
@@ -207,11 +196,11 @@ const ImageUpload = () => {
 
                 <div>
                   <h3 className='modal-text'>Additional Options:</h3>
-                  <Checkbox checked={sterilized} onChange={handleSterilizedChange} colorPrimaryBorder='#FF5B2E'>
+                  <Checkbox onChange={(e) => setIsSterilized(e.target.value)} colorPrimaryBorder='#FF5B2E'>
                     Sterilized
                   </Checkbox>
                   <br />
-                  <Checkbox checked={hasPassport} onChange={handlePassportChange}>
+                  <Checkbox onChange={(e) => setHasPassport(e.target.value)}>
                     Passport
                   </Checkbox>
                 </div>

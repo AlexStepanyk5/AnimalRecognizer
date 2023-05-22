@@ -1,8 +1,9 @@
 @use "../../styles/variables" as *;
 @use "../../styles/functions" as *;
 
+.home-page{
+    
 .our-pets-header {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +13,7 @@
     font-size: rem(16px);
     font-weight: 400;
     background-color: #fff3e6 !important;
-    margin-left: rem(231.5px);
+    margin-left: rem(233px);
     max-width: 1440px;
     padding-top: rem(75px);
 
@@ -24,4 +25,4 @@
         font-size: rem(45px);
     }
 }
-
+}

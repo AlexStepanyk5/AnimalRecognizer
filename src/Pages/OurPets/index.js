@@ -3,16 +3,13 @@ import './style.scss';
 import Filters from "../../components/Home/OurPets/Filters.js";
 
 const OurPetsPage = () => {
-    const filters = {
-        color: '',
-        type: '',
-        sterilized: false,
-        passport: false,
-    };
+
+    const type = 'Any';
+
 
 return(
     <>
-        <Filters filters={filters}/>
+        <Filters inputType={type}/>
     </>
 )
 }
