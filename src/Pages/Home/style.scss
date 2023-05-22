@@ -2,6 +2,7 @@
 @use "../../styles/functions" as *;
 
 .our-pets-header {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +12,9 @@
     font-size: rem(16px);
     font-weight: 400;
     background-color: #fff3e6 !important;
+    margin-left: rem(231.5px);
+    max-width: 1440px;
+    padding-top: rem(75px);
 
     .pets-header-title {
         display: flex;
@@ -20,3 +24,4 @@
         font-size: rem(45px);
     }
 }
+

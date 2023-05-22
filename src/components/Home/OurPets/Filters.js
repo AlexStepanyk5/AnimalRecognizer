@@ -39,8 +39,8 @@ const Filters = ({ onApplyFilters }) => {
 
     return (
         <div className="filters-container">
-            <div className="our-pets-header">
-                <div className="pets-header-title">
+            <div className="pets-header">
+                <div className="pets-title">
                     <img src="./images/Home/paw.png" />
                     <h1>Our Pets</h1>
                 </div>
