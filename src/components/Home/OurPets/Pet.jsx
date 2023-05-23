@@ -9,7 +9,7 @@ const Pet = ({ pet }) => {
   return (
     <div>
       <div className='card'>
-        <img src={imageSrc} alt={imageAlt} />
+        <img className='card-img' src={imageSrc} alt={imageAlt} />
         <h4 className='pet-name'>{pet.name}</h4>
         <p className='shelter-name'>{pet.currentShelter.name}</p>
       </div>
@@ -18,5 +18,3 @@ const Pet = ({ pet }) => {
 }
 
 export default Pet
-
-{/* <img src="https://drive.google.com/uc?export=view&id=1lcYH0g_M7HX5_CQ4XkpuSBznHJrbKYoX"/> */ }

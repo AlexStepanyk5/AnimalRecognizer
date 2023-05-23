@@ -47,13 +47,13 @@
                     font-size: 20px;
                     line-height: 30px;
                 }
-            }
 
-            .card img {
-                width: rem(200px);
-                height: rem(200px);
-                border-radius: 30px;
-                margin-bottom: rem(10px);
+                .card-img {
+                    width: rem(200px) !important;
+                    height: rem(200px) !important;
+                    border-radius: 30px !important;
+                    margin-bottom: rem(10px) !important;
+                }
             }
 
             .swiper-slide {

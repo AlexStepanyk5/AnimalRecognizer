@@ -4,7 +4,6 @@ import convert from 'color-convert';
 import { Modal, Button, Checkbox, Select } from 'antd';
 import './style.scss';
 
-
 const ImageUpload = () => {
   const [type, setType] = useState([]);
   const [dominantColor, setDominantColor] = useState(null);
@@ -14,10 +13,6 @@ const ImageUpload = () => {
   // const [editedBasicColorName, setEditedBasicColorName] = useState('');
   const [isSterilized, setIsSterilized] = useState(false);
   const [hasPassport, setHasPassport] = useState(false);
-  // const [color, setColor] = useState(editedBasicColorName);
-  // const [type, setType] = useState(editedtype);
-  // const [sterilized, setSterilized] = useState(isSterilized);
-  // const [passport, setPassport] = useState(hasPassport);
 
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];

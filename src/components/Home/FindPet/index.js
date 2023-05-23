@@ -8,6 +8,7 @@ const FindPet = () => {
             <div className='find-pet-content'>
 
                 <div className='find-pet-block'>
+
                     <div className='find-pet-images'>
                         <img className='star' src="./images/Home/Star.png"></img>
                         <img className='circles' src="./images/Home/circles.png"></img>
@@ -23,18 +24,15 @@ const FindPet = () => {
                         </h1>
                         <p className='main-text find-pet-description'>Best pets are waiting for adoption. Find out the the perfect one you will like it.</p>
                         <a href='/our-pets' className='find-text-button'>Find a pet</a>
-
                     </div>
 
                 </div>
+                
                 <hr></hr>
-
 
             </div>
 
-
         </div>
-
     )
 }
 
