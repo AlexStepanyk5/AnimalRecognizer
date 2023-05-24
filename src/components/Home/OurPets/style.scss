@@ -1,18 +1,102 @@
 @use "../../../styles/variables" as *;
 @use "../../../styles/functions" as *;
 
-.pets-container {
+
+.filters-container {
     max-width: 1440px;
-    padding: 50px 140px 30px;
+    padding: 150px 140px 30px;
     font-family: $main-font;
     font-size: rem(14px);
     margin: auto;
-    background-color: #fff3e6;
+    background-color: #fff6ed;
     color: #00063a;
+
+    .pets-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: $main-font;
+        font-size: rem(16px);
+        font-weight: 400;
+        line-height: 30px;
+        background-color: #fff6ed !important;
+
+        .pets-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $secondary-font;
+            font-size: rem(45px);
+            background-color: #fff6ed !important;
+        }
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: rem(70px);
+        padding-bottom: rem(25px);
+        margin-top: rem(60px);
+        padding-top: rem(15px);
+        background-color: #ffdfb0;
+
+        .select-title {
+            font-size: rem(28px);
+            color: #00063a;
+            font-weight: 500;
+            padding-bottom: rem(15px);
+            padding-top: rem(10px);
+            text-align: center;
+            font-family: slackey;
+        }
+
+        .ant-checkbox .ant-checkbox-inner {
+            border-color: #ff5b2e !important;
+        }
+
+        .ant-checkbox-checked .ant-checkbox-inner {
+            border-color: #ff5b2e !important;
+            background-color: #ff5b2e !important;
+        }
+
+        #slackey {
+            font-family: $secondary-font;
+            font-size: rem(45px);
+        }
+
+
+        .select-text {
+            width: 150px;
+            font-family: $main-font;
+            font-size: rem(18px);
+            font-weight: 400;
+            color: #323341;
+            line-height: rem(22px);
+            justify-content: center;
+        }
+    }
+}
+
+.bottom-container {
+    padding-bottom: rem(150px);
+
+    .pets-container {
+        max-width: 1440px;
+        padding: 50px 0px 30px 0px;
+        font-family: $main-font;
+        font-size: rem(14px);
+        margin: auto;
+        background-color: #fff3e6;
+        color: #00063a;
     }
 
     .pets-block {
         color: #656689;
+        width: rem(1160px);
+        margin-left: rem(20px);
 
         .pets-block-title {
             display: flex;
@@ -53,6 +137,7 @@
                     height: rem(200px) !important;
                     border-radius: 30px !important;
                     margin-bottom: rem(10px) !important;
+                    object-fit: cover;
                 }
             }
 
@@ -66,175 +151,6 @@
             .swiper-wrapper {
                 max-height: 1000px;
             }
-
-        
-    }
-}
-
-.filters-container{
-    max-width: 1440px;
-    padding: 150px 140px 30px;
-    font-family: $main-font;
-    font-size: rem(14px);
-    margin: auto;
-    background-color: #fff6ed;
-    color: #00063a;
-    .pets-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-family: $main-font;
-        font-size: rem(16px);
-        font-weight: 400;
-        line-height: 30px;
-        background-color: #fff6ed !important;
-    
-        .pets-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: $secondary-font;
-            font-size: rem(45px);
-            background-color: #fff6ed !important;
-        }
-    }
-    .filters{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: rem(70px);
-        padding-bottom: rem(25px);
-        margin-top: rem(60px);
-        padding-top: rem(15px);
-        background-color: #ffdfb0;
-
-        .select-title {
-            font-size: rem(28px);
-            color: #00063a;
-            font-weight: 500;
-            padding-bottom: rem(15px);
-            padding-top: rem(10px);
-            text-align: center;
-            font-family: slackey;
-        }
-        
-        .ant-checkbox .ant-checkbox-inner {
-            border-color: #ff5b2e !important;
-        }
-        
-        .ant-checkbox-checked .ant-checkbox-inner {
-            border-color: #ff5b2e !important;
-            background-color: #ff5b2e !important;
-        }
-        #slackey {
-            font-family: $secondary-font;
-            font-size: rem(45px);
-        }
-        
-        
-        .select-text{
-            width: 150px;
-            font-family: $main-font;
-            font-size: rem(18px);
-            font-weight: 400;
-            color: #323341;
-            line-height: rem(22px);
-            justify-content: center;
-        }
-
-
-
-        
-        // .approval {
-        //     background-color: #ff5b2e;
-        //     width: rem(200px);
-        //     height: rem(50px);
-        //     font-size: rem(18px);
-        //     font-weight: 1000;
-        //     margin-right: rem(30px);
-        // }
-        
-        // .approval:hover {
-        //     cursor: pointer;
-        //     box-shadow: 0px 8px 8px #723d00 !important;
-        //     transform: translateY(-5px) !important;
-        //     background-color: #ff5b2e !important;
-        // }
-    }
-}
-.bottom-container{
-    padding-bottom: rem(150px);
-    .pets-container {
-        max-width: 1440px;
-        padding: 50px 0px 30px 0px;
-        font-family: $main-font;
-        font-size: rem(14px);
-        margin: auto;
-        background-color: #fff3e6;
-        color: #00063a;
-        }
-    
-        .pets-block {
-            color: #656689;
-            width: rem(1160px);
-            margin-left: rem(20px);
-    
-            .pets-block-title {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                font-family: $secondary-font;
-                font-size: rem(45px);
-                color: #00063a;
-            }
-    
-            .cards-container {
-                margin-bottom: rem(50px);
-    
-                .card {
-                    height: rem(342px);
-                    width: rem(251px);
-                    background: linear-gradient(180deg, #FFB390 0%, #FCCC84 100%);
-                    border-radius: 50px;
-                    padding: rem(26px);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    text-align: center;
-                    align-items: center;
-                    font-weight: 400;
-                    font-size: 17px;
-                    line-height: 24px;
-    
-                    h4 {
-                        font-family: $secondary-font;
-                        font-weight: 400;
-                        font-size: 20px;
-                        line-height: 30px;
-                    }
-                }
-    
-                .card img {
-                    width: rem(200px) !important;
-                    height: rem(200px) !important;
-                    border-radius: 30px !important;
-                    margin-bottom: rem(10px) !important;
-                }
-    
-                .swiper-slide {
-                    text-align: center;
-                    font-size: 18px;
-                    background: transparent !important;
-                    padding-bottom: rem(30px);
-                }
-    
-                .swiper-wrapper {
-                    max-height: 1000px;
-                }
-    
-            
         }
     }
 }

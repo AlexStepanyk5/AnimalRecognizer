@@ -12,12 +12,39 @@ const OurPets = ({inputType, color, sterilized, passport }) => {
 
     const [dogs, setDogs] = useState();
     const [cats, setCats] = useState();
+    var responseFromGetCat;
+    var responseFromGetDog;
 
     useEffect(() => {
         const getPet = async () => {
             try {
-                const responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/${color}/${sterilized}/${passport}`)
-                const responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
+                if (color === "Any"){
+
+                    console.log("color any")
+                    responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/${sterilized}/${passport}`)
+                    responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${sterilized}/${passport}`)
+                    // responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/White/true/true`)
+                    // responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/White/true/true`)
+                    console.log("color any")
+                    console.log(responseFromGetCat)
+                    
+                    
+                } 
+                // if(inputType === 'Any' && color !== 'Any'){
+                    
+                    //     responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
+                    //     responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
+                    // }
+                    
+                    else{
+                        console.log("color not any")
+                        console.log(responseFromGetCat, "im here!")
+                        // responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/White/true/true`)
+                        // responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/White/true/true`)
+
+                     responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/${color}/${sterilized}/${passport}`)
+                     responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
+                }
 
                 await setDogs(responseFromGetDog.data);
                 await setCats(responseFromGetCat.data)
@@ -28,7 +55,7 @@ const OurPets = ({inputType, color, sterilized, passport }) => {
         }
         getPet();
 
-    }, [ color, sterilized, passport])
+    }, [ color, sterilized, passport, responseFromGetCat, responseFromGetDog])
 
     return (
         <div className="pets-container">

@@ -6,15 +6,17 @@ import OurPets from './index.js';
 const { Option } = Select;
 
 const Filters = ({inputType}) => {
-    const [color, setColor] = useState('');
+    const [color, setColor] = useState('Any');
     const [type, setType] = useState(inputType);
     const [sterilized, setSterilized] = useState(false);
     const [passport, setPassport] = useState(false);
     
     const handleColorChange = (color) => {
+        console.log("im color and i",color);
         setColor(color);
     };
     const handleTypeChange = (type) => {
+        console.log("im type and i",type);
         setType(type);
     };
 
