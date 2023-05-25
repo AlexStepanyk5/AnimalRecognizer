@@ -77,12 +77,8 @@ const ImageUpload = () => {
   };
 
   const handleSaveChanges = () => {
-    const selectedType = type;
-    const selectedColor = basicColorName;
-    const selectedSterilized = isSterilized;
-    const selectedPassport = hasPassport;
 
-    navigate(`/our-pets/${selectedType}/${selectedColor}/${selectedSterilized}/${selectedPassport}`);
+    navigate(`/our-pets/${type}/${basicColorName}/${isSterilized}/${hasPassport}`);
     closeModal();
   };
 

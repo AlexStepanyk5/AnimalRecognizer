@@ -32,7 +32,7 @@ const Footer = () => {
     const [oppen, setOppen] = React.useState(false);
     const handleOppen = () => setOppen(true);
     const handleClosse = () => setOppen(false);
-
+    const publicURL = process.env.PUBLIC_URL;
 
 
     return (
@@ -46,10 +46,10 @@ const Footer = () => {
                         </h2>
                     </div>
                     <div className="social-media">
-                        <a target='blank' href="https://www.facebook.com/fcit.tneu.edu.ua"><img alt="facebook-img" src="./images/facebook.svg"></img></a>
-                        <a target='blank' href='https://twitter.com/ZUNUniversity'><img alt="twitter-img" src="./images/twitter.svg"></img></a>
-                        <a target='blank' href='https://www.linkedin.com/company/wunu/'><img alt="linkedin-img" src="./images/linkedin.svg"></img></a>
-                        <a target='blank' href='https://www.instagram.com/fcit.zunu/'><img alt="instagram-img" src="./images/instagram.svg"></img></a>
+                        <a target='blank' href='https://www.facebook.com/fcit.tneu.edu.ua'><img alt="facebook-img" src={`${publicURL}/images/facebook.svg`} /></a>
+                        <a target='blank' href='https://twitter.com/ZUNUniversity'><img alt="twitter-img" src={`${publicURL}/images/twitter.svg`} /></a>
+                        <a target='blank' href='https://www.linkedin.com/company/wunu/'><img alt="linkedin-img" src={`${publicURL}/images/linkedin.svg`} /></a>
+                        <a target='blank' href='https://www.instagram.com/fcit.zunu/'><img alt="instagram-img" src={`${publicURL}/images/instagram.svg`} /></a>
                     </div>
 
                 </div>
@@ -58,9 +58,9 @@ const Footer = () => {
 
                         <h3 className="slackey">Useful links</h3>
                         <ul className="main-font">
-                            <li>
+                            <ul>
                                 <li onClick={handleOppen}>FAQs</li>
-                                <Modal sx
+                                <Modal
                                     open={oppen}
                                     onClose={handleClosse}
                                     aria-labelledby="modal-modal-title"
@@ -108,10 +108,10 @@ const Footer = () => {
                                         }} variant="contained" onClick={handleClosse}>Close</Button>
                                     </Box>
                                 </Modal>
-                            </li>
-                            <li>
+                            </ul>
+                            <ul>
                                 <li onClick={handlleOpen}>Privacy Policy</li>
-                                <Modal sx
+                                <Modal
                                     open={openn}
                                     onClose={handlleClose}
                                     aria-labelledby="modal-modal-title"
@@ -126,7 +126,7 @@ const Footer = () => {
                                                 <li>Effective Date: 20.05.2023</li><br />
                                                 <li>
                                                     This Privacy Policy describes how we collect, use, and protect your personal information when you visit our website. We are committed to safeguarding your privacy and ensuring the security of your personal information. By using our website, you consent to the practices outlined in this Privacy Policy.
-                                                    <li /><br />
+                                                    <br />
                                                     1. Information We Collect:
                                                     We may collect personal information such as your name, email address, contact information, and any other information you voluntarily provide to us through forms or interactions on our website.
                                                     <br />
@@ -153,8 +153,8 @@ const Footer = () => {
                                                     <br />
                                                     8. Contact Us:
                                                     If you have any questions or concerns regarding this Privacy Policy or our privacy practices, please contact us at +380676535231.
-                                                    <br /><li><br />
-                                                        By using our website, you acknowledge that you have read, understood, and agreed to the terms and conditions of this Privacy Policy.</li></li><br />
+                                                    <br /><br />
+                                                        By using our website, you acknowledge that you have read, understood, and agreed to the terms and conditions of this Privacy Policy.</li><br />
                                             </ul>
                                         </Typography>
                                         <Button sx={{
@@ -172,10 +172,10 @@ const Footer = () => {
                                         }} variant="contained" onClick={handlleClose}>Close</Button>
                                     </Box>
                                 </Modal>
-                            </li>
-                            <li>
+                            </ul>
+                            <ul>
                                 <li onClick={handleOpen}>Terms of Use</li>
-                                <Modal sx
+                                <Modal
                                     open={open}
                                     onClose={handleClose}
                                     aria-labelledby="modal-modal-title"
@@ -186,12 +186,12 @@ const Footer = () => {
                                             Terms & Conditions
                                         </Typography>
                                         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                            <ol>
+                                            <ul>
                                                 <li>1. These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Webiste Name accessible at Website URL.</li><br />
                                                 <li>2. By using our Website, you accepted these terms and conditions in full. If you disagree with these terms and conditions or any part of these terms and conditions, you must not use our Website.</li><br />
                                                 <li>3. Intellectual Property Rights Unless otherwise stated, we or our licensors own the intellectual property rights in the website and material on the website. Subject to the license below, all these intellectual property rights are reserved.</li><br />
                                                 <li>4. License to use website You may view, download for caching purposes only, and print pages from the website for your own personal use, subject to the restrictions set out below and elsewhere in these terms and conditions.</li><br />
-                                            </ol>
+                                            </ul>
                                         </Typography>
                                         <Button sx={{
                                             margin: '0 auto',
@@ -208,7 +208,7 @@ const Footer = () => {
                                         }} variant="contained" onClick={handleClose}>Close</Button>
                                     </Box>
                                 </Modal>
-                            </li>
+                            </ul>
 
                         </ul>
                     </div>

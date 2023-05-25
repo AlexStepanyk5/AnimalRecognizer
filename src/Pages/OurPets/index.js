@@ -4,15 +4,17 @@ import Filters from '../../components/Home/OurPets/Filters';
 import { useParams } from 'react-router-dom';
 
 const OurPetsPage = () => {
-  const { selectedType = 'Any', selectedColor = 'Any', selectedSterilized = false, selectedPassport = false } = useParams();
+  const { selectedType = 'Any', selectedColor = 'Any', selectedSterilized = 'false', selectedPassport = 'false' } = useParams();
+  const parsedSelectedSterilized = JSON.parse(selectedSterilized);
+  const parsedSelectedPassport = JSON.parse(selectedPassport);
 
   return (
     <>
       <Filters
         inputType={selectedType}
         inputColor={selectedColor}
-        inputSterilized={selectedSterilized}
-        inputPassport={selectedPassport}
+        inputSterilized={parsedSelectedSterilized}
+        inputPassport={parsedSelectedPassport}
       />
     </>
   );
