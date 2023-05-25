@@ -241,4 +241,13 @@
   justify-content: center;
   margin-left: rem(60px);
   margin-top: rem(25px);
+  object-fit: cover;
+}
+
+.image-uploaded{
+  max-width: 300px;
+  max-height: 300px;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
 }

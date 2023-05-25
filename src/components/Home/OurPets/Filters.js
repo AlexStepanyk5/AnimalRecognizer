@@ -42,7 +42,7 @@ const Filters = ({inputType, inputColor, inputSterilized, inputPassport}) => {
                     <Select value={color} onChange={handleColorChange} className="select-text">
                         <Option value="Any">Any</Option>
                         <Option value="Black">Black</Option>
-                        <Option value="Gray">Gray</Option>
+                        <Option value="Grey">Grey</Option>
                         <Option value="White">White</Option>
                         <Option value="Brown">Brown</Option>
                         <Option value="Red">Red</Option>

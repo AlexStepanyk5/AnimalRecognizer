@@ -96,7 +96,7 @@ const ImageUpload = () => {
 
   const convertColorToBasic = (hexCode) => {
     const colorMapping = {
-      gray: ['#525252', '#747474', '#4e4545', '#807373', '#686161'],
+      grey: ['#525252', '#747474', '#4e4545', '#807373', '#686161'],
       black: ['#000000', '#303030', '#161414', '#302525', '#140f0f'],
       brown: ['#2e1707', '#492106', '#42290f', '#5f3516'],
       red: ['#fc7a00', '#a04300', '#fd9042', '#ad6507', '#cf8e16'],
@@ -159,7 +159,7 @@ const ImageUpload = () => {
                 {imageData && (
                   <div>
                     <h3 className='modal-text'>Uploaded Image:</h3>
-                    <img src={imageData} style={{ width: '200px', height: '200px' }} alt="Uploaded" />
+                    <img className='image-upload' src={imageData} style={{ width: '200px', height: '200px' }} alt="Uploaded" />
                   </div>
                 )}
 
@@ -184,7 +184,7 @@ const ImageUpload = () => {
                     <h3 className='modal-text'>Basic Color:</h3>
                     <Select value={basicColorName} onChange={handleColorChange} className='select'>
                       <Option value="Black">Black</Option>
-                      <Option value="Gray">Gray</Option>
+                      <Option value="Grey">Grey</Option>
                       <Option value="White">White</Option>
                       <Option value="Brown">Brown</Option>
                       <Option value="Red">Red</Option>
