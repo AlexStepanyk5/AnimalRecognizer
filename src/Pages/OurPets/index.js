@@ -1,17 +1,21 @@
-import react from 'react';
 import './style.scss';
-import Filters from "../../components/Home/OurPets/Filters.js";
+import React from 'react';
+import Filters from '../../components/Home/OurPets/Filters';
+import { useParams } from 'react-router-dom';
 
 const OurPetsPage = () => {
+  const { selectedType = 'Any', selectedColor = 'Any', selectedSterilized = false, selectedPassport = false } = useParams();
 
-    const type = 'Any';
-
-
-return(
+  return (
     <>
-        <Filters inputType={type}/>
+      <Filters
+        inputType={selectedType}
+        inputColor={selectedColor}
+        inputSterilized={selectedSterilized}
+        inputPassport={selectedPassport}
+      />
     </>
-)
-}
+  );
+};
 
 export default OurPetsPage;

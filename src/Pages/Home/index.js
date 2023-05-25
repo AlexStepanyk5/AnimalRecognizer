@@ -14,7 +14,7 @@ const Home = () => {
             <HowToUse />
             <div className="our-pets-header">
                 <div className="pets-header-title">
-                    <img src="./images/Home/paw.png" />
+                    <img src="./images/Home/paw.png" alt='paw'/>
                     <h1>Our Pets</h1>
                 </div>
                 <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>

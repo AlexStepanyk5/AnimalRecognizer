@@ -1,40 +1,29 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import {Checkbox, Select } from 'antd';
 import './style.scss';
 import OurPets from './index.js';
 
 const { Option } = Select;
 
-const Filters = ({inputType}) => {
-    const [color, setColor] = useState('Any');
+const Filters = ({inputType, inputColor, inputSterilized, inputPassport}) => {
     const [type, setType] = useState(inputType);
-    const [sterilized, setSterilized] = useState(false);
-    const [passport, setPassport] = useState(false);
+    const [color, setColor] = useState(inputColor);
+    const [sterilized, setSterilized] = useState(inputSterilized);
+    const [passport, setPassport] = useState(inputPassport);
+    const publicURL = process.env.PUBLIC_URL;
     
     const handleColorChange = (color) => {
-        console.log("im color and i",color);
-        setColor(color);
+        setColor(color);    
     };
     const handleTypeChange = (type) => {
-        console.log("im type and i",type);
         setType(type);
-    };
-
-    // const handleSterilizedChange = (e) => {
-    //     setSterilized(e.target.checked);
-    // };
-
-    // const handlePassportChange = (e) => {
-    //     setPassport(e.target.checked);
-    // };
-
-   
+    };   
 
     return (
         <div className="filters-container">
             <div className="pets-header">
                 <div className="pets-title">
-                    <img src="./images/Home/paw.png" />
+                    <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
                     <h1>Our Pets</h1>
                 </div>
                 <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>
@@ -51,7 +40,7 @@ const Filters = ({inputType}) => {
                 <div>
                     <h3 className="select-title">Color</h3>
                     <Select value={color} onChange={handleColorChange} className="select-text">
-                        <Option value="">Any</Option>
+                        <Option value="Any">Any</Option>
                         <Option value="Black">Black</Option>
                         <Option value="Gray">Gray</Option>
                         <Option value="White">White</Option>
@@ -61,7 +50,7 @@ const Filters = ({inputType}) => {
                 </div>
                 <div>
                     <h3 className="select-title">Additional Options</h3>
-                    <Checkbox checked = {sterilized} onChange={() => setSterilized(!sterilized)} colorPrimaryBorder="#FF5B2E" className="select-text">
+                    <Checkbox checked = {sterilized} onChange={() => setSterilized(!sterilized)} className="select-text">
                         Sterilized
                     </Checkbox>
                     <Checkbox checked = {passport} onChange={() => setPassport(!passport)} className="select-text">
@@ -70,7 +59,7 @@ const Filters = ({inputType}) => {
                 </div>
             </div>
             <div className='bottom-container'>
-                <OurPets inputType={type} color={color} sterilized={sterilized} passport={passport} />
+                <OurPets type={type} color={color} sterilized={sterilized} passport={passport} />
             </div>
         </div>
     );

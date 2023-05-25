@@ -3,6 +3,7 @@ import axios from 'axios';
 import convert from 'color-convert';
 import { Modal, Button, Checkbox, Select } from 'antd';
 import './style.scss';
+import {useNavigate } from 'react-router-dom';
 
 const ImageUpload = () => {
   const [type, setType] = useState([]);
@@ -10,9 +11,9 @@ const ImageUpload = () => {
   const [basicColorName, setBasicColorName] = useState(null);
   const [imageData, setImageData] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
-  // const [editedBasicColorName, setEditedBasicColorName] = useState('');
   const [isSterilized, setIsSterilized] = useState(false);
   const [hasPassport, setHasPassport] = useState(false);
+  const navigate = useNavigate();
 
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];
@@ -63,7 +64,6 @@ const ImageUpload = () => {
 
         const basicColor = convertColorToBasic(dominantColor);
         setBasicColorName(basicColor);
-        // setEditedBasicColorName(basicColor);
       };
 
       reader.readAsDataURL(selectedFile);
@@ -76,11 +76,19 @@ const ImageUpload = () => {
     setModalVisible(false);
   };
 
-  const handleSaveChanges = (e) => {
-    e.preventDefault()
+  const handleSaveChanges = () => {
+    const selectedType = type;
+    const selectedColor = basicColorName;
+    const selectedSterilized = isSterilized;
+    const selectedPassport = hasPassport;
 
+    navigate(`/our-pets/${selectedType}/${selectedColor}/${selectedSterilized}/${selectedPassport}`);
     closeModal();
   };
+
+  const handleColorChange = (basicColorName) => {
+    setBasicColorName(basicColorName);    
+};
 
   const rgbToHex = (r, g, b) => {
     const componentToHex = (c) => {
@@ -178,7 +186,7 @@ const ImageUpload = () => {
                 {basicColorName && (
                   <div>
                     <h3 className='modal-text'>Basic Color:</h3>
-                    <Select value={basicColorName} className='select'>
+                    <Select value={basicColorName} onChange={handleColorChange} className='select'>
                       <Option value="Black">Black</Option>
                       <Option value="Gray">Gray</Option>
                       <Option value="White">White</Option>
@@ -191,11 +199,11 @@ const ImageUpload = () => {
 
                 <div>
                   <h3 className='modal-text'>Additional Options:</h3>
-                  <Checkbox onChange={(e) => setIsSterilized(e.target.value)} colorPrimaryBorder='#FF5B2E'>
+                  <Checkbox onChange={() => setIsSterilized(!isSterilized)}>
                     Sterilized
                   </Checkbox>
                   <br />
-                  <Checkbox onChange={(e) => setHasPassport(e.target.value)}>
+                  <Checkbox onChange={() => setHasPassport(!hasPassport)}>
                     Passport
                   </Checkbox>
                 </div>
@@ -203,18 +211,18 @@ const ImageUpload = () => {
             </div>
             <div className='approval-button'>
               <br />
-              <Button className='approval'
-                key="save"
-                type="primary"
-                onClick={handleSaveChanges}
-              >
-                Find similar pets
-              </Button>
+                <Button className='approval'
+                  key="save"
+                  type="primary"
+                  onClick={handleSaveChanges}
+                >
+                  Find similar pets
+                </Button>
             </div>
           </>
         ) : (
           <div>
-            <img className="image" src="./images/modalCat.png" alt='booo' />
+            <img className="image" src="./images/modalCat.png" alt='very-very cute cat' />
             <p className='modal-wrong-text'>Please upload a photo with a cat or a dog.</p>
           </div>
         )}

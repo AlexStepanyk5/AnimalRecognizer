@@ -8,40 +8,21 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import { Grid, Pagination } from "swiper";
 
-const OurPets = ({inputType, color, sterilized, passport }) => {
-
+const OurPets = ({type, color, sterilized, passport }) => {
+    const publicURL = process.env.PUBLIC_URL;
     const [dogs, setDogs] = useState();
     const [cats, setCats] = useState();
     var responseFromGetCat;
     var responseFromGetDog;
-
+    
     useEffect(() => {
         const getPet = async () => {
             try {
                 if (color === "Any"){
-
-                    console.log("color any")
                     responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/${sterilized}/${passport}`)
                     responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${sterilized}/${passport}`)
-                    // responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/White/true/true`)
-                    // responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/White/true/true`)
-                    console.log("color any")
-                    console.log(responseFromGetCat)
-                    
-                    
                 } 
-                // if(inputType === 'Any' && color !== 'Any'){
-                    
-                    //     responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
-                    //     responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
-                    // }
-                    
                     else{
-                        console.log("color not any")
-                        console.log(responseFromGetCat, "im here!")
-                        // responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/White/true/true`)
-                        // responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/White/true/true`)
-
                      responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/${color}/${sterilized}/${passport}`)
                      responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
                 }
@@ -60,10 +41,10 @@ const OurPets = ({inputType, color, sterilized, passport }) => {
     return (
         <div className="pets-container">
             <div className="pets-block">
-                {(inputType === 'Cat' || inputType === 'Any' ) &&
+                {(type === 'Cat' || type === 'Any' ) &&
                     <div className='cats-block'>
                         <div className="pets-block-title">
-                            <img src="./images/Home/paw.png" />
+                            <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
                             <h1>Cats</h1>
                         </div>
 
@@ -83,21 +64,21 @@ const OurPets = ({inputType, color, sterilized, passport }) => {
                                 {
                                     cats !== undefined ?
                                         (cats.map((cat) => (
-                                            <SwiperSlide key={cat.id}>
-                                                <Pet pet={cat} />
+                                            <SwiperSlide >
+                                                <Pet key={cat.id} pet={cat} />
                                             </SwiperSlide>
                                         )))
-                                        : 'No cats'
+                                        : 'No connection to DB'
                                 }
                             </Swiper>
                         </div>
 
                     </div>
                 }
-                {(inputType === 'Dog' || inputType === 'Any') &&
+                {(type === 'Dog' || type === 'Any') &&
                     <div className='dogs-block'>
                         <div className="pets-block-title">
-                            <img src="./images/Home/paw.png" />
+                            <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
                             <h1>Dogs</h1>
                         </div>
 
@@ -118,12 +99,12 @@ const OurPets = ({inputType, color, sterilized, passport }) => {
                                 {
                                     dogs !== undefined ?
                                         (dogs.map((dog) => (
-                                            <SwiperSlide key={dog.id}>
-                                                <Pet pet={dog} />
+                                            <SwiperSlide >
+                                                <Pet key={dog.id} pet={dog} />
                                             </SwiperSlide>
                                         )))
 
-                                        : 'No dogs'
+                                        : 'No connection to DB'
                                 }
                             </Swiper>
                         </div>
