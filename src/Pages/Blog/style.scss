@@ -1,14 +1,74 @@
 @use "../../styles/variables" as *;
 @use "../../styles/functions" as *;
 
-.blog-page {
+.blog-page-container {
     max-width: 1440px;
-    padding: 100px 140px 30px;
+    
     font-family: $main-font;
     font-size: rem(14px);
     margin: auto;
     background-color: #fffbf7;
     padding-top: rem(150px);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-top: rem(200px);
+}
+.swiper {
+    width: 100%;
+    height: rem(803px);
+  }
+  
+  .swiper-slide {
+    
+    font-size: 18px;
+    
+  
+    /* Center slide text vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #adoption-stories{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../..//public/images/blog/adoption-stories.png);
+  }
+  #tips-guides{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../..//public/images/blog/tips-guides.png);
+  }
+  #expert-advice{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../..//public/images/blog/expert-advice.png);
+  }
+ 
+.swiper-image-block{
+    padding: 90px 144px;
+    color: #FFFAF5;
+    display: flex;
+    flex-direction: column;
+    gap: rem(36px);
+    
+    h1{
+        
+        font-family: $secondary-font;
+        font-size: rem(45px);
+    }
+    p{
+        font-family: $main-font;
+        font-size: 36px;
+line-height: 55px;
+    }
 }
