@@ -3,7 +3,7 @@
 
 .signup-container {
   max-width: 1440px;
-  padding: 185px 140px 30px;
+  padding: 180px 140px 80px ;
   margin-bottom: 100px;
   background-color: #fff8f1;
   max-height: 1000px;
@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .signup-container form {
@@ -42,7 +43,9 @@
 
 .signup-container button {
   padding: rem(15px) rem(25px);
-  margin-top: rem(60px);
+  margin-top: rem(20px);
+  margin-left: rem(25px);
+  margin-right: rem(25px);
   background-color: #ff6600;
   color: white;
   border: none;
@@ -60,9 +63,36 @@
   transform: translateY(-5px);
 }
 
-.status_signup {
+.signup-text{
   font-family: $secondary-font ;
-  font-size: 250%;
+  font-size: 45px;
   color: #00063a;
-  padding-bottom: rem(75px);
+  padding-bottom: rem(55px);
+  text-align: center !important;
+}
+.status_signup {
+  font-family: $main-font ;
+  font-size: 15px;
+  color: #fc0000;
+  text-align: center !important;
+  margin-bottom: rem(15px);
+}
+
+.signup-content {
+  font-family: $main-font ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: auto;
+}
+
+.redirect-auth{
+  font-size: 13px;
+  text-align: center;
+  margin-top: rem(15px);
+}
+
+input::placeholder{
+  font-size: rem(15px);
 }

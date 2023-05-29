@@ -8,7 +8,7 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isConnected, setIsConnected] = useState(false);
-  const [connectionStatus, setConnectionStatus] = useState('Log in');
+  const [connectionStatus, setConnectionStatus] = useState('');
 
   const handleRegistration = (event) => {
     event.preventDefault();
@@ -23,15 +23,12 @@ function SignUp() {
       password: password
     })
       .then(response => {
-        console.log(response.data); // log response from server
-
-        // Add code to handle successful registration
+        console.log(response.data);
         setIsConnected(true);
         setConnectionStatus('You are registered and logged in');
       })
       .catch(error => {
-        console.error(error); // log error from server
-        // Add code to handle registration error
+        console.error(error);
         setIsConnected(false);
         setConnectionStatus('Error occurred during registration');
       });
@@ -40,16 +37,21 @@ function SignUp() {
 
   return (
     <form className='signup-container' onSubmit={handleRegistration}>
+      <h2 className='signup-text'>Sign up</h2>
+
+      <div className='signup-content'>
+        <label>Username:</label>
+        <input placeholder="Type your username" type="text" value={username} onChange={e => setUsername(e.target.value)} />
+        <label>Email:</label>
+        <input placeholder="Type your email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <label>Password:</label>
+        <input placeholder="Type your password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+        <label>Confirm Password:</label>
+        <input placeholder="Confirm your password" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+      </div>
       <div className='status_signup'>{connectionStatus}</div>
-      <label>Username:</label>
-      <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-      <label>Email:</label>
-      <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-      <label>Password:</label>
-      <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-      <label>Confirm Password:</label>
-      <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
       <button type="submit">Register</button>
+      <p className='redirect-auth'>Already signed up? <a href='/authorization'>Log in here!</a></p>
     </form>
   );
 }
