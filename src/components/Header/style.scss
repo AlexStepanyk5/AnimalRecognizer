@@ -16,15 +16,24 @@
     border-bottom: 3px solid #FF5B2E;
     padding: 30px 230px;
 
+   
+        .heading {
+            font-family: $secondary-font;
+            font-size: rem(50px);
+            color: #000000;
+            display: flex;
+            align-items: center;
+            gap: rem(20px);
+        }
+        .logo{
+            width: rem(60px);
+        }
+        
+    
 
 
 
-    .heading {
-        font-family: $secondary-font;
-        font-size: rem(50px);
-        color: #000000;
-    }
-
+    
     a {
         text-decoration: none;
         color: #5E6085;
