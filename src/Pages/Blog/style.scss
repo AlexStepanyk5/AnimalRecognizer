@@ -7,11 +7,34 @@
     font-family: $main-font;
     font-size: rem(14px);
     margin: auto;
-    background-color: #fffbf7;
     padding-top: rem(150px);
     display: flex;
     flex-direction: column;
     padding-top: rem(200px);
+    .stories{
+      text-align: center;
+      font-family: $secondary-font;
+      font-size: rem(45px);
+      padding: 90px 144px;
+      color: #000958;
+      h2{
+        margin-bottom: rem(100px);
+      }
+      .story-block{
+        text-align: left;
+        h2{
+          font-family: $secondary-font;
+          font-size: rem(32px);
+          margin-bottom: rem(20px);
+        }
+        p{
+          font-family: $main-font;
+          font-size: rem(18px);
+          line-height: rem(40px);
+          color: #656689;
+        }
+      }
+    }
 }
 .swiper {
     width: 100%;
@@ -71,4 +94,13 @@
         font-size: 36px;
 line-height: 55px;
     }
+}
+.swiper-button-prev::after{
+  color: #FDC688;
+}
+.swiper-button-next::after{
+  color: #FDC688;
+}
+.swiper-pagination-bullet{
+  background-color: #FDC688;
 }
