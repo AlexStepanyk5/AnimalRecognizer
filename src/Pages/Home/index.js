@@ -19,7 +19,9 @@ const Home = () => {
                 </div>
                 <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>
             </div>
-            <OurPets inputType='Any'/>
+            <div className='bottom-container'>
+                <OurPets type='Any' color='Any'/>
+            </div>
             <Facilities />
             <OurTeam currentPage='' />
             <Blog />

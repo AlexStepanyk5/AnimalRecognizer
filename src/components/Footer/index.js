@@ -60,7 +60,7 @@ const Footer = () => {
                 src={`${publicURL}/images/linkedin.svg`}
               />
             </a>
-            <a target="blank" href="https://www.instagram.com/fcit.zunu/">
+            <a target="blank" href="https://www.instagram.com/kn.zunu/">
               <img
                 alt="instagram-img"
                 src={`${publicURL}/images/instagram.svg`}

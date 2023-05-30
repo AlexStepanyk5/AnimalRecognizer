@@ -1,11 +1,13 @@
 import "./style.scss";
+import "swiper/css";
+import "swiper/css/effect-cards";
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper";
+
 import { Autoplay, Pagination, Navigation } from "swiper";
 import Blog from "../../components/Home/Blog";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -13,7 +15,6 @@ import "swiper/css/navigation";
 const BlogPage = () => {
   return (
     <div className="blog-page-container">
-      <Blog />
       <div>
         <Swiper
           spaceBetween={30}
@@ -91,6 +92,55 @@ const BlogPage = () => {
             Lily for seeing past his rough exterior and recognizing the beauty
             within.
           </p>
+        </div>
+      </div>
+      <div className="tips-guides">
+        <h1>Tips and Guides</h1>
+        <div className="tips">
+          <img src="./images/blog/useful-cat.png" />
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+          >
+            <SwiperSlide >
+              <h1>
+                Provide a balanced diet: Feed your pet high-quality pet food appropriate for their species, age, and health condition. Consult with a veterinarian to determine the right diet for your pet.
+              </h1>
+              <img src="images/blog/tip-1.png" />
+            </SwiperSlide>
+            <SwiperSlide >
+              <h1>
+                Regular exercise: Dogs, cats, and other pets need regular exercise to maintain their physical and mental well-being. Engage them in playtime, walks, or other activities that suit their energy levels and abilities.
+              </h1>
+              <img src="images/blog/exercise.png" />
+            </SwiperSlide>
+            <SwiperSlide >
+              <h1>
+                Grooming: Regular grooming is essential to keep your pet's coat, nails, and teeth in good condition. Brush their fur, trim their nails, and clean their teeth as recommended by your veterinarian.
+              </h1>
+              <img src="images/blog/grooming.png" />
+            </SwiperSlide>
+            <SwiperSlide >
+              <h1>
+                Regular veterinary check-ups: Schedule routine visits to the veterinarian for health check-ups and vaccinations. Regular examinations can help detect any potential health issues early and ensure your pet's well-being.
+              </h1>
+              <img src="images/blog/veterinary.png" />
+            </SwiperSlide>
+            <SwiperSlide >
+              <h1>
+                Socialization: Socialize your pet with other animals and people from an early age to help them develop positive behaviors and reduce anxiety or aggression.
+              </h1>
+              <img src="images/blog/socialization.png" />
+            </SwiperSlide>
+            <SwiperSlide >
+              <h1>
+                Safe environment: Create a safe environment for your pet by removing any hazardous substances or objects they could ingest. Keep electrical cords, toxic plants, chemicals, and small objects out of their reach.
+              </h1>
+              <img src="images/blog/save-environment.png" />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>

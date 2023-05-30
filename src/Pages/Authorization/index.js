@@ -15,17 +15,14 @@ function Authorization() {
       password: password
     })
       .then(response => {
-        console.log(response.data); // log response from server
-
-        // Add code to handle successful registration
+        console.log(response.data);
         setIsConnected(true);
         setConnectionStatus('You are logged in');
       })
       .catch(error => {
-        console.error(error); // log error from server
-        // Add code to handle registration error
+        console.error(error);
         setIsConnected(false);
-        setConnectionStatus(' Incorrect data');
+        setConnectionStatus('Incorrect data');
       });
     setEmail(''); setPassword('');
   };

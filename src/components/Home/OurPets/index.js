@@ -103,7 +103,6 @@ const OurPets = ({type, color, sterilized, passport }) => {
                                                 <Pet key={dog.id} pet={dog} />
                                             </SwiperSlide>
                                         )))
-
                                         : 'No connection to DB'
                                 }
                             </Swiper>
