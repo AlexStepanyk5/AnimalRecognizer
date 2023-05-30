@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import "./style.scss";
-import {useState} from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,11 +15,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
 const publicURL = process.env.PUBLIC_URL;
-const test = true;
 
-const Header = () => {
-    const [auth, setAuth] = React.useState(true);
-    const [anchorEl, setAnchorEl] = React.useState(null);
+const Header = ({ isConnected }) => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [auth, setAuth] = React.useState(true);
+
 
     const handleChange = (event) => {
         setAuth(event.target.checked);
@@ -32,10 +32,10 @@ const Header = () => {
       const handleClose = () => {
         setAnchorEl(null);
       };
-
-  return (
-    <div className="header-container">
-        <div className='header-content'>
+    
+      return (
+        <div className="header-container">
+          <div className='header-content'>
       <div>
         <a className="heading" href="/">
           <img
@@ -57,24 +57,20 @@ const Header = () => {
           <a href="/about">About us</a>
         </li>
         
-        {test ? (
-            <div>
+        {isConnected ? (
+          <div>
             <li>
-            <div onClick={handleMenu} className='user-icon'>
-              <IconButton
-                size="medium"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                
-                color="inherit"
-              >
-                             
-                <AccountCircle />
-                
-              </IconButton>
-              <li><p>Leo Messi</p></li>
-
+              <div onClick={handleMenu} className='user-icon'>
+                <IconButton
+                  size="medium"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+                <li><p>Leo Messi</p></li>
               </div>
               <Menu
                 id="menu-appbar"
@@ -96,12 +92,13 @@ const Header = () => {
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
               </Menu>
             </li>
-            </div>
-          ) : (
+          </div>
+        ) : (
           <div className='header-login-button'>
             <a href='/signup'>Sign in</a>
-            <img src={`${publicURL}/images/log-in.svg`}/>
-          </div>)}
+            <img src={`${publicURL}/images/log-in.svg`} />
+          </div>
+        )}
 
         
       </ul>

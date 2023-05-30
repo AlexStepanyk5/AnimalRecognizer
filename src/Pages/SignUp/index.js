@@ -1,39 +1,44 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './style.scss';
 
-function SignUp() {
+function SignUp({ updateIsConnected }) {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [isConnected, setIsConnected] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState('');
 
   const handleRegistration = (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
-      setIsConnected(false);
       setConnectionStatus('Passwords do not match');
       return;
     }
-    axios.post('https://localhost:44383/api/Register', {
-      username: username,
-      email: email,
-      password: password
-    })
+    axios
+      .post('https://localhost:44383/api/Register', {
+        username: username,
+        email: email,
+        password: password
+      })
       .then(response => {
         console.log(response.data);
-        setIsConnected(true);
+        updateIsConnected(true);
         setConnectionStatus('You are registered and logged in');
+        navigate('/');
       })
       .catch(error => {
         console.error(error);
-        setIsConnected(false);
+        updateIsConnected(false);
         setConnectionStatus('Error occurred during registration');
       });
-    setUsername(''); setEmail(''); setPassword(''); setConfirmPassword('');
-  };
+    setUsername('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+  }
 
   return (
     <form className='signup-container' onSubmit={handleRegistration}>

@@ -1,30 +1,35 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './style.scss';
 
-function Authorization() {
+function Authorization({ updateIsConnected }) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isConnected, setIsConnected] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState('');
+  updateIsConnected(true);
 
   const handleAuthorization = (event) => {
     event.preventDefault();
-    axios.post('https://localhost:44383/api/Account/login', {
-      email: email,
-      password: password
-    })
+    axios
+      .post('https://localhost:44383/api/Account/login', {
+        email: email,
+        password: password
+      })
       .then(response => {
         console.log(response.data);
-        setIsConnected(true);
+        updateIsConnected(true);
         setConnectionStatus('You are logged in');
+        navigate('/');
       })
       .catch(error => {
         console.error(error);
-        setIsConnected(false);
+        updateIsConnected(false);
         setConnectionStatus('Incorrect data');
       });
-    setEmail(''); setPassword('');
+    setEmail('');
+    setPassword('');
   };
 
   return (
@@ -38,8 +43,9 @@ function Authorization() {
       </div>
       <div className='status'>{connectionStatus}</div>
       <button type="submit">Authorize</button>
-      <p className='redirect-signup'>Don`t have an account yet? <a href='/signup'>Sign up here!</a></p>
+      <p className='redirect-signup'>Don't have an account yet? <a href='/signup'>Sign up here!</a></p>
     </form>
   );
 }
+
 export default Authorization;
