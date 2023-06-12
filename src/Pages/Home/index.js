@@ -20,7 +20,7 @@ const Home = () => {
                 <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>
             </div>
             <div className='bottom-container'>
-                <OurPets type='Any' color='Any'/>
+                <OurPets type='Any' color='Any' sterilized = 'false' passport = 'false' />
             </div>
             <Facilities />
             <OurTeam currentPage='' />

@@ -17,8 +17,8 @@ function SignUp({ updateIsConnected }) {
       setConnectionStatus('Passwords do not match');
       return;
     }
-    axios
-      .post('https://localhost:44383/api/Register', {
+    axios //44383
+      .post('https://localhost:7216/api/Register', {
         username: username,
         email: email,
         password: password

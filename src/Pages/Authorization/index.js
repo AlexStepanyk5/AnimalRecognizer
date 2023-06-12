@@ -8,12 +8,11 @@ function Authorization({ updateIsConnected }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [connectionStatus, setConnectionStatus] = useState('');
-  updateIsConnected(true);
 
   const handleAuthorization = (event) => {
     event.preventDefault();
     axios
-      .post('https://localhost:44383/api/Account/login', {
+      .post('https://localhost:7216/api/Account/login', {
         email: email,
         password: password
       })

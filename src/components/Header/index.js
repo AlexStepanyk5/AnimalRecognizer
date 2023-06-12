@@ -31,6 +31,7 @@ const Header = ({ isConnected }) => {
     
       const handleClose = () => {
         setAnchorEl(null);
+        isConnected = false;
       };
     
       return (
@@ -70,7 +71,7 @@ const Header = ({ isConnected }) => {
                 >
                   <AccountCircle />
                 </IconButton>
-                <li><p>Leo Messi</p></li>
+                <li><p>AlexSt</p></li>
               </div>
               <Menu
                 id="menu-appbar"
