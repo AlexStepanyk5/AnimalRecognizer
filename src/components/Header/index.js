@@ -16,11 +16,12 @@ import Menu from '@mui/material/Menu';
 
 const publicURL = process.env.PUBLIC_URL;
 
+
 const Header = ({ isConnected }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [auth, setAuth] = React.useState(true);
 
-
+   isConnected = false;
     const handleChange = (event) => {
         setAuth(event.target.checked);
       };
