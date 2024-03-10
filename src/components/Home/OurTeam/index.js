@@ -5,7 +5,7 @@ const OurTeam = ({ currentPage }) => {
     return (
         <div className="our-team-container">
             <h2 className="our-team-title">Our Team</h2>
-            <div class="wrapper">
+            <div className="wrapper">
                 <div className="team-member-card">
                     <img className="member-image" src='./images/team/Anna.jpg'/>                   
                     <h3 className="team-member-name">Anna Melnyk</h3>

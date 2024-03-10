@@ -50,13 +50,13 @@ const Header = ({ isConnected }) => {
       </div>
       <ul className="navbar-container">
         <li>
-          <a href="/our-pets">Our pets</a>
+          <a href="/our-pets">Наші улюбленці</a>
         </li>
         <li>
-          <a href="/blog">Blog</a>
+          <a href="/blog">Блог</a>
         </li>
         <li>
-          <a href="/about">About us</a>
+          <a href="/about">Про нас</a>
         </li>
         
         {isConnected ? (
@@ -89,15 +89,15 @@ const Header = ({ isConnected }) => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>My Profile</MenuItem>
-                <MenuItem onClick={handleClose}>Settings</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose}>Мій профіль</MenuItem>
+                <MenuItem onClick={handleClose}>Налаштування</MenuItem>
+                <MenuItem onClick={handleClose}>Вийти</MenuItem>
               </Menu>
             </li>
           </div>
         ) : (
           <div className='header-login-button'>
-            <a href='/signup'>Sign in</a>
+            <a href='/signup'>Увійти</a>
             <img src={`${publicURL}/images/log-in.svg`} />
           </div>
         )}

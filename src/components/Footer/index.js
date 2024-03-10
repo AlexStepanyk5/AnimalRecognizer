@@ -37,11 +37,9 @@ const Footer = () => {
       <div className="footer">
         <div className="meow">
           <div>
-            <h3 className="slackey">Meow</h3>
+            <h3 className="slackey">Мяяв-в</h3>
             <h2 className="meow-text">
-              Our vision is a world free from animal cruelty: together we can
-              move the world for animals. Global Animal Welfare. Better Life For
-              Animals.
+              Наше бачення - світ вільний від насильнства над тваринами: разом ми можемо рухати світ за тварин. Глобальний добробут для тварин. Краще життя для тварин.
             </h2>
           </div>
           <div className="social-media">
@@ -70,10 +68,10 @@ const Footer = () => {
         </div>
         <div className="other">
           <div>
-            <h3 className="slackey">Useful links</h3>
+            <h3 className="slackey">Корисні посилання</h3>
             <ul className="main-font">
               <ul>
-                <li onClick={handleOppen}>FAQs</li>
+                <li onClick={handleOppen}>Часті запитання</li>
                 <Modal
                   open={oppen}
                   onClose={handleClosse}
@@ -86,74 +84,57 @@ const Footer = () => {
                       variant="h6"
                       component="h2"
                     >
-                      Frequently Asked Questions
+                      Питання, що ми часто отримуємо
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                       <ul>
                         <li>
-                          Q: How does the pet adoption process work on this
-                          website?
+                          П: Як працює процес адопції тварин на цьому вебсайті?
                           <br />
-                          A: To adopt a pet, browse the available listings and
-                          find a pet that suits your preferences. Contact the
-                          pet owner or shelter through the provided contact
-                          information to inquire about the pet, ask questions,
-                          and arrange a meeting. If both parties are satisfied,
-                          you can proceed with the adoption process.
+                          В: Щоб прийняти чотирилапого друга, перегляньте доступні списки та
+                           знайдіть тваринку, яка відповідає вашим уподобанням. Зверніться до
+                           власника тварини або притулку за вказаною контактною інформацією,
+                           щоб дізнатися про улюбленця, поставити питання, що вас цікавлять і 
+                           домовитися про зустріч і подальші дії.
                           <br />
                           <br />
-                          Q: Can I post my pet for adoption on this website?
+                          П: Чи можу я викласти оголошення про адопцію свого чотирилапого друга на цьому сайті?
                           <br />
-                          A: Absolutely! We encourage users to post their pets
-                          for adoption. Simply create an account, provide
-                          necessary details about your pet, including their
-                          description, photos, and any other relevant
-                          information. Interested individuals can then contact
-                          you directly through the website.
+                          В: Звісно! Ми заохочуємо наших користувачів викладати оголошення при потребі.
+                          Просто створіть акаунт, надайте потрібні деталі про вашого улюбленця (включаючи опис,
+                          фото і всю іншу потрібну інформацію)
+                          Усі, кого зацікавить ваше оголошення зможуть з вами зв'язатись.
                           <br />
                           <br />
-                          Q: How do I contact the pet owner or shelter to
-                          inquire about a pet?
+                          П: Як я можу зв'язатись із власником чи притулком щодо адопції?
                           <br />
-                          A: Each pet listing includes contact information, such
-                          as email or phone number. Simply reach out to the pet
-                          owner or shelter using the provided contact details to
-                          ask questions, discuss the pet's requirements, and
-                          express your interest in adoption.
+                          В: Кожна анкета містить контактну інформацію подавача (номер телефону, електронну адресу).
+                          Просто зв'яжіться із контактною особою, задайте питання, що вас цікавлять та дізнайтесь
+                          потреби тваринки.
                           <br />
                           <br />
-                          Q: Are the pets on this website from shelters or
-                          individual owners?
+                          П: Тварини на цьому вебсайті від окремих власників чи притулків?
                           <br />
-                          A: We collaborate with both individual pet owners and
-                          shelters. Some pets are posted by individuals who can
-                          no longer care for their pets, while others are from
-                          reputable animal shelters. Each listing will clearly
-                          indicate whether it's from a shelter or an individual.
+                          В: Ми співпрацюємо із всіма - притулками та окремими власниками. 
+                          Одні улюбленці публікуються власниками із різних причин, інші ж
+                          тваринки, що тимчасово перебувають у притулках. Кожна анкета дає 
+                          інформацію про те, в кого саме знаходиться тваринка.
                           <br />
                           <br />
-                          Q: What if I encounter any issues during the adoption
-                          process?
+                          П: Що якщо я стикнусь із проблемами під час адопції?
                           <br />
-                          A: If you face any issues or concerns during the
-                          adoption process, please contact our customer support
-                          team. We are here to assist you and ensure a smooth
-                          adoption experience.
+                          В: Якщо ви стикнетесь із проблемами під час адопції тварин, просто зверніться в нашу службу підтримки -
+                          наша команда з радістю допоможе вам та впениться, що весь процес пройде чудово!
                           <br />
                           <br />
-                          Q: How can I support shelters through this website?
+                          П: Як я можу допомогти тваринкам, чиї анкети розміщені на цьому вебсайті?
                           <br />
-                          A: Our website provides opportunities for users to
-                          donate directly to partnering shelters. Additionally,
-                          you can choose to adopt pets from these shelters,
-                          which helps create space for more animals in need. By
-                          spreading the word about our website and promoting
-                          responsible pet ownership, you can also contribute to
-                          the welfare of animals in shelters.
+                          В: Наш вебсайт дає можливість донатити напряму тваринкам у притулках та нам для допомоги у благодійних зборах.
+                          На додачу, ви можете сприяти процесу адопції тваринок, що тут розміщені - це найкраща допомога. Окрім цього, 
+                          поширення може допомогти фінансово, що теж є дуже вагомим внеском.
                           <br />
                           <br />
-                          If you have any further questions or need assistance,
-                          please feel free to contact our customer support team.
+                          Якщо у вас є інші запитання - без вагань зв'яжіться із нашою командою і ми будемо раді вам допомогти!
                         </li>
                         <br />
                       </ul>
@@ -175,13 +156,13 @@ const Footer = () => {
                       variant="contained"
                       onClick={handleClosse}
                     >
-                      Close
+                      Закрити
                     </Button>
                   </Box>
                 </Modal>
               </ul>
               <ul>
-                <li onClick={handlleOpen}>Privacy Policy</li>
+                <li onClick={handlleOpen}>Політики приватності</li>
                 <Modal
                   open={openn}
                   onClose={handlleClose}
@@ -194,85 +175,75 @@ const Footer = () => {
                       variant="h6"
                       component="h2"
                     >
-                      Privacy Policy
+                      Політики приватності
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                       <ul>
-                        <li>Effective Date: 20.05.2023</li>
+                        <li>Дата набуття чинності: 20.01.2024</li>
                         <br />
                         <li>
-                          This Privacy Policy describes how we collect, use, and
-                          protect your personal information when you visit our
-                          website. We are committed to safeguarding your privacy
-                          and ensuring the security of your personal
-                          information. By using our website, you consent to the
-                          practices outlined in this Privacy Policy.
-                          <br />
-                          1. Information We Collect: We may collect personal
-                          information such as your name, email address, contact
-                          information, and any other information you voluntarily
-                          provide to us through forms or interactions on our
-                          website.
-                          <br />
-                          2. Use of Information: We use the collected
-                          information to provide you with the requested
-                          services, respond to your inquiries, improve our
-                          website, and communicate with you about updates,
-                          promotions, or other relevant information. We may also
-                          use your information for statistical analysis and to
-                          enhance the user experience.
-                          <br />
-                          3. Disclosure of Information: We do not sell, trade,
-                          or otherwise transfer your personal information to
-                          third parties without your consent, except in the
-                          following circumstances: - We may share your
-                          information with trusted third-party service providers
-                          who assist us in operating our website and conducting
-                          our business, as long as they agree to keep the
-                          information confidential. - We may disclose your
-                          information if required by law or in response to a
-                          valid legal request, such as a court order or
-                          government inquiry. - In the event of a merger,
-                          acquisition, or sale of our business assets, your
-                          information may be transferred to the acquiring
-                          entity.
-                          <br />
-                          4. Cookies and Tracking Technologies: Our website may
-                          use cookies and similar tracking technologies to
-                          enhance your browsing experience, analyze trends, and
-                          gather demographic information. You can manage your
-                          cookie preferences through your browser settings.
-                          <br />
-                          5. Data Security: We take reasonable measures to
-                          protect your personal information from unauthorized
-                          access, alteration, disclosure, or destruction.
-                          However, please note that no method of transmission or
-                          electronic storage is completely secure, and we cannot
-                          guarantee absolute security.
-                          <br />
-                          6. Third-Party Links: Our website may contain links to
-                          third-party websites that are not under our control.
-                          We are not responsible for the privacy practices or
-                          content of such websites. We encourage you to review
-                          the privacy policies of those websites before
-                          providing any personal information.
-                          <br />
-                          7. Changes to this Privacy Policy: We reserve the
-                          right to update or modify this Privacy Policy at any
-                          time. Any changes will be effective immediately upon
-                          posting the revised Privacy Policy on our website. We
-                          encourage you to review this Privacy Policy
-                          periodically to stay informed about how we collect,
-                          use, and protect your personal information.
-                          <br />
-                          8. Contact Us: If you have any questions or concerns
-                          regarding this Privacy Policy or our privacy
-                          practices, please contact us at +380676535231.
-                          <br />
-                          <br />
-                          By using our website, you acknowledge that you have
-                          read, understood, and agreed to the terms and
-                          conditions of this Privacy Policy.
+                           Ця Політика конфіденційності описує, як ми збираємо, використовуємо та
+                           захищаємо вашу особисту інформацію, коли ви відвідуєте наш
+                           вебсайт. Ми прагнемо захищати вашу конфіденційність
+                           та забезпечувати безпеку вашої особистої інформації. 
+                           Використовуючи наш вебсайт, ви погоджуєтеся з
+                           твердженнями, що містяться в цій Політиці конфіденційності.
+                           <br />
+                           1. Інформація, яку ми збираємо: ми можемо збирати особисту інформацію,
+                           таку інформацію, як ваше ім’я, адреса електронної пошти, контактні
+                           дані та будь-яку іншу інформацію, яку ви надаєте нам добровільно
+                           через форми або взаємодії на нашому вебсайті.
+                           <br />
+                           2. Використання інформації: ми використовуємо зібрану
+                           інформацію, щоб надати вам запитані дані, послуги, 
+                           відповіді на ваші запити та щоб покращувати наш
+                           вебсайт, дізнаватись вашу думку щодо оновлень. Ми також можемо
+                           використовувати вашу інформацію для статистичного аналізу, щоб
+                           покращити користувацький досвід.
+                           <br />
+                           3. Розкриття інформації: ми не продаємо, не торгуємо,
+                           або іншим чином не передаємо вашу особисту інформацію
+                           третіми особами без вашої згоди, за винятком
+                           таких обставини: - Ми можемо поділитися вашими даними
+                           з довіреними сторонніми постачальниками послуг, які 
+                           допомагають нам у роботі нашого вебсайту та проведенні
+                           аналізу нашої організації, якщо вони згодні зберігати
+                           інформацію конфіденційно. - Ми можемо розкрити ваші
+                           дані, якщо це вимагається законом або у відповідь на
+                           дійсний законний запит, наприклад судовий наказ або
+                           державний запит.
+                           <br />
+                           4. Файли cookie та технології відстеження: наш вебсайт може
+                           використовувати файли cookie та подібні технології відстеження, щоб
+                           покращувати ваш досвід перегляду, аналізувати тенденції та
+                           збирати демографічну інформацію. Ви можете керувати
+                           налаштуванням файлів cookie через налаштування вашого браузера.
+                           <br />
+                           5. Безпека даних: ми вживаємо розумних заходів, щоб
+                           захистити вашу особисту інформацію від несанкціонованого доступу,
+                           зміни, розкриття або знищення.
+                           Однак зауважте, що жоден спосіб передачі або електронне зберігання 
+                           не може бути повністю безпечним, і ми не можемо гарантують абсолютну безпеку.
+                           <br />
+                           6. Посилання третіх сторін: наш вебсайт може містити посилання на
+                           вебсайти третіх осіб, які не знаходяться під нашим контролем.
+                           Ми не несемо відповідальності за практику конфіденційності або
+                           вміст таких вебсайтів. Заохочуємо вас переглянути політики 
+                           конфіденційності цих вебсайтів перед наданням будь-якої особистої інформації.
+                           <br />
+                           7. Зміни в цій Політиці конфіденційності: Ми залишаємо за собою
+                           право оновлювати або змінювати цю Політику конфіденційності в будь-який час. 
+                           Будь-які зміни набудуть чинності негайно розміщення переглянутої Політики 
+                           конфіденційності на нашому вебсайті. Ми рекомендуємо вам переглядати цю Політику 
+                           конфіденційності періодично, щоб бути в курсі того, як ми збираємо,
+                           використовуємо та захищаємо вашу особисту інформацію.
+                           <br />
+                           8. Зв’яжіться з нами: якщо у вас виникли запитання чи сумніви
+                           щодо цієї Політики конфіденційності, будь ласка, зв'яжіться з нами.
+                           <br />
+                           <br />
+                           Використовуючи наш вебсайт, ви підтверджуєте, що ви ознайомлені, зрозуміли і погоджуєтесь 
+                           з умовами цієї Політики конфіденційності.
                         </li>
                         <br />
                       </ul>
@@ -300,7 +271,7 @@ const Footer = () => {
                 </Modal>
               </ul>
               <ul>
-                <li onClick={handleOpen}>Terms of Use</li>
+                <li onClick={handleOpen}>Правила використання</li>
                 <Modal
                   open={open}
                   onClose={handleClose}
@@ -313,37 +284,33 @@ const Footer = () => {
                       variant="h6"
                       component="h2"
                     >
-                      Terms & Conditions
+                      Правила та умови
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                       <ul>
                         <li>
-                          1. These Website Standard Terms and Conditions written
-                          on this webpage shall manage your use of our website,
-                          Webiste Name accessible at Website URL.
-                        </li>
-                        <br />
-                        <li>
-                          2. By using our Website, you accepted these terms and
-                          conditions in full. If you disagree with these terms
-                          and conditions or any part of these terms and
-                          conditions, you must not use our Website.
-                        </li>
-                        <br />
-                        <li>
-                          3. Intellectual Property Rights Unless otherwise
-                          stated, we or our licensors own the intellectual
-                          property rights in the website and material on the
-                          website. Subject to the license below, all these
-                          intellectual property rights are reserved.
-                        </li>
-                        <br />
-                        <li>
-                          4. License to use website You may view, download for
-                          caching purposes only, and print pages from the
-                          website for your own personal use, subject to the
-                          restrictions set out below and elsewhere in these
-                          terms and conditions.
+                          1. Стандартні положення та умови вебсайту, описані на цій сторінці,
+                           керуватимуть використанням вами нашого вебсайту.
+                           Назва вебсайту доступна за URL-адресою вебсайту.
+                         </li>
+                         <br />
+                         <li>
+                           2. Використовуючи наш веб-сайт, ви приймаєте ці умови та
+                           умови в повному обсязі. Якщо ви не згодні з цими умовами
+                           та умови або будь-яка частина цих умов і
+                           умови, ви не повинні використовувати наш веб-сайт.
+                         </li>
+                         <br />
+                         <li>
+                           3. Права інтелектуальної власності: Ми та наші ліцензіари володіємо 
+                           інтелектуальним продуктом права власності на вебсайт і матеріали на вебсайті. 
+                           Усе це відповідно до наведеної нижче ліцензії права інтелектуальної власності.
+                         </li>
+                         <br />
+                         <li>
+                           4. Ліцензія на використання веб-сайту: Ви можете переглядати, завантажувати лише з метою 
+                           кешування та друку сторінок вебсайту для вашого особистого користування відповідно до
+                           обмежень, викладених тут та в інших місцях правил та умов.
                         </li>
                         <br />
                       </ul>
@@ -365,7 +332,7 @@ const Footer = () => {
                       variant="contained"
                       onClick={handleClose}
                     >
-                      Close
+                      Закрити
                     </Button>
                   </Box>
                 </Modal>
@@ -373,17 +340,17 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="slackey">Explore</h3>
+            <h3 className="slackey">Для вас</h3>
             <ul className="main-font">
-              <a href="/about">About us</a>
-              <a href="/our-pets">Our Pets</a>
-              <a href="/blog">Blog</a>
+              <a href="/about">Про нас</a>
+              <a href="/our-pets">Наші улюбленці</a>
+              <a href="/blog">Блог</a>
             </ul>
           </div>
           <div>
-            <h3 className="slackey">Contact info</h3>
+            <h3 className="slackey">Контактна інформація</h3>
             <ul className="main-font">
-              <a href="tel:+380676535231 ">+380676535231</a>
+              <a href="tel:+380252525250">+380252525250</a>
               <a href="https://goo.gl/maps/yqwMBbJ84u5jyTEt5" target="blank">
                 Ternopil, Mykulynetska street, 46a
               </a>

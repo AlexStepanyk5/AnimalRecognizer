@@ -23,8 +23,8 @@ const OurPets = ({type, color, sterilized, passport }) => {
                     responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${sterilized}/${passport}`)
                 } 
                     else{
-                     responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/${color}/${sterilized}/${passport}`)
-                     responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
+                    responseFromGetDog = await axios.get(`https://localhost:7216/api/Pets/Dog/${color}/${sterilized}/${passport}`)
+                    responseFromGetCat = await axios.get(`https://localhost:7216/api/Pets/Cat/${color}/${sterilized}/${passport}`)
                 }
 
                 await setDogs(responseFromGetDog.data);
@@ -68,7 +68,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                                                 <Pet key={cat.id} pet={cat} />
                                             </SwiperSlide>
                                         )))
-                                        : 'No connection to DB'
+                                        : 'Did not receive data from DB'
                                 }
                             </Swiper>
                         </div>
@@ -83,7 +83,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                         </div>
 
                         <div className="cards-container">
-
+                
                             <Swiper
                                 slidesPerView={4}
                                 slidesPerGroup={4}
@@ -103,7 +103,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                                                 <Pet key={dog.id} pet={dog} />
                                             </SwiperSlide>
                                         )))
-                                        : 'No connection to DB'
+                                        : 'Did not receive data from DB'
                                 }
                             </Swiper>
                         </div>
