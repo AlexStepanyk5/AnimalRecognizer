@@ -37,7 +37,7 @@ const Footer = () => {
       <div className="footer">
         <div className="meow">
           <div>
-            <h3 className="slackey">Мяяв-в</h3>
+            <h3 className="slackey">Ня-яв</h3>
             <h2 className="meow-text">
               Наше бачення - світ вільний від насильнства над тваринами. Разом ми можемо змінювати світ для тварин. Глобальний добробут для тварин. Краще життя для тварин.
             </h2>

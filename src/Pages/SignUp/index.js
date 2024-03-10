@@ -26,13 +26,13 @@ function SignUp({ updateIsConnected }) {
       .then(response => {
         console.log(response.data);
         updateIsConnected(true);
-        setConnectionStatus('You are registered and logged in');
+        setConnectionStatus('Ви зареєстровані та увійшли, гав-гав!');
         navigate('/');
       })
       .catch(error => {
         console.error(error);
         updateIsConnected(false);
-        setConnectionStatus('Error occurred during registration');
+        setConnectionStatus('Виникла помилка під час реєстрації, спробуйте знову(');
       });
     setUsername('');
     setEmail('');
@@ -42,21 +42,21 @@ function SignUp({ updateIsConnected }) {
 
   return (
     <form className='signup-container' onSubmit={handleRegistration}>
-      <h2 className='signup-text'>Sign up</h2>
+      <h2 className='signup-text'>Реєстрація</h2>
 
       <div className='signup-content'>
-        <label>Username:</label>
-        <input placeholder="Type your username" type="text" value={username} onChange={e => setUsername(e.target.value)} />
-        <label>Email:</label>
-        <input placeholder="Type your email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
-        <label>Password:</label>
-        <input placeholder="Type your password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-        <label>Confirm Password:</label>
-        <input placeholder="Confirm your password" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+        <label>Ім'я користувача:</label>
+        <input placeholder="Введіть ім'я користувача" type="text" value={username} onChange={e => setUsername(e.target.value)} />
+        <label>Електронна адреса:</label>
+        <input placeholder="Введіть електронну адресу" type="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <label>Пароль:</label>
+        <input placeholder="Введіть пароль" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+        <label>Підтвердіть пароль:</label>
+        <input placeholder="Підтвердіть пароль" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
       </div>
       <div className='status_signup'>{connectionStatus}</div>
-      <button type="submit">Register</button>
-      <p className='redirect-auth'>Already signed up? <a href='/authorization'>Log in here!</a></p>
+      <button type="submit">Зареєструватись</button>
+      <p className='redirect-auth'>Вже зареєстровані? <a href='/authorization'>Увійдіть тут!</a></p>
     </form>
   );
 }

@@ -6,31 +6,34 @@ const About = () => {
                 <div className="about-header-container">
                     <div className='about-header'>
                         <img alt='paw' src="./images/Home/paw.png" />
-                        <h1>About Us</h1>
+                        <h1>Про нас</h1>
                     </div>
-                    <p>Our big-picture hope is for every pet in the world to be safe, respected and loved - whether the pet is owned, surrendered to a shelter, unclaimed at the pound, seized by authorities, or trapped by rangers.</p>
+                    </div>
+                <div className='about-text'>
+                    <p >Ми - благодійна організація PetCare, яка прагне згуртувати усіх навколо спільної проблеми. <br/> Усі тут сподіваються, що кожна домашня тваринка у світі буде в безпеці, огорнута повагою, теплом та любов’ю, незалежно від того, чи вона у власника, здана в притулок, загублена чи безхатня.</p>
                 </div>
+
 
                 <div className='about-blocks-container'>
                     <div className='block-container'>
                         <img alt='about-us-img' src="./images/about-us/about-us-image-1.png" />
                         <div className='block-text'>
-                            <h2>Create a positive and progressive culture for rescue.</h2>
-                            <p>We want to improve the rescue and adoption experience for everyone and believe that the best way to achieve this is by creating and nurturing a positive and progressive culture for rescue.</p>
+                            <h2>Створюємо позитивну і прогресивну культуру для турботи про тварин</h2>
+                            <p>Ми хочемо покращити досвід порятунку та адопції для всіх і вважаємо, що найкращий спосіб досягти цього — створити та плекати позитивну та прогресивну культуру порятунку.</p>
                         </div>
                     </div>
                     <div className='block-container' id='reverse'>
                         <img alt='about-us-img' src="./images/about-us/about-us-image-2.png" />
                         <div className='block-text'>
-                            <h2>Use technology to drive social change.</h2>
-                            <p>We are digital innovators, always looking for ways we can leverage the latest advances in the tech world to solve the big issues and challenges that rescue pets face in the world.</p>
+                            <h2>Використовуваємо технології, щоб просувати зміни</h2>
+                            <p>Ми цифрові новатори, які завжди шукають способи використання останніх досягнень у світі технологій для вирішення великих проблем і викликів, з якими стикається світ порятунку тварин.</p>
                         </div>
                     </div>
                     <div className='block-container'>
                         <img alt='about-us-img' src="./images/about-us/about-us-image-3.png" />
                         <div className='block-text'>
-                            <h2>Unite to save lives.</h2>
-                            <p>We unite pets with new families, rescue groups with adopters and foster carers, corporate partners with a national rescue community, and we unite all passionate advocates for rescue pets to drive positive change.</p>
+                            <h2>Об'єднуємо, щоб рятувати життя</h2>
+                            <p>Ми об’єднуємо домашніх тварин із новими сім’ями, групи волонтерів з новими потенційними власниками та тимчасовими опікунами, корпоративних партнерів із національною спільнотою порятунку та всіх прихильників порятунку домашніх тварин, щоб стимулювати позитивні зміни.</p>
                         </div>
                     </div>
 

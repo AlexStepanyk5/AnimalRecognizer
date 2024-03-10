@@ -32,70 +32,66 @@ const BlogPage = () => {
         >
           <SwiperSlide>
             <div id="adoption-stories" className="swiper-image-block">
-              <h1>Adoption Stories</h1>
+              <h1>Про блог</h1>
               <p>
-                In this page, we provide a dedicated space for our blog on our
-                pet adopting website. Our blog serves as a valuable resource for
-                pet lovers, potential adopters, and current pet owners.
+                  Ця сторінка - спеціальне місце для нашого блогу про адопцію тварин. Наш блог є цікавим ресурсом для
+                  любителів домашніх тварин, потенційних усиновлювачів та тих, хто ще вагається.
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div id="tips-guides" className="swiper-image-block">
-              <h1>Tips and Guides</h1>
+              <h1>Підказки та інструкції</h1>
               <p>
-                We offer practical tips, guides, and step-by-step tutorials on
-                various aspects of pet care. Whether it's introducing a new pet
-                to your home, crate training, basic obedience, or dealing with
-                common behavioral issues, our blog provides actionable advice to
-                help pet owners navigate these situations successfully.
+                 Ми пропонуємо практичні поради, посібники та покрокові інструкції щодо
+                 різних аспектів догляду за домашніми тваринами. Будь то знайомство з новою 
+                 домашньою твариною, специфічне тренування, базова слухняність чи роботи з
+                 поширеними проблемами поведінки - наш блог дає дієві поради власникам 
+                 домашніх тварин в кожній з цих ситуацій.
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div id="expert-advice" className="swiper-image-block">
-              <h1>Expert Advice</h1>
+              <h1>Поради експертів</h1>
               <p>
-                Our blog page features articles written by experienced pet
-                professionals, veterinarians, trainers, and behaviorists. They
-                provide expert advice on various topics, including pet behavior,
-                training tips, nutrition, grooming, and overall pet well-being.
-                We strive to provide reliable and up-to-date information to
-                assist pet owners in providing the best care for their furry
-                companions.
+                 На сторінці нашого блогу представлені статті, написані досвідченими кінологами,
+                 професіоналами, ветеринарами та тренерами. Вони дають експертні поради з різних тем, 
+                 у тому числі щодо поведінки домашніх тварин, поради щодо дресирування, харчування, 
+                 догляду та загального самопочуття домашніх тварин. Ми прагнемо надавати достовірну та 
+                 актуальну інформацію, щоб допомогти власникам домашніх тварин забезпечити найкращий 
+                 догляд за їхніми пухнастиками компаньйонами.
               </p>
             </div>
           </SwiperSlide>
         </Swiper>
       </div>
       <div className="stories">
-        <h2>Adoption Stories</h2>
+        <h2>Історії адопції</h2>
         <div className="story-block">
-          <h2>Lily and Charlie</h2>
+          <h2>Лілія та Чарлі</h2>
           <img alt="story-1" src="./images/blog/story-1.png" />
           <p>
-            Once upon a time, in a bustling city filled with towering
-            skyscrapers and busy streets, there was a humble animal shelter
-            called "Paws of Hope." It was a place where wagging tails and
-            hopeful eyes eagerly awaited their chance at a forever home. One
-            fateful day, a young woman named Lily found herself drawn to the
-            shelter's doors, her heart yearning for a furry companion to share
-            her life's adventures. As she entered, she was greeted by a symphony
-            of barks and meows, each one a plea for love and a place to belong.
-            Amidst the chaos, a small, scruffy dog caught Lily's attention. His
-            name was Charlie, a shy and timid soul who had endured hardships in
-            his past. Lily could see the flicker of hope in his eyes, and she
-            knew she had found her perfect match. Overcoming her initial
-            reservations, Lily made the decision to adopt Charlie and give him
-            the love and stability he had been longing for. With every wag of
-            his tail and gentle nudge against her hand, Charlie silently thanked
-            Lily for seeing past his rough exterior and recognizing the beauty
-            within.
+             Давним-давно, в галасливому місті, наповненому високими хмарочосами і 
+             жвавими вулицями, був скромний притулок для тварин під назвою «Лапки надії». 
+             Це було місце, де виляли хвостами і очі, повні надії, з нетерпінням чекали 
+             свого шансу отримати вічний дім. Одного доленосного дня, молода жінка на 
+             ім’я Лілі прийшла до дверей притулку. Її серце прагнуло завестися пухнастим 
+             другом, що розділить із нею її життєві пригоди. Коли вона увійшла, її зустріла 
+             симфонія гавкання та нявкання, кожне з яких благало про любов та новий дім.
+             Серед хаосу увагу Лілі привернув маленький знесилений песик. Його звали Чарлі, с
+             ором'язлива й боязка душа, яка пережила труднощі в минулому. Лілі побачила спалах 
+             надії в його очах, і вона знала, що знайшла ідеальну пару. Подолавши усі свої 
+             сумніви та переживання, Лілі прийняла рішення усиновити Чарлі та подарувати йому
+             свою любов і стабільність, яких він так прагнув. З кожним помахом свого хвоста, 
+             і ніжним штовхом її руки, Чарлі мовчки дякував за те, що вона розгледіла його 
+             ніжну душу за серйозним та боязким тілом. З того часу вони багато мандрували
+             і ніколи не розділялись, адже стали невід'ємною частиною життя одне одного.
           </p>
         </div>
       </div>
       <div className="tips-guides">
-        <h1>Tips and Guides</h1>
+        <h1>Підказки та інструкції</h1>
         <div className="tips">
           <img src="./images/blog/useful-cat.png" />
           <Swiper
@@ -106,37 +102,37 @@ const BlogPage = () => {
           >
             <SwiperSlide >
               <h1>
-                Provide a balanced diet: Feed your pet high-quality pet food appropriate for their species, age, and health condition. Consult with a veterinarian to determine the right diet for your pet.
+              <p>Збалансоване харчування:</p> Годуйте свого улюбленця високоякісним кормом, що відповідає його виду, віку та стану здоров’я. Проконсультуйтеся з ветеринаром, щоб визначити правильний раціон для вашого вихованця.
               </h1>
               <img src="images/blog/tip-1.png" />
             </SwiperSlide>
             <SwiperSlide >
               <h1>
-                Regular exercise: Dogs, cats, and other pets need regular exercise to maintain their physical and mental well-being. Engage them in playtime, walks, or other activities that suit their energy levels and abilities.
+              <p>Регулярні фізичні вправи:</p> Собаки, коти та інші домашні тварини потребують регулярних фізичних вправ, щоб підтримувати своє фізичне та психічне благополуччя. Залучайте їх до ігор, прогулянок або інших видів діяльності, які відповідають їхньому рівню енергії та здібностям.
               </h1>
               <img src="images/blog/exercise.png" />
             </SwiperSlide>
             <SwiperSlide >
               <h1>
-                Grooming: Regular grooming is essential to keep your pet's coat, nails, and teeth in good condition. Brush their fur, trim their nails, and clean their teeth as recommended by your veterinarian.
+              <p>Догляд:</p> Регулярний догляд необхідний для підтримки шерсті, нігтів і зубів вашого вихованця в хорошому стані. Розчісуйте їм шерсть, стрижіть їм кігті та чистіть зуби відповідно до рекомендацій ветеринара.
               </h1>
               <img src="images/blog/grooming.png" />
             </SwiperSlide>
             <SwiperSlide >
               <h1>
-                Regular veterinary check-ups: Schedule routine visits to the veterinarian for health check-ups and vaccinations. Regular examinations can help detect any potential health issues early and ensure your pet's well-being.
+              <p>Регулярні ветеринарні огляди:</p> Заплануйте регулярні візити до ветеринара для огляду здоров’я та вакцинації. Регулярні огляди можуть допомогти вчасно виявити будь-які потенційні проблеми зі здоров’ям і забезпечити благополуччя вашого вихованця.
               </h1>
               <img src="images/blog/veterinary.png" />
             </SwiperSlide>
             <SwiperSlide >
               <h1>
-                Socialization: Socialize your pet with other animals and people from an early age to help them develop positive behaviors and reduce anxiety or aggression.
+              <p>Соціалізація:</p> Спілкуйтеся з тваринами та людьми з раннього дитинства, щоб допомогти їм розвинути позитивну поведінку та зменшити тривогу чи агресію.
               </h1>
               <img src="images/blog/socialization.png" />
             </SwiperSlide>
             <SwiperSlide >
               <h1>
-                Safe environment: Create a safe environment for your pet by removing any hazardous substances or objects they could ingest. Keep electrical cords, toxic plants, chemicals, and small objects out of their reach.
+              <p>Безпечне середовище:</p> Створіть безпечне середовище для свого вихованця, прибравши будь-які небезпечні предмети, які вони можуть проковтнути. Тримайте шнури, рослини, хімікати та дрібні предмети в недоступному для них місці, слідкуйте за ними під час прогулянок.
               </h1>
               <img src="images/blog/save-environment.png" />
             </SwiperSlide>

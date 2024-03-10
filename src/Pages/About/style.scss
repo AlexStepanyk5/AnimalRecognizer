@@ -18,7 +18,7 @@
         color: #656689;
         font-size: rem(24px);
         text-align: center;
-        margin-bottom: rem(70px);
+        margin-bottom: rem(35px);
 
         .about-header {
             padding-top: rem(75px);
@@ -31,11 +31,23 @@
         }
     }
 
+    
+    .about-text {
+        width: rem(1050px);
+        margin: auto;
+        font-family: $main-font;
+        color: #656689;
+        font-size: rem(24px);
+        text-align: center;
+        margin-bottom: rem(70px);
+    }
+
     .about-blocks-container {
         display: flex;
         flex-direction: column;
         gap: rem(44px);
         margin-bottom: rem(50px);
+        margin-top: rem(50px);
 
         .block-container {
             width: rem(1154px);

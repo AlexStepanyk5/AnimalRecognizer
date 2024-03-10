@@ -19,13 +19,13 @@ function Authorization({ updateIsConnected }) {
       .then(response => {
         console.log(response.data);
         updateIsConnected(true);
-        setConnectionStatus('You are logged in');
+        setConnectionStatus('Гав-гав!');
         navigate('/');
       })
       .catch(error => {
         console.error(error);
         updateIsConnected(false);
-        setConnectionStatus('Incorrect data');
+        setConnectionStatus('Спробуйте знову(');
       });
     setEmail('');
     setPassword('');
@@ -33,16 +33,16 @@ function Authorization({ updateIsConnected }) {
 
   return (
     <form className='authorization-container' onSubmit={handleAuthorization}>
-      <h2 className='authorization-text'>Log in</h2>
+      <h2 className='authorization-text'>Вхід</h2>
       <div className='authorization-content'>
-        <label>Email:</label>
-        <input placeholder="Enter your email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
-        <label>Password:</label>
-        <input placeholder="Enter your password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+        <label>Електронна адреса:</label>
+        <input placeholder="Введіть електронну адресу" type="email" value={email} onChange={e => setEmail(e.target.value)} />
+        <label>Пароль:</label>
+        <input placeholder="Введіть пароль" type="password" value={password} onChange={e => setPassword(e.target.value)} />
       </div>
       <div className='status'>{connectionStatus}</div>
-      <button type="submit">Authorize</button>
-      <p className='redirect-signup'>Don't have an account yet? <a href='/signup'>Sign up here!</a></p>
+      <button type="submit">Увійти</button>
+      <p className='redirect-signup'>Ще не маєте профілю? <a href='/signup'>Зареєструйтесь тут!</a></p>
     </form>
   );
 }
