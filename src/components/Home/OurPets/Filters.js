@@ -26,35 +26,35 @@ const Filters = ({inputType, inputColor, inputSterilized, inputPassport}) => {
                     <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
                     <h1>Наші тваринки</h1>
                 </div>
-                <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>
+                <p>Наші тваринки вже чекають на тебе!<br />Обери ту, що тобі підходить!</p>
             </div>
             <div className="filters">
                 <div>
-                    <h3 className="select-title">Animal</h3>
+                    <h3 className="select-title">Чотирилапий друг</h3>
                     <Select value={type} onChange={handleTypeChange} className="select-text">
-                        <Option value="Any">Any</Option>
-                        <Option value="Dog">Dog</Option>
-                        <Option value="Cat">Cat</Option>
+                        <Option value="Any">Усі</Option>
+                        <Option value="Dog">Гав!</Option>
+                        <Option value="Cat">Няв!</Option>
                     </Select>
                 </div>
                 <div>
-                    <h3 className="select-title">Color</h3>
+                    <h3 className="select-title">Колір</h3>
                     <Select value={color} onChange={handleColorChange} className="select-text">
-                        <Option value="Any">Any</Option>
-                        <Option value="Black">Black</Option>
-                        <Option value="Grey">Grey</Option>
-                        <Option value="White">White</Option>
-                        <Option value="Brown">Brown</Option>
-                        <Option value="Red">Red</Option>
+                        <Option value="Any">Усі</Option>
+                        <Option value="Black">Чорний</Option>
+                        <Option value="Grey">Сірий</Option>
+                        <Option value="White">Білий</Option>
+                        <Option value="Brown">Коричневий</Option>
+                        <Option value="Red">Рудий</Option>
                     </Select>
                 </div>
                 <div>
-                    <h3 className="select-title">Additional Options</h3>
+                    <h3 className="select-title">Додаткові опції</h3>
                     <Checkbox checked = {sterilized} onChange={() => setSterilized(!sterilized)} className="select-text">
-                        Sterilized
+                        Стерилізовано
                     </Checkbox>
                     <Checkbox checked = {passport} onChange={() => setPassport(!passport)} className="select-text">
-                        Passport
+                        Паспорт
                     </Checkbox>
                 </div>
             </div>

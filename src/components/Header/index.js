@@ -50,7 +50,7 @@ const Header = ({ isConnected }) => {
       </div>
       <ul className="navbar-container">
         <li>
-          <a href="/our-pets">Наші улюбленці</a>
+          <a href="/our-pets">Чотирилапі друзі</a>
         </li>
         <li>
           <a href="/blog">Блог</a>

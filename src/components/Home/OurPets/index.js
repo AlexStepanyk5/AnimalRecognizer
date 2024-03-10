@@ -45,7 +45,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                     <div className='cats-block'>
                         <div className="pets-block-title">
                             <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
-                            <h1>Мяв!</h1>
+                            <h1>Няв!</h1>
                         </div>
 
                         <div className="cards-container">
