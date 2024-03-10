@@ -45,7 +45,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                     <div className='cats-block'>
                         <div className="pets-block-title">
                             <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
-                            <h1>Cats</h1>
+                            <h1>Мяв!</h1>
                         </div>
 
                         <div className="cards-container">
@@ -79,7 +79,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                     <div className='dogs-block'>
                         <div className="pets-block-title">
                             <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
-                            <h1>Dogs</h1>
+                            <h1>Гав!</h1>
                         </div>
 
                         <div className="cards-container">

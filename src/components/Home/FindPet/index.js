@@ -18,11 +18,11 @@ const FindPet = () => {
                     <div className="find-pet-text">
 
                         <h1 className='slackey find-pet-title'>
-                            Find a pet by our tools
+                            Знайди свого чотирилапого друга з нашою допомогою!
                             <img src="./images/Home/emoji.png" alt='emoji'></img>
                         </h1>
-                        <p className='main-text find-pet-description'>Best pets are waiting for adoption. Find out the the perfect one you will like it.</p>
-                        <a href='/our-pets' className='find-text-button'>Find a pet</a>
+                        <p className='main-text find-pet-description'>Найкращі улюбленці вже чекають на тебе! Обери того, що підійде тобі найбільше!</p>
+                        <a href='/our-pets' className='find-text-button'>Знайти тваринку</a>
                     </div>
 
                 </div>

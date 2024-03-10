@@ -1,5 +1,4 @@
 import './style.scss';
-import OurTeam from '../../components/Home/OurTeam';
 const About = () => {
     return (
         <div>
@@ -38,7 +37,6 @@ const About = () => {
                 </div>
 
             </div>
-            <OurTeam currentPage="about" />
         </div>
     );
 }

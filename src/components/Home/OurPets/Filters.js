@@ -24,7 +24,7 @@ const Filters = ({inputType, inputColor, inputSterilized, inputPassport}) => {
             <div className="pets-header">
                 <div className="pets-title">
                     <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
-                    <h1>Our Pets</h1>
+                    <h1>Наші тваринки</h1>
                 </div>
                 <p>Best pets are waiting for adoption! <br />Find the one you will love the most with our tools.</p>
             </div>

@@ -27,7 +27,7 @@ const ImageUpload = () => {
         setImageData(imageData);
 
         const response = await axios.post(
-          `https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDEVL_Yj-SsWIC93wpK85tZuXLlt72_l5I`,
+          `https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCoCcJ4qE_elWt0cwhQYcpCybj5ueH9Qcg`,
           {
             requests: [
               {
@@ -141,10 +141,10 @@ const ImageUpload = () => {
         disabled={modalVisible}
       >
         <img src='./images/Home/upload.png' alt="Upload button" />
-        <h4>Upload <br /> image</h4>
+        <h4>Завантаження <br /> зображення</h4>
       </Button>
       <Modal
-        title={<span className='modal-title'>Let's find a new owner for our little friend!</span>}
+        title={<span className='modal-title'>Давайте знайдемо нового власника для нашого чотирилапого друга!</span>}
         open={modalVisible}
         onCancel={closeModal}
         className='modal'
@@ -158,7 +158,7 @@ const ImageUpload = () => {
 
                 {imageData && (
                   <div>
-                    <h3 className='modal-text'>Uploaded Image:</h3>
+                    <h3 className='modal-text'>Завантажене зображення:</h3>
                     <img className='image-upload' src={imageData} style={{ width: '200px', height: '200px' }} alt="Uploaded" />
                   </div>
                 )}
@@ -168,7 +168,7 @@ const ImageUpload = () => {
               <div style={{ flex: 1 }}>
                 {dominantColor && (
                   <div>
-                    <h3 className='modal-text'>Dominant Color:</h3>
+                    <h3 className='modal-text'>Домінуючий колір:</h3>
                     <div
                       style={{
                         backgroundColor: dominantColor,
@@ -181,26 +181,26 @@ const ImageUpload = () => {
 
                 {basicColorName && (
                   <div>
-                    <h3 className='modal-text'>Basic Color:</h3>
+                    <h3 className='modal-text'>Базовий колір:</h3>
                     <Select value={basicColorName} onChange={handleColorChange} className='select'>
-                      <Option value="Black">Black</Option>
-                      <Option value="Grey">Grey</Option>
-                      <Option value="White">White</Option>
-                      <Option value="Brown">Brown</Option>
-                      <Option value="Red">Red</Option>
+                      <Option value="Black">Чорний</Option>
+                      <Option value="Grey">Сірий</Option>
+                      <Option value="White">Білтй</Option>
+                      <Option value="Brown">Коричневий</Option>
+                      <Option value="Red">Рудий</Option>
                     </Select>
 
                   </div>
                 )}
 
                 <div>
-                  <h3 className='modal-text'>Additional Options:</h3>
+                  <h3 className='modal-text'>Додаткові опції:</h3>
                   <Checkbox onChange={() => setIsSterilized(!isSterilized)}>
-                    Sterilized
+                    Стерилізований
                   </Checkbox>
                   <br />
                   <Checkbox onChange={() => setHasPassport(!hasPassport)}>
-                    Passport
+                    Паспорт
                   </Checkbox>
                 </div>
               </div>
@@ -212,14 +212,14 @@ const ImageUpload = () => {
                   type="primary"
                   onClick={handleSaveChanges}
                 >
-                  Find similar pets
+                  Знайти тваринок за параметрами
                 </Button>
             </div>
           </>
         ) : (
           <div>
             <img className="image" src="./images/modalCat.png" alt='very-very cute cat' />
-            <p className='modal-wrong-text'>Please upload a photo with a cat or a dog.</p>
+            <p className='modal-wrong-text'>Будь ласка, завантажте фото із собакою чи котом</p>
           </div>
         )}
       </Modal>

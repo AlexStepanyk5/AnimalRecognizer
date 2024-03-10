@@ -14,30 +14,30 @@ const HowToUse = () => {
                     </div>
 
                     <div className='image-upload-text'>
-                        <h3>How To use?</h3>
-                        <p>Just upload the image of your animal<br />and our AI will help you with detecting its <br />features to find similar animals for you</p>
+                        <h3>Як це працює?</h3>
+                        <p>Просто завантажте фото тваринки <br />і наш вебсайт допоможе вам розпізнати та заповнити<br />його риси для фільтрування доступних анкет</p>
                     </div>
                 </div>
 
                 <div className='contact-container'>
                     <div className='contact-content'>
                         <div className='contact-text'>
-                            <h1 id='slackey'>Lets book a call and stay connected</h1>
+                            <h1 id='slackey'>Давайте домовимось про дзвінок та все обговоримо!</h1>
                             <div className='check-block'>
                                 <img src='./images/Home/check-box.png' alt="Check Box" />
-                                <p className='check-text'>Cooperation with companies</p>
+                                <p className='check-text'>Кооперація із іншими організаціями</p>
                                 <img src='./images/Home/check-box.png' alt="Check Box" />
-                                <p className='check-text'>Support with any questions</p>
+                                <p className='check-text'>Допомога із вашими запитаннями</p>
                             </div>
-                            <p className='main-text'>If you want to get more information about our service,
-                                book a call to discuss cooperation or you have any emergency situation -
-                                please, be free to reach us with no hesitation - we are always glad to help you!
+                            <p className='main-text'>Якщо ви хочете отримати більше інформації про наш сервіс,
+                                 замовити дзвінок для обговорення співпраці або у вас виникла екстрена ситуація -
+                                 Будь ласка, зв’яжіться з нами без вагань – ми завжди раді Вам допомогти!
                             </p>
 
                             <div className='contact-buttons'>
-                                <a href="mailto:dazerotes@gmail.com?subject=Let`s schedule a call about cooperation" className='contact-button'>Book a call</a>
+                                <a href="mailto:support@petcare.com?subject=Let`s schedule a call about cooperation" className='contact-button'>Подзвоніть мені</a>
 
-                                <a href="tel:+380676535231" className='emergency-button'><img src='./images/Home/phone.png' alt="Emergency call" />Emergency call</a>
+                                <a href="tel:+380252525250" className='emergency-button'><img src='./images/Home/phone.png' alt="Emergency call" />Терміновий дзвінок</a>
                             </div>
                         </div>
                         <div className='contact-photo'>
