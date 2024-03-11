@@ -68,7 +68,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                                                 <Pet key={cat.id} pet={cat} />
                                             </SwiperSlide>
                                         )))
-                                        : 'Did not receive data from DB'
+                                        : 'Не було отримано відповідь від бази даних, але є це - ♥'
                                 }
                             </Swiper>
                         </div>
@@ -103,7 +103,7 @@ const OurPets = ({type, color, sterilized, passport }) => {
                                                 <Pet key={dog.id} pet={dog} />
                                             </SwiperSlide>
                                         )))
-                                        : 'Did not receive data from DB'
+                                        : 'Не було отримано відповідь від бази даних, але є це - ♥'
                                 }
                             </Swiper>
                         </div>

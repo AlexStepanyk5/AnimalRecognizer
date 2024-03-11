@@ -141,7 +141,7 @@ const ImageUpload = () => {
         disabled={modalVisible}
       >
         <img src='./images/Home/upload.png' alt="Upload button" />
-        <h4>Завантаження <br /> зображення</h4>
+        <h4>Завантажити <br /> зображення</h4>
       </Button>
       <Modal
         title={<span className='modal-title'>Давайте знайдемо нового власника для нашого чотирилапого друга!</span>}
