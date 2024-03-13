@@ -11,7 +11,7 @@ const Pet = ({ pet }) => {
       <div className='card'>
         <img className='card-img' src={imageSrc} alt={imageAlt} />
         <h4 className='pet-name'>{pet.name}</h4>
-        <p className='contact-name'>{pet.currentContact.name}</p>
+        <p className='contact-name'>{pet.contact.name}</p>
       </div>
     </div>
   )
