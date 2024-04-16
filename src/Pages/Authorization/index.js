@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './style.scss';
 
-function Authorization({ updateIsConnected }) {
+function Authorization({ updateIsConnected, updateUserName }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,6 +20,7 @@ function Authorization({ updateIsConnected }) {
         console.log(response.data);
         updateIsConnected(true);
         setConnectionStatus('Гав-гав!');
+        updateUserName(response.data.name); // Update userName state
         navigate('/');
       })
       .catch(error => {
