@@ -159,7 +159,7 @@ const ImageUpload = () => {
                 {imageData && (
                   <div>
                     <h3 className='modal-text'>Завантажене зображення:</h3>
-                    <img className='image-upload' src={imageData} style={{ width: '200px', height: '200px' }} alt="Uploaded" />
+                    <img className='image-upload' src={imageData} style={{ width: '200px', height: '200px' }} alt="Завантажене фото" />
                   </div>
                 )}
 
@@ -185,7 +185,7 @@ const ImageUpload = () => {
                     <Select value={basicColorName} onChange={handleColorChange} className='select'>
                       <Option value="Black">Чорний</Option>
                       <Option value="Grey">Сірий</Option>
-                      <Option value="White">Білтй</Option>
+                      <Option value="White">Білий</Option>
                       <Option value="Brown">Коричневий</Option>
                       <Option value="Red">Рудий</Option>
                     </Select>
