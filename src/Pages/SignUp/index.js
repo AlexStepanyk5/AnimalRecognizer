@@ -10,18 +10,20 @@ function SignUp({ updateIsConnected }) {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [connectionStatus, setConnectionStatus] = useState('');
+  const [type] = useState(0);
 
   const handleRegistration = (event) => {
     event.preventDefault();
     if (password !== confirmPassword) {
-      setConnectionStatus('Passwords do not match');
+      setConnectionStatus('Паролі не співпадають(');
       return;
     }
     axios //44383
       .post('https://localhost:7216/api/Register', {
         username: username,
         email: email,
-        password: password
+        password: password,
+        type: type
       })
       .then(response => {
         console.log(response.data);
@@ -34,6 +36,9 @@ function SignUp({ updateIsConnected }) {
         updateIsConnected(false);
         setConnectionStatus('Виникла помилка під час реєстрації, спробуйте знову(');
       });
+    console.log(username);
+    console.log(email);
+    console.log(password);
     setUsername('');
     setEmail('');
     setPassword('');
