@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './style.scss';
 
-function SignUp({ updateIsConnected }) {
+function SignUp({ updateIsConnected, updateUserName }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -11,6 +11,7 @@ function SignUp({ updateIsConnected }) {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [connectionStatus, setConnectionStatus] = useState('');
   const [type] = useState(0);
+  const [id] = useState(0);
 
   const handleRegistration = (event) => {
     event.preventDefault();
@@ -20,7 +21,8 @@ function SignUp({ updateIsConnected }) {
     }
     axios //44383
       .post('https://localhost:7216/api/Register', {
-        username: username,
+        id: id,
+        name: username,
         email: email,
         password: password,
         type: type
@@ -28,6 +30,7 @@ function SignUp({ updateIsConnected }) {
       .then(response => {
         console.log(response.data);
         updateIsConnected(true);
+        updateUserName(response.data.name);
         setConnectionStatus('Ви зареєстровані та увійшли, гав-гав!');
         navigate('/');
       })
@@ -36,9 +39,6 @@ function SignUp({ updateIsConnected }) {
         updateIsConnected(false);
         setConnectionStatus('Виникла помилка під час реєстрації, спробуйте знову(');
       });
-    console.log(username);
-    console.log(email);
-    console.log(password);
     setUsername('');
     setEmail('');
     setPassword('');

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -27,7 +27,7 @@ function App() {
 
   const updateUserName = (name) => {
     setUserName(name);
-    localStorage.setItem('userName', name); // Save userName to local storage
+    localStorage.setItem('userName', name);
   };
 
   const ProtectedRoute = ({ element, ...props }) => {
@@ -45,7 +45,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/authorization" element={<Authorization updateIsConnected={updateIsConnected} updateUserName={updateUserName} />} />
-          <Route path="/signup" element={<SignUp updateIsConnected={updateIsConnected} />} />
+          <Route path="/signup" element={<SignUp updateIsConnected={updateIsConnected} updateUserName={updateUserName} />} />
           <Route path="/profile" element={<ProtectedRoute element={<Profile />} />} />
           <Route path="/settings" element={<ProtectedRoute element={<Settings />} />} />
         </Routes>

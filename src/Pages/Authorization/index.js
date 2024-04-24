@@ -20,7 +20,7 @@ function Authorization({ updateIsConnected, updateUserName }) {
         console.log(response.data);
         updateIsConnected(true);
         setConnectionStatus('Гав-гав!');
-        updateUserName(response.data.name); // Update userName state
+        updateUserName(response.data.name);
         navigate('/');
       })
       .catch(error => {
