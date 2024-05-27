@@ -21,11 +21,12 @@
         margin-bottom: rem(35px);
 
         .about-header {
-            padding-top: rem(75px);
+            padding-top: rem(55px);
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: $secondary-font;
+            font-weight: bold;
             font-size: rem(45px);
             color: #000958;
         }
@@ -40,14 +41,14 @@
         font-size: rem(24px);
         text-align: center;
         margin-bottom: rem(70px);
+        font-weight: 650;
     }
 
     .about-blocks-container {
         display: flex;
         flex-direction: column;
-        gap: rem(44px);
-        margin-bottom: rem(50px);
-        margin-top: rem(50px);
+        gap: rem(28px);
+        margin-bottom: rem(35px);
 
         .block-container {
             width: rem(1154px);
@@ -56,19 +57,23 @@
             border-radius: rem(50px);
             padding: rem(32px);
             display: flex;
-            gap: rem(32px);
+            gap: rem(12px);
             align-items: center;
 
             .block-text {
                 color: #656689;
                 font-family: $main-font;
-                font-size: rem(22px);
+                font-size: rem(24px);
+                font-weight: 700;
+                text-align: center;
 
                 h2 {
                     font-family: $secondary-font;
+                    font-weight: bold;
                     font-size: rem(32px);
                     color: #000958;
-                    margin-bottom: rem(10px);
+                    margin-bottom: rem(40px);
+                    text-align: center;
                 }
             }
 

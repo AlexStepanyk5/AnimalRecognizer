@@ -26,12 +26,12 @@ const Filters = ({inputType, inputColor, inputSterilized, inputPassport}) => {
                     <img src={`${publicURL}/images/Home/paw.png`} alt='paw' />
                     <h1>Наші тваринки</h1>
                 </div>
-                <p>Наші тваринки вже чекають на тебе!<br />Обери ту, що тобі підходить!</p>
+                <p className='pets-text'>Наші тваринки вже чекають на тебе!<br />Обери ту, що тобі підходить!</p>
             </div>
             <div className="filters">
-                <div>
-                    <h3 className="select-title">Чотирилапий друг</h3>
-                    <Select value={type} onChange={handleTypeChange} className="select-text">
+                <div className='type-box'>
+                    <h3 className="select-title">Чотирилапі друзі</h3>
+                    <Select value={type} onChange={handleTypeChange} className="select-text-type">
                         <Option value="Any">Усі</Option>
                         <Option value="Dog">Гав!</Option>
                         <Option value="Cat">Няв!</Option>

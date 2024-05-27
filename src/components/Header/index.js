@@ -97,9 +97,9 @@ const Header = ({ isConnected, updateIsConnected, userName }) => {
                   open={Boolean(anchorEl)}
                   onClose={handleClose}
                 >
-                  <MenuItem onClick={handleProfile}>Мій профіль</MenuItem>
-                  <MenuItem onClick={handleSettings}>Налаштування</MenuItem>
-                  <MenuItem onClick={handleExit}>Вийти</MenuItem>
+                  <MenuItem onClick={handleProfile} className='acc-options'>Мої анкети</MenuItem>
+                  <MenuItem onClick={handleSettings} className='acc-options'>Мій профіль</MenuItem>
+                  <MenuItem onClick={handleExit} className='acc-options'>Вийти</MenuItem>
                 </Menu>
               </li>
             </div>

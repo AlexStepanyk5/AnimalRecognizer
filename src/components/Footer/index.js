@@ -353,7 +353,7 @@ const Footer = () => {
               <a href="tel:+380252525250">+380252525250</a>
               <a href="mailto:support@petcare.com">support@petcare.com</a>
               <a href="https://goo.gl/maps/yqwMBbJ84u5jyTEt5" target="blank">
-                Тернопіль, вулиця Микулинецька, 46a
+                Україна, Тернопіль <br></br>вул. Микулинецька, 46a
               </a>
             </ul>
           </div>

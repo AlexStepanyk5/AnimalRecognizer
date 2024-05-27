@@ -1,2 +1,115 @@
 @use "../../styles/variables" as *;
 @use "../../styles/functions" as *;
+
+.settings-container {
+  max-width: 1440px;
+  padding: 100px 140px 30px;
+  font-family: $main-font;
+  font-size: rem(14px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .settings-header-container {
+    width: rem(750px);
+    margin: auto;
+    font-family: $main-font;
+    color: #656689;
+    font-size: rem(24px);
+    text-align: center;
+    margin-bottom: rem(35px);
+
+    .settings-header {
+      padding-top: rem(55px);
+      padding-bottom: rem(15px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $secondary-font;
+      font-weight: bold;
+      font-size: rem(45px);
+      color: #000958;
+    }
+  }
+
+  .settings-text {
+    width: rem(1050px);
+    margin: auto;
+    font-family: $main-font;
+    color: #656689;
+    font-size: rem(24px);
+    text-align: center;
+    margin-bottom: rem(70px);
+  }
+
+  .settings-form {
+    width: rem(400px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: rem(20px);
+
+      label {
+        font-family: $main-font;
+        font-size: rem(22px);
+        color: #656689;
+        margin-bottom: rem(10px);
+        font-weight: 600;
+      }
+      .notifications{
+        display: flex;
+        gap: rem(15px);
+        padding-left: rem(45px);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: rem(8px);
+        font-size: rem(14px);
+        border: 1px solid #ccc;
+        border-radius: rem(5px);
+        height: rem(40px);
+      }
+
+      input[type="checkbox"] {
+        margin-right: rem(10px);
+      }
+
+      .error {
+        color: red;
+        font-size: rem(14px);
+        margin-top: rem(5px);
+      }
+    }
+
+    .success {
+      color: green;
+      font-size: rem(14px);
+      margin-top: rem(10px);
+    }
+
+    button {
+      padding: rem(10px) rem(20px);
+      background-color: #ffa500;
+      color: #fff;
+      border: none;
+      border-radius: rem(5px);
+      cursor: pointer;
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-size: 24px;
+
+      &:hover {
+        background-color: #e69500;
+      }
+    }
+  }
+}

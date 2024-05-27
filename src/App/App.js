@@ -8,8 +8,8 @@ import BlogPage from '../Pages/Blog';
 import OurPetsPage from '../Pages/OurPets';
 import Authorization from '../Pages/Authorization';
 import SignUp from '../Pages/SignUp';
-import Profile from '../Pages/Profile';
 import Settings from '../Pages/Settings';
+// import  from '../Pages/';
 
 function App() {
   const [isConnected, setIsConnected] = useState(() => {
@@ -30,7 +30,7 @@ function App() {
     localStorage.setItem('userName', name);
   };
 
-  const ProtectedRoute = ({ element, ...props }) => {
+  const ProtectedRoute = ({ element }) => {
     return isConnected ? element : <Navigate to="/authorization" />;
   };
 
@@ -46,8 +46,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/authorization" element={<Authorization updateIsConnected={updateIsConnected} updateUserName={updateUserName} />} />
           <Route path="/signup" element={<SignUp updateIsConnected={updateIsConnected} updateUserName={updateUserName} />} />
-          <Route path="/profile" element={<ProtectedRoute element={<Profile />} />} />
           <Route path="/settings" element={<ProtectedRoute element={<Settings />} />} />
+          {/* <Route path="/profile" element={<ProtectedRoute element={< />} />} /> */}
         </Routes>
         <Footer />
       </div>

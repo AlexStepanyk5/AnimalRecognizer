@@ -16,7 +16,7 @@ const Home = () => {
                     <img src="./images/Home/paw.png" alt='paw'/>
                     <h1>Наші тваринки</h1>
                 </div>
-                <p>Наші тваринки вже чекають на тебе!<br />Обери ту, що тобі підходить!</p>
+                <p className="pets-text">Наші тваринки вже чекають на тебе!<br />Обери ту, що тобі підходить!</p>
             </div>
             <div className='bottom-container'>
                 <OurPets type='Any' color='Any' sterilized = 'false' passport = 'false' />

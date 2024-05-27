@@ -54,8 +54,8 @@
           }
 
         .heading {
-            font-family: $secondary-font;
-            font-size: rem(50px);
+            font-family: $slackey;
+            font-size: rem(45px) !important;
             color: #000000;
             display: flex;
             align-items: center;
@@ -67,7 +67,18 @@
     
     a {
         text-decoration: none;
+        font-family: $main-font;
+        font-weight: 900;
         color: #5E6085;
+        font-size: rem(23px);
+    }
+
+    p {
+        text-decoration: none;
+        font-family: $main-font;
+        font-weight: 900;
+        color: #5E6085;
+        font-size: rem(23px);
     }
 
     a:hover {
@@ -76,7 +87,7 @@
 
     .navbar-container {
         display: flex;
-        gap: rem(35px);
+        gap: rem(42px);
         color: #5E6085;
         padding: rem(10px);
         align-items: center;
@@ -101,4 +112,15 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+
 }
+
+.acc-options{
+    font-family: $main-font !important;
+    font-weight: 900 !important;
+    color: #5E6085 !important;
+    font-size: rem(20px) !important;
+    width: rem(200px);
+    align-items: center !important;
+}
+

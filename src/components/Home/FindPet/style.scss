@@ -67,15 +67,15 @@
 
                 .find-pet-description {
                     font-family: $main-font;
-                    font-size: rem(20px);
+                    font-size: rem(25px);
                     color: #656689;
-                    margin-bottom: rem(50px);
+                    margin-bottom: rem(75px);
                 }
 
                 .find-text-button {
                     font-family: $main-font;
-                    font-size: rem(16px);
-                    font-weight: 600;
+                    font-size: rem(20px);
+                    font-weight: 900;
                     width: fit-content;
                     color: #FFFFFF;
                     background-color: #ff6600;
@@ -104,6 +104,7 @@
 .slackey {
     font-family: $secondary-font;
     font-size: rem(16px);
+    font-weight: bold;
 }
 
 .main-text {

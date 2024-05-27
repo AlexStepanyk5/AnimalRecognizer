@@ -24,9 +24,9 @@ const HowToUse = () => {
                         <div className='contact-text'>
                             <h1 id='slackey'>Давайте домовимось про дзвінок та все обговоримо!</h1>
                             <div className='check-block'>
-                                <img src='./images/Home/check-box.png' alt="Check Box" />
+                                <img src='./images/Home/checkmark.png' alt="Check Box" />
                                 <p className='check-text'>Кооперація із іншими організаціями</p>
-                                <img src='./images/Home/check-box.png' alt="Check Box" />
+                                <img src='./images/Home/checkmark.png' alt="Check Box" />
                                 <p className='check-text'>Допомога із вашими запитаннями</p>
                             </div>
                             <p className='main-text'>Якщо ви хочете отримати більше інформації про наш сервіс,

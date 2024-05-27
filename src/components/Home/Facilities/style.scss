@@ -16,9 +16,7 @@
         gap: rem(25px);
 
         .facilities {
-            display: flex;
-            gap: rem(25px);
-            padding-bottom: rem(100px);
+            padding-bottom: rem(50px);
             padding-left: rem(90px);
             padding-right: rem(90px);
             text-align: center;
@@ -26,44 +24,49 @@
 
         .facilities-main {
             font-family: $secondary-font;
-            font-size: rem(40px);
+            font-size: rem(35px);
             color: #00063a;
             padding-top: rem(15px);
+            font-weight: bold;
         }
 
         .facilities-text {
             font-family: $main-font;
-            font-size: rem(16px);
+            font-size: rem(20px);
             color: #656689;
-            font-weight: 400;
-            line-height: 30px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-top: rem(15px);
+            padding-left: rem(25px);
         }
 
         .wrapper {
             height: rem(656px);
             display: grid;
-            grid-template-columns: rem(580px) rem(580px);
+            grid-template-columns: rem(560px) rem(560px);
             gap: rem(250px);
             background-image: url(../../../../public/images/Home/dog_lines.png);
         }
 
         .column {
-            width: rem(340px);
+            width: rem(360px);
             text-align: center;
         }
 
         .column h3 {
             padding-top: rem(15px);
-            padding-bottom: rem(150px);
+            margin-bottom: rem(95px);
             font-family: $main-font;
-            font-size: rem(16px);
+            font-size: rem(20px);
             color: #656689;
+            font-weight: 500;
         }
 
         .column li {
             font-family: $secondary-font;
             font-size: rem(24px);
             color: #00063a;
+            font-weight: bold;
         }
     }
 }
@@ -72,6 +75,7 @@
     font-family: $secondary-font;
     font-size: rem(16px);
     color: #00063a;
+    font-weight: bold;
 }
 
 .main-text {

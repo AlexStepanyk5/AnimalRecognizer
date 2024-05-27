@@ -14,7 +14,7 @@ const Blog = () => {
                 <div className='blog-right-box'>
                     <img src='./images/Home/blog-dog.png' alt='dogee'/>
                     <div>
-                        <h3 id='right-box-title'>3 цікавих факти про собак:</h3>
+                        <h3 id='right-box-title'>Три цікавих факти про собак:</h3>
                         <p className='main-text'>1. Нюх собак принаймні в 40 разів кращий, ніж наш<br />2. У собаки є 18 м'язів, які контролюють їхні вуха<br />3. Ваша собака може бути правшою та шульгою</p>
                     </div>
                 </div>

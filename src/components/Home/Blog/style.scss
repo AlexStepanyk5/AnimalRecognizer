@@ -18,8 +18,8 @@
 
             .blog-button {
                 font-family: $main-font;
-                font-size: rem(16px);
-                font-weight: 600;
+                font-size: rem(18px);
+                font-weight: 800;
                 color: #FFFFFF;
                 background-color: #ff6600;
                 border: none;
@@ -54,8 +54,8 @@
             gap: rem(25px);
 
             #right-box-title {
-                font-family: $main-font;
-                font-weight: 600;
+                font-family: $secondary-font;
+                font-weight: 800;
                 font-size: rem(20px);
                 line-height: 182.02%;
                 text-align: center;
@@ -70,6 +70,7 @@
     font-size: rem(45px);
     color: #00063a;
     margin-bottom: rem(25px);
+    font-weight: bold !important;
 }
 
 .main-text {

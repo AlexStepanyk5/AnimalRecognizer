@@ -36,6 +36,7 @@
         text-align: center;
         line-height: 30px;
         color: #fffaf5;
+        font-weight: bold;
       }
 
       .image-upload-button:hover {
@@ -56,6 +57,7 @@
       .image-upload-text h3 {
         font-family: $secondary-font;
         font-size: rem(31px);
+        font-weight: bold;
       }
 
       .image-upload-text p {
@@ -80,8 +82,8 @@
 
         .check-text {
           font-family: $main-font;
-          font-weight: rem(500px);
-          font-size: rem(15px);
+          font-weight: 900 !important;
+          font-size: rem(20px) !important;
           line-height: rem(18px);
           color: #48496a;
         }
@@ -111,8 +113,8 @@
 
           .contact-button {
             font-family: $main-font;
-            font-size: rem(16px);
-            font-weight: 600;
+            font-size: rem(20px);
+            font-weight: 900;
             color: #ffffff;
             background-color: #ff6600;
             border: none;
@@ -157,12 +159,13 @@
 #slackey {
   font-family: $secondary-font;
   font-size: rem(45px);
+  font-weight: bold;
 }
 
 .main-text {
   font-family: $main-font;
-  font-size: rem(16px);
-  font-weight: 400;
+  font-size: rem(19px) !important;
+  font-weight: 600 !important;
   color: #656689;
   line-height: 30px;
   margin-bottom: rem(40px);
@@ -190,6 +193,7 @@
 
 .modal-title {
   font-family: $secondary-font !important;
+  font-weight: bold !important;
   font-size: rem(25px) !important;
   display: flex !important;
   text-align: center !important;

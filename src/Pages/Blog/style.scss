@@ -14,6 +14,7 @@
   .stories {
     text-align: center;
     font-family: $secondary-font;
+    font-weight: bold;
     font-size: rem(45px);
     padding: 90px 144px;
     color: #000958;
@@ -27,6 +28,7 @@
 
       h2 {
         font-family: $secondary-font;
+        font-weight: bold;
         font-size: rem(32px);
         margin-bottom: rem(20px);
       }
@@ -34,8 +36,9 @@
       p {
         font-family: $main-font;
         font-size: rem(18px);
-        line-height: rem(40px);
+        line-height: rem(30px);
         color: #656689;
+        margin-top: rem(15px);
       }
     }
   }
@@ -43,6 +46,7 @@
   .tips-guides {
     text-align: center;
     font-family: $secondary-font;
+    font-weight: bold;
     font-size: rem(45px);
     padding: 90px 144px;
     color: #000958;
@@ -74,12 +78,18 @@
               height: 150px;
               border-radius: 15px;
             }
-            p{
-              font-weight:bold;
-              font-size: 24px;
-              margin-bottom: rem(10px);
-              margin-top: rem(10px);
+            h1{
+              font-family: $main-font;
+              font-weight: 650;
+              font-size: 20px;
             }
+            p{
+              font-family: $secondary-font !important;
+              font-weight: 1000  !important;
+              font-size: 24px  !important;
+              margin-bottom: rem(20px)  !important;
+            }
+
           }
   
           
@@ -140,6 +150,7 @@
   h1 {
 
     font-family: $secondary-font;
+    font-weight: bold;
     font-size: rem(45px);
   }
 
